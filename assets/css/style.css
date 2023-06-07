@@ -28,7 +28,7 @@ body {
 } */
 
 #background-image {
-    background-image: url(/assets/images/bg_wide.jpg);
+    background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_wide.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,7 +71,7 @@ footer li {
 @media screen and (max-width: 1024px) {
 
     #background-image { 
-    background-image: url(/assets/images/bg_laptop_1024.jpg);
+    background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_laptop_1024.jpg);
     background-size: contain;
     min-height: 100%;
     background-attachment: fixed;
@@ -88,7 +88,7 @@ footer {
 /* TABLET 768px */
 @media screen and (max-width: 768px) {
     #background-image {
-        background-image: url(/assets/images/bg_tab.jpg);
+        background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_tab.jpg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -101,7 +101,7 @@ footer {
 /* LARGER MOBILE 328px */
 @media screen and (max-width: 450px) {
     #background-image {
-        background-image: url(/assets/images/bg_mobile.jpg);
+        background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
