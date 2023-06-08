@@ -15,6 +15,29 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+/* Headings & text styling */
+h1 {
+    font-weight: bold;
+    font-size: 2vw;
+    padding: 10px;
+}
+
+h2 {
+    padding-top: 10px;
+    font-size: 1.2vw;
+}
+
+h4 {
+    font-style: italic;
+    font-size: 0.6vw;
+}
+
+p {
+    padding: 5px;
+    font-size: 1vw;
+  }
+
 /* BACKGROUND */
 #background-image {
     background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_wide.jpg);
@@ -36,12 +59,13 @@ body {
 
 .container-content {
     width: 33%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     margin-top: 33vh;
     color: white;
     padding: 10px;
     box-shadow: 2px 3px 22px 21px rgba(0, 0, 0, 0.39);
     border-radius: 5px;
+    text-align: center;
   }
 
 /* HOME PAGE  */
@@ -50,6 +74,7 @@ body {
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
+    padding: 10px;
 
 }
 .btns button {
@@ -68,6 +93,7 @@ body {
 .btn-game {
     transform: scale(1.8);
     margin: 10px;
+    padding-top: 20px;
 }
 
 .btns button:hover {
