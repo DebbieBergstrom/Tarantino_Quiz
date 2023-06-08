@@ -20,11 +20,11 @@ body {
 h1 {
     font-weight: bold;
     font-size: 2vw;
-    padding: 10px;
+    padding: 0.6rem;
 }
 
 h2 {
-    padding-top: 10px;
+    padding-top: 0.6rem;
     font-size: 1.2vw;
 }
 
@@ -34,9 +34,9 @@ h4 {
 }
 
 p {
-    padding: 5px;
+    padding: 0.3rem;
     font-size: 1vw;
-  }
+}
 
 /* BACKGROUND */
 #background-image {
@@ -54,19 +54,19 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .container-content {
-    width: 33%;
+    width: 30vw;
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 33vh;
     color: white;
-    padding: 10px;
-    box-shadow: 2px 3px 22px 21px rgba(0, 0, 0, 0.39);
-    border-radius: 5px;
+    padding: 0.6rem;
+    box-shadow: 0.125rem 0.1875 1.25rem 1, 2rem rgba(0, 0, 0, 0.39);
+    border-radius: 0.3rem;
     text-align: center;
-  }
+}
 
 /* HOME PAGE  */
 .btns {
@@ -74,26 +74,27 @@ p {
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
-    padding: 10px;
+    padding: 0.6rem;
 
 }
+
 .btns button {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: auto;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+    width: 1.2vl;
     background-color: rgb(168, 26, 38);
-    font-size: 80%;
+    font-size: 1vw;
     color: white;
-    border-radius: 6px;
-    box-shadow: 0px 3px 0px #521313, 0px 2px 6px rgba(0, 0, 0, 0.5);
-    padding: 4px 6px;
+    border-radius: 0.375rem;
+    box-shadow: 0rem 0.2rem 0rem #521313, 0rem 0.125rem 0.4rem rgba(0, 0, 0, 0.5);
+    padding: 0.25rem 0.4rem;
     transition: all 0.3s ease;
 }
 
 .btn-game {
     transform: scale(1.8);
-    margin: 10px;
-    padding-top: 20px;
+    margin: 0.4rem;
+    padding-top: 1.25rem;
 }
 
 .btns button:hover {
@@ -148,18 +149,53 @@ footer li {
 /* LAPTOP 1024px */
 @media screen and (max-width: 1024px) {
 
-    #background-image { 
-    background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_laptop_1024.jpg);
-    background-size: contain;
-    min-height: 100%;
-    background-attachment: fixed;
-    margin-bottom: 3rem;
-}
+    #background-image {
+        background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_laptop_1024.jpg);
+    }
 
-footer {
-    height: 2.5rem;
-    border-top: 5px solid;
-}
+    .container-content {
+        width: 38vw;
+        margin-top: 28vh;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 2.5vw;
+        padding: 0.7rem;
+    }
+
+    h2 {
+        padding-top: 0.6rem;
+        font-size: 1.4vw;
+    }
+
+    h4 {
+        font-size: 0.7vw;
+    }
+
+    p {
+        padding: 0.3rem;
+        font-size: 1.2vw;
+    }
+
+    .btns {
+        padding: 0.4rem;
+    }
+
+    .btns button {
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+        width: 1.2vl;
+        box-shadow: 0rem 0.2rem 0rem #521313, 0rem 0.125rem 0.4rem rgba(0, 0, 0, 0.5);
+        padding: 0.2rem 0.3rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-game {
+        transform: scale(1.6);
+        margin: 0.3rem;
+        padding-top: 0.6rem;
+    }
 
 }
 
@@ -167,36 +203,70 @@ footer {
 @media screen and (max-width: 768px) {
     #background-image {
         background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_tab.jpg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 120vh;
-        background-attachment: fixed;
-        padding-bottom: 5rem;
+    }
+
+    .container-content {
+        width: 70vw;
+        margin-top: 38vh;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 3vw;
+        padding: 0.5rem;
+    }
+    
+    h2 {
+        padding-top: 0.4rem;
+        font-size: 1.8vw;
+    }
+    
+    h4 {
+        font-size: 0.8vw;
+    }
+    
+    p {
+        padding: 0.1rem;
+        font-size: 1.6vw;
+    }
+
+    .btns {
+        padding: 0.3rem;
     }
 }
 
-/* LARGER MOBILE 328px */
+/* MOBILE 450px */
 @media screen and (max-width: 450px) {
     #background-image {
         background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 120vh;
-        background-attachment: fixed;
-        padding-bottom: 5rem;
     }
 
-/* SMALL MOBILE 328px */
-/* @media screen and (max-width: 328px) {
-    #background-image {
-        background-image: url(/assets/images/bg_mobile.jpg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 120vh;
-        background-attachment: fixed;
-        padding-bottom: 5rem;
-    } */
+    .container-content {
+        width: 80vw;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: 38vh;
+    }
+
+    .btns {
+        padding: 0.2rem;
+    }
+
+    .btns button {
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+        width: 1.2vl;
+        background-color: rgb(168, 26, 38);
+        font-size: 1vw;
+        color: white;
+        border-radius: 0.375rem;
+        box-shadow: 0rem 0.2rem 0rem #521313, 0rem 0.125rem 0.4rem rgba(0, 0, 0, 0.5);
+        padding: 0.25rem 0.4rem;
+        transition: all 0.3s ease;
+    }
+
+    .btn-game {
+        transform: scale(1.6);
+        margin: 0.3rem;
+        padding-top: 0.6rem;
+    }
 }
