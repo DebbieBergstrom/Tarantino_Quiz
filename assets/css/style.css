@@ -12,6 +12,7 @@ html,
 body {
     height: 100%;
     overflow: hidden;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* Max width set to keep content within 1440px on bigger desktop screens */
@@ -50,7 +51,7 @@ footer {
 footer li {
     display: inline;
     font-size: 140%;
-    margin: 5%;
+    margin: 3%;
 }
 
 .contact-icons a {
@@ -58,6 +59,13 @@ footer li {
 }
 
 .contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#contact-us {
     display: flex;
     justify-content: center;
     align-items: center;
