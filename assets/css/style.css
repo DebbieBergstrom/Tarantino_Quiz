@@ -15,6 +15,9 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.hidden {
+    display: none;
+}
 
 /* Headings & text styling */
 h1 {
@@ -49,7 +52,7 @@ p {
     padding-bottom: 5rem;
 }
 
-/* SECTION W/ BACKGROUND HOLDING THE SITES CONTENT FOR GAME, RULES & HIGHSCORE */
+/* SECTION W/ BACKGROUND-COLOR HOLDING THE SITES CONTENT FOR GAME, RULES & HIGHSCORE */
 .section-container {
     display: flex;
     justify-content: center;
@@ -221,16 +224,16 @@ footer li {
         font-size: 4vw;
         padding: 0.5rem;
     }
-    
+
     h2 {
         padding-top: 0.6rem;
         font-size: 1.8vw;
     }
-    
+
     h4 {
         font-size: 0.8vw;
     }
-    
+
     p {
         padding: 0.2rem;
         font-size: 2vw;
@@ -248,7 +251,7 @@ footer li {
     footer {
         height: 2.5rem;
         border-top: 5px solid;
-}
+    }
 }
 
 /* MOBILE 450px */
@@ -269,19 +272,19 @@ footer li {
         font-size: 1.4vw;
         padding: 0.3rem 0.4rem;
     }
-    
+
     h1 {
         font-size: 5vw;
     }
-    
+
     h2 {
         font-size: 3vw;
     }
-    
+
     h4 {
         font-size: 1.8vw;
     }
-    
+
     p {
         font-size: 2.8vw;
         line-height: 0.8rem;
@@ -294,5 +297,5 @@ footer li {
     footer {
         height: 2rem;
         border-top: 3.8px solid;
-}
+    }
 }
