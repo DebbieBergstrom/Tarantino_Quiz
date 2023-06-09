@@ -1,108 +1,331 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **The Ultimate Tarantino Quiz**
 
-Welcome Debbie Bergstrom,
+Welcome to 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![amiresponsive](image url)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+*Please have a look at the deployed website ![here.](site url)*
 
-## Gitpod Reminders
+&nbsp;
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## **CONTENT**
 
-`python3 -m http.server`
+## Table of Content
 
-A blue button should appear to click: _Make Public_,
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Returning Visitor Goals](#returning-visitor-goals)
+    3. [Site Owner Goals](#site-owner-goals)
+    4. [Developer Goals](#developer-goals)
+2. [User Experience](#user-experience)
+    1. [User Stories](#user-stories)
+3. [Design](#design)
+    1. [Colour](#colours)
+    2. [Fonts](#fonts)
+    3. [Structure](#structure)
+    4. [Wireframes](#wireframes)
+4.  [Features](#features)
+5. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks-&-tools)
+6. [Testing](#validation)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [Accessibility](#accessibility)
+    4. [Performance](#performance)
+    5. [Device testing](#performing-tests-on-various-devices)
+    6. [Browser compatibility](#browser-compatability)
+    7. [Testing user stories](#testing-user-stories)
+8. [Bugs](#Bugs)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
 
-Another blue button should appear to click: _Open Browser_.
+&nbsp;
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## **GOALS**
+### **Project Goals**
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### **User Goals**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- 
 
-To log into the Heroku toolbelt CLI:
+### **Returning Visitor Goals**
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### **Site Owner Goals**
 
-------
+- 
 
-## Release History
+### **Developer Goals**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+&nbsp;
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## **USER EXPERIENCE**
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+&nbsp;
+### **USER STORIES**
+#### **First time users**
+1. _As a first-time user, I want to 
+2. _As a first-time user, I want to 
+3. _As a first-time user, I want to 
+4. _As a first-time user, I want to 
+5. _As a first-time user, I want to 
+6. _As a first-time user, 
+#### **Returning users**
+8. _As a returning user, I want to
+9. _As a returning user, I want to
+10. _As a returning user, I want to
+11. _As a returning user, I want to 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### **Site owner**
+14. _As the site owner, I want users to 
+15. _As the site owner, I want users to 
+16. _As the site owner, I want users to 
+17. _As the site owner, I want users to 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+&nbsp;
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## **FEATURES**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The website has NUMBER OF responsive pages, although the "Home" page consists of NUMBER OF sections that corresponds to approximatley NUMBER OF pages. By using correct HTML markup and labels it is ensured screen readers can accurately interpret the pages.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+&nbsp;
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### **HEADER & NAVIGATION BAR**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### **LANDING PAGE / HERO IMAGE**
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+&nbsp;
 
-------
+### **FOOTER**
 
-## FAQ about the uptime script
+- The footer is fixed on every page and contains the social media links. It's important these links are easily accessed because 
+- User stories covered: 
 
-**Why have you added this script?**
+&nbsp;
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### **404 - PAGE NOT FOUND ERROR MESSAGE**
 
-**How will this affect me?**
+A custom-made 404 error page was made since it is a simple yet effective way to improve the user experience on your website and keep users happy even if an error page occurs. It has the header, footer and colors from the original design.
+- User stories covered: 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![](image url)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+&nbsp;
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## **DESIGN**
 
-**So….?**
+### **Colors**
+- Color scheme inspiration was taken from 
+- A complementary color was added for sharp contrast 
+- These design choices was thought to help create a visually appealing and cohesive website that will leave a positive impression on our visitors.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![](image url)
 
-**Can I opt out?**
+### **Fonts**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- Logo /h1: Arial??? 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### **Structure**
+The site has been designed with a user-friendly and intuitive structure. Upon arrival, the user is greeted with a ????????????????????????????????
 
-**Anything more?**
+The website is composed of :
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- The homepage, which features ?????????????????
 
----
+By organizing the content into distinct pages, the website makes it easy for users to navigate and find the information they are looking for. Additionally, the use of a consistent navigation bar and footer throughout the website ensures that users can always find their way back to the main sections of the website and find the social media links.
 
-Happy coding!
+### **Wireframes**
+
+<details><summary>Home</summary>
+<img src="">
+</details>
+
+&nbsp;
+
+## **Technologies Used**
+
+### **Languages**
+- HTML
+- CSS
+- JavaScript
+
+### **Frameworks & Tools**
+- Git
+- GitHub
+- Gitpod
+- Tinypng
+- Paint (for Windows)
+- Balsamiq
+- Google Fonts
+- Adobe Photo Shop
+- Font Awsome
+- Favicon.io 
+- W3C validator
+- Jigsaw CSS validator
+- WAVE Web Accessibility Evaluation Tool
+
+&nbsp;
+
+## **Testing**
+
+### **HTML Validation**
+
+The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors except index-page. It states a contrast error of the Google-map at the bottom of the page.
+
+index.html [results](https://validator.w3.org/??????????????????????????)
+
+404.html [results](https://validator.w3.org/??????????????????????????)
+
+&nbsp;
+
+### **CSS Validation**
+
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
+
+<details><summary>style.css</summary>
+<img src="">
+</details>
+
+&nbsp;
+
+### **Accessibility**
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
+
+index.html [results](https://wave.webaim.org/report???????????????????)
+
+404.html [results](https://wave.webaim.org/report???????????????????)
+
+&nbsp;
+
+### **Performance**
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. 
+
+<details><summary>Home</summary>
+<img src="docs/validation/lighthouse_index.png">
+</details>
+<details><summary>Courses</summary>
+<img src="docs/validation/lighthouse_courses.png">
+</details>
+<details><summary>Dive Sites</summary>
+<img src="docs/validation/lighthouse_divesites.png">
+</details>
+<details><summary>Gallery</summary>
+<img src="docs/validation/lighthouse_gallery.png">
+</details>
+
+### **Performing tests on various devices**
+The website was tested on the following devices:
+- Desktop screen 4k
+- Samsung s22 Ultra
+- iPhone XR
+- Samsung 360 Laptop
+
+### **Browser compatability**
+The website was tested on the following browsers:
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Egde
+- Apple Safari
+
+&nbsp;
+
+### **Testing User Stories**
+
+1. As a first-time user, I want to 
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+
+&nbsp;
+
+2. As a returning user, I want to 
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+
+
+3. As the site owner, I want users to have a custom made 404 error message with the websites familiar design to direct them back to the website when needed.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| 404 error page | On 404 error page click on link ?????????????????????????????????? (link starts at Home) or any link up in the navigation bar | Find back to home page | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="">
+</details>
+
+&nbsp;
+
+## **Bugs**
+
+| **Bug** | **Fix** |
+| ----------- | ----------- |
+| 1. Bug to be listed| Solutions to be fixed |
+
+
+&nbsp;
+
+## **Deployment**
+
+**To deploy the website, the following steps were taken using GitHub Pages:**
+
+1. Navigate to the Settings tab in the GitHub repository.
+2. Select Pages from the left-hand menu.
+3. Choose the branch Main as the source.
+After the webpage refreshes, a ribbon will appear at the top saying that "Your site is published at https://debbiebergstrom.github.io/CI_PP1_DS/".
+
+**To fork the repository, follow these steps:**
+
+1. Go to the GitHub repository.
+2. Click on the Fork button located in the upper right-hand corner.
+
+**To clone the repository, follow these steps:**
+
+1. Go to the GitHub repository.
+2. Click on the Code button located above the list of files.
+3. Select your preferred method of cloning using HTTPS, SSH, or Github CLI, and click the copy button to copy the URL to your clipboard.
+4. Open Git Bash.
+5. Change the current working directory to the one where you want the cloned directory to be.
+6. Type "git clone" and paste the URL from the clipboard (e.g., "$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY").
+7. Press Enter to create your local clone.
+
+&nbsp;
+
+## **Credits**
+
+### Here's a collection of sites that were helpful in creating this website:
+&nbsp;
+
+
+Create some of the text content: Worked together with [ChatGPT](https://openai.com/)
+
+&nbsp;
+
+### **Media**
+Pictures taken from 
+
+&nbsp;
+
+## **Acknowledgements**
+
+I would like to take the opportunity to thank:
+- My mentor Mo Shami for his support, advice and for pushing me in the right way. 
+- My family for being really supportive.
+- To the teachers at Code Institute and Slack for providing help and updates.
+- Friends who shared amazing photos of our dive trips. 
+- My boss at my job who's been supportive and helpful with working scheduls.
