@@ -21,7 +21,8 @@
     <main id="background-image">
         <!--Contains all the different site content boxes that is centered and toggles when called-->
         <section class="section-container">
-            <!--Home Page Container-->
+
+            <!--HOME PAGE CONTAINER-->
             <div id="home-box" class="container-content">
                 <h1>Hey "Honey Bunny"!</h1>
                 <br>
@@ -45,8 +46,8 @@
                 </div>
             </div>
 
-            <!--Rules Page Container-->
-            <div class="container-content rules-box hidden">
+            <!--RULES PAGE CONTAINER-->
+            <div class="container-content rules-box">
                 <h1>The following rules apply:</h1>
                 <ol>
                     <li>
@@ -69,11 +70,15 @@
                 <h4>(From Dusk Till Dawn, Kill Bill: Vol 1.)</h4>
                 <div class="btns">
                     <!-- Toggle to Enter Name before Quiz-->
-                    <button class="btn-to-name-first" aria-label="yes start quiz">YES, START QUIZ!</button>                    
+                    <button class="btn-to-name-first" aria-label="yes start quiz">YES, START QUIZ!</button>                                        
+                </div>
+                <!-- Toggle back to Home Page-->
+                <div class="exit-back">
+                    <button class="btn-exit" aria-label="exit go back">X</button>
                 </div>
             </div>
 
-             <!--Enter Name First Container-->
+             <!--ENTER NAME FIRST CONTAINER-->
              <div class="container-content name-first-box">
                 <h1>"Everyone Be Cool!"</h1>
                 <h4>(Pulp Fiction)</h4>
@@ -81,13 +86,52 @@
                     <input type="text" id="name" name="name" required=""
                     placeholder="Enter your name here">
                 <div class="btns">
-                    <!-- Toggle to Enter Name before Quiz-->
-                    <button class="btn-to-quiz" aria-label="submit and begin" type="submit">Submit & Begin!</button>                    
+                    <!-- Submit the name to Scoreboard & Toggle to the Quiz Game (IS THIS POSSIBLE WITH ONE BUTTON????)-->
+                    <button class="btn-to-quiz" aria-label="submit and begin" type="submit">SUBMIT & BEGIN!</button>                    
+                </div>
+                <!-- Toggle back to Home Page-->
+                <div class="exit-back">
+                    <button class="btn-exit" aria-label="exit go back">X</button>
+                </div>
+            </div>
+            
+             <!--QUIZ GAME CONTAINER-->
+             <div id="game-box" class="container-content">
+                <div>
+
+                </div>
+
+
+                <!-- Toggle back to Home Page-->
+                <div class="exit-back">
+                    <button class="btn-exit" aria-label="exit go back">X</button>
                 </div>
             </div>
 
+             <!--FINISHED GAME CONTAINER-->
+             <div id="finished-box" class="container-content">
+               <div class="finished-quiz-img-bg"></div>
 
 
+                <!-- Toggle back to Home Page-->
+                <div class="exit-back">
+                    <button class="btn-exit" aria-label="exit go back">X</button>
+                </div>
+            </div>
+
+             <!--HIGH SCORE CONTAINER-->
+             <div id="score-box" class="container-content">
+                <div class="movie-img">                    
+                </div>
+                <div class="score-list">
+                </div>
+
+
+                <!-- Toggle back to Home Page-->
+                <div class="exit-back">
+                    <button class="btn-exit" aria-label="exit go back">X</button>
+                </div>
+            </div>
 
         </section>
 

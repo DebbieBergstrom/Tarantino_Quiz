@@ -41,6 +41,10 @@ p {
     font-size: 1vw;
 }
 
+.name-first-box h1 {
+    padding-bottom: 0.1em;
+}
+
 /* BACKGROUND */
 #background-image {
     background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_wide.jpg);
@@ -112,6 +116,19 @@ p {
     box-shadow: none;
     transform: translateY(2px);
 }
+
+.btn-exit {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2a2a2a;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 /* FOOTER */
 footer {
