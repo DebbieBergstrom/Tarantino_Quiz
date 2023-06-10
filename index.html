@@ -78,15 +78,17 @@
             </div>
 
              <!--ENTER NAME FIRST CONTAINER-->
-             <div class="container-content name-first-box">
+             <div id="name-first-box" class="container-content">
                 <h1>"Everyone Be Cool!"</h1>
                 <h4>(Pulp Fiction)</h4>
                 <p>We just need your name first.</p>
-                    <input type="text" id="name" name="name" required=""
-                    placeholder="Enter your name here">
+                    <input type="text" id="name" name="name" required="" 
+                    placeholder="Enter your name here"> <!--Make validation and set character rules, like max length-->
+                    <input type="submit" value="Submit Name" class="btns">
+                <div class="msg-name-valid"></div> <!--Make validation that the name is entered with a greeting W/ username and ask to press start button-->
                 <div class="btns">
-                    <!-- Submit the name to Scoreboard & Toggle to the Quiz Game (IS THIS POSSIBLE WITH ONE BUTTON????)-->
-                    <button class="btn-to-quiz" aria-label="submit and begin" type="submit">SUBMIT & BEGIN!</button>                    
+                    <!-- Toggle to the Quiz Game-->
+                    <button class="btn-to-quiz" aria-label="start the quiz">LET THE QUIZ BEGIN!</button>                    
                 </div>
                 <!-- Toggle back to Home Page-->
                 <div class="exit-back">
@@ -109,7 +111,9 @@
 
              <!--FINISHED GAME CONTAINER-->
              <div id="finished-box" class="container-content">
-               <div class="finished-quiz-img-bg"></div>
+               <div class="finished-quiz-img-bg">
+                <div class="users-score"></div> <!-- display this games score-->
+               </div>
 
 
                 <!-- Toggle back to Home Page-->
@@ -122,7 +126,7 @@
              <div id="score-box" class="container-content">
                 <div class="movie-img">                    
                 </div>
-                <div class="score-list">
+                <div id="score-list">
                 </div>
 
 
