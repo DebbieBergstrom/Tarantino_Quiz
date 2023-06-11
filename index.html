@@ -23,7 +23,7 @@
         <section class="section-container">
 
             <!--HOME PAGE CONTAINER-->
-            <div id="home-box" class="container-content">
+            <div class="container-content home-box">
                 <h1>Hey "Honey Bunny"!</h1>
                 <br>
                 <p>Test your knowledge of the legendary filmmaker Quentin Tarantino and his extraordinary movies. Get
@@ -35,7 +35,7 @@
                 <br>
                 <div class="btns">
                     <!-- Toggles to Rules-->
-                    <button id="btn-rules" aria-label="show the rules">RULES</button> 
+                    <button class="btn-rules" aria-label="show the rules">RULES</button> 
                     <!--Toggles to Highscore-->
                     <button class="btn-highscore" aria-label="show highscore board">HIGHSCORE</button>                    
                 </div>
@@ -46,7 +46,7 @@
             </div>
 
             <!--RULES PAGE CONTAINER-->
-            <div class="container-content rules-box">
+            <div class="container-content rules-box hidden">
                 <h1>The following rules apply:</h1>
                 <ol>
                     <li>
@@ -78,18 +78,18 @@
             </div>
 
              <!--ENTER NAME FIRST CONTAINER-->
-             <div id="name-first-box" class="container-content">
+             <div class="container-content name-first-box hidden">
                 <h1>"Everyone Be Cool!"</h1>
                 <h4>(Pulp Fiction)</h4>
                 <p>We just need your name first.</p>
                     <input type="text" id="name" name="name" required="" 
                     placeholder="Enter your name here"> <!--Make validation and set character rules, like max length-->
                 <div class="btns">
-                    <button type="submit" value="Submit Name" class="btns"></button>
+                    <button id="btn-submit" type="submit" aria-label="submit name">Submit Name</button>
                 </div>
                 <div class="msg-name-valid"></div> <!--Make validation that the name is entered with a greeting W/ username and ask to press start button-->
-                <div class="btns">
-                    <!-- Toggle to the Quiz Game-->
+                  <!-- Toggle to the Quiz Game-->
+                <div class="btns">                  
                     <button class="btn-to-quiz" aria-label="start the quiz">LET THE QUIZ BEGIN!</button>                    
                 </div>
                 <!-- Toggle back to Home Page-->
@@ -99,7 +99,7 @@
             </div>
             
              <!--QUIZ GAME CONTAINER-->
-             <div id="game-box" class="container-content">
+             <div class="container-content game-box hidden">
                 <div>
 
                 </div>
@@ -112,7 +112,7 @@
             </div>
 
              <!--FINISHED GAME CONTAINER-->
-             <div id="finished-box" class="container-content">
+             <div class="container-content finished-box hidden">
                <div class="finished-quiz-img-bg">
                     <div class="users-score"></div> <!-- display this games score-->
                </div>
@@ -123,17 +123,16 @@
             </div>
 
              <!--HIGH SCORE CONTAINER-->
-             <div id="score-box" class="container-content">
+             <div class="container-content score-box hidden">
                 <div class="movie-img">                    
                 </div>
-                <div id="score-list">
+                <div class="score-list">
                 </div>
                 <!-- Toggle back to Home Page-->
                 <div class="exit-back">
                     <button class="btn-exit" aria-label="exit go back">X</button>
                 </div>
             </div>
-
         </section>
 
     </main>
@@ -142,7 +141,7 @@
         <ul class="contact-icons">
             <li>
                 <a href="https://github.com/DebbieBergstrom" target="_blank" rel="noopener"
-                    aria-label="Visit our Github page (opens in new tab)"><i class="fab fa-github"></i>
+                    aria-label="Visit our Github page (opens in new tab)"><i class="fab fa-github"></i></a>
             </li>
             <li><!-- Change to a contact form ???? emailjs.com API-->
                 <span id="contact-us"><i class="fa-solid fa-arrow-left"></i> Contact Us! <i
@@ -150,7 +149,7 @@
             </li>
             <li>                
                 <a href="https://www.linkedin.com/in/debbie-bergström-3224ba160" target="_blank" rel="noopener"
-                    aria-label="Visit our LinkedIn page (opens in new tab)"><i class="fa-brands fa-linkedin"></i>
+                    aria-label="Visit our LinkedIn page (opens in new tab)"><i class="fa-brands fa-linkedin"></i></a>
             </li>
         </ul>
     </footer>

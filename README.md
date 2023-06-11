@@ -275,7 +275,7 @@ The website was tested on the following browsers:
 
 | **Bug** | **Fix** |
 | ----------- | ----------- |
-| 1. Bug to be listed| Solutions to be fixed |
+| 1. Couldn't get the exit-buttons to work except for one place| Solutions to be fixed |
 
 
 &nbsp;
@@ -310,6 +310,8 @@ After the webpage refreshes, a ribbon will appear at the top saying that "Your s
 
 ### Here's a collection of sites that were helpful in creating this website:
 &nbsp;
+
+To better help me understand toggling betewwn elements: https://softauthor.com/javascript-toggle-class-element/
 
 
 Create some of the text content: Worked together with [ChatGPT](https://openai.com/)

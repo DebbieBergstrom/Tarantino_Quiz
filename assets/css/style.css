@@ -102,7 +102,7 @@ p {
     padding-top: 1.25rem;
 }
 
-#btn-game-rules {
+.btn-game-rules {
     margin: 1.8rem;
 }
 
@@ -117,6 +117,18 @@ p {
     transform: translateY(2px);
 }
 
+#btn-submit {
+    font-size: 0.7vw;
+    background-color: white;
+    color: #2a2a2a;
+}
+
+#btn-submit:hover {
+    background-color: rgb(168, 26, 38);
+    color: white;
+    cursor: pointer;
+} 
+
 .btn-exit {
     font-size: 1rem;
     color: #ffffff;
@@ -128,6 +140,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .btn-exit:hover {
+    background-color: rgb(168, 26, 38);
+    color: white;
+    cursor: pointer;
   }
 
 /* FOOTER */
