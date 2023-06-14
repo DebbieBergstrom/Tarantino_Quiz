@@ -35,13 +35,13 @@
                 <br>
                 <div class="btns">
                     <!-- Toggles to Rules-->
-                    <button class="btn-rules" aria-label="show the rules">RULES</button> 
+                    <button class="btn-rules" aria-label="show the rules">RULES</button>
                     <!--Toggles to Highscore-->
-                    <button class="btn-highscore" aria-label="show highscore board">HIGHSCORE</button>                    
+                    <button class="btn-highscore" aria-label="show highscore board">HIGHSCORE</button>
                 </div>
                 <!-- Toggle to Enter Name before Quiz-->
                 <div class="btns">
-                    <button class="btn-to-name-first" aria-label="start quiz game">START THE QUIZ!</button>                    
+                    <button class="btn-to-name-first" aria-label="start quiz game">START THE QUIZ!</button>
                 </div>
             </div>
 
@@ -69,7 +69,7 @@
                 <h4>(From Dusk Till Dawn, Kill Bill: Vol 1.)</h4>
                 <div class="btns">
                     <!-- Toggle to Enter Name before Quiz-->
-                    <button class="btn-to-name-first" aria-label="yes start quiz">YES, START QUIZ!</button>                                        
+                    <button class="btn-to-name-first" aria-label="yes start quiz">YES, START QUIZ!</button>
                 </div>
                 <!-- Toggle back to Home Page-->
                 <div class="exit-back">
@@ -77,20 +77,21 @@
                 </div>
             </div>
 
-             <!--ENTER NAME FIRST CONTAINER-->
-             <div class="container-content name-first-box hidden">
+            <!--ENTER NAME FIRST CONTAINER-->
+            <div class="container-content name-first-box hidden">
                 <h1>"Everyone Be Cool!"</h1>
                 <h4>(Pulp Fiction)</h4>
                 <p>We just need your name first.</p>
-                    <input type="text" id="name" name="name" required="" 
-                    placeholder="Enter your name here"> <!--Make validation and set character rules, like max length-->
+                <input type="text" id="name" name="name" required="" placeholder="Enter your name here">
+                <!--Make validation and set character rules, like max length-->
                 <div class="btns">
                     <button id="btn-submit" type="submit" aria-label="submit name">Submit Name</button>
                 </div>
-                <div class="msg-name-valid"></div> <!--Make validation that the name is entered with a greeting W/ username and ask to press start button-->
-                  <!-- Toggle to the Quiz Game-->
-                <div class="btns">                  
-                    <button class="btn-to-quiz" aria-label="start the quiz">LET THE QUIZ BEGIN!</button>                    
+                <div class="msg-name-valid"></div>
+                <!--Make validation that the name is entered with a greeting W/ username and ask to press start button-->
+                <!-- Toggle to the Quiz Game-->
+                <div class="btns">
+                    <button class="btn-to-quiz" aria-label="start the quiz">LET THE QUIZ BEGIN!</button>
                 </div>
                 <!-- Toggle back to Home Page-->
                 <div class="exit-back">
@@ -102,21 +103,23 @@
 
 
 
-            
-             <!--QUIZ GAME CONTAINER-->
-             <div class="container-content game-box">
-                <div id="quiz-movie-img">            
-                    <div> <!-- quiz movie picture -->
-                        <h2 id="questions">Questions go here</h2>
-                        <div id="answer-btns">
-                            <button class="btn-answ">A1</button>
-                            <button class="btn-answ">A2</button>
-                            <button class="btn-answ">A3</button>
-                            <button class="btn-answ">A4</button>
+
+            <!--QUIZ GAME CONTAINER-->
+            <div class="container-content game-box">
+               
+                    <div>
+                        <div>
+                            <!-- quiz movie picture -->
+                            <h2 id="questions">Questions go here</h2>
+                            <div id="answer-btns">
+                                <button class="btn-answ">A1</button>
+                                <button class="btn-answ">A2</button>
+                                <button class="btn-answ">A3</button>
+                                <button class="btn-answ">A4</button>
+                            </div>
+                            <button id="btn-next">Next</button>
                         </div>
-                        <button id="btn-next">Next</button>
                     </div>
-
                 </div>
 
 
@@ -129,20 +132,20 @@
 
 
 
-             <!--FINISHED GAME CONTAINER-->
-             <div class="container-content finished-box hidden">
-               <div class="finished-quiz-img-bg">
+            <!--FINISHED GAME CONTAINER-->
+            <div class="container-content finished-box hidden">
+                <div class="finished-quiz-img-bg">
                     <div class="users-score"></div> <!-- display this games score-->
-               </div>
+                </div>
                 <!-- Toggle back to Home Page-->
                 <div class="exit-back">
                     <button class="btn-exit" aria-label="exit go back">X</button>
                 </div>
             </div>
 
-             <!--HIGH SCORE CONTAINER-->
-             <div class="container-content score-box hidden">
-                <div class="movie-img">                    
+            <!--HIGH SCORE CONTAINER-->
+            <div class="container-content score-box hidden">
+                <div class="movie-img">
                 </div>
                 <div class="score-list">
                 </div>
@@ -161,11 +164,12 @@
                 <a href="https://github.com/DebbieBergstrom" target="_blank" rel="noopener"
                     aria-label="Visit our Github page (opens in new tab)"><i class="fab fa-github"></i></a>
             </li>
-            <li><!-- Change to a contact form ???? emailjs.com API-->
+            <li>
+                <!-- Change to a contact form ???? emailjs.com API-->
                 <span id="contact-us"><i class="fa-solid fa-arrow-left"></i> Contact Us! <i
                         class="fa-solid fa-arrow-right"></i></span>
             </li>
-            <li>                
+            <li>
                 <a href="https://www.linkedin.com/in/debbie-bergström-3224ba160" target="_blank" rel="noopener"
                     aria-label="Visit our LinkedIn page (opens in new tab)"><i class="fa-brands fa-linkedin"></i></a>
             </li>

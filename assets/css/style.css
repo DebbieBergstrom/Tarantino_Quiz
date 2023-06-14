@@ -186,13 +186,18 @@ footer li {
 
 /* THE QUIZ GAME */
 
-#quiz-movie-img {
+ #quiz-movie-img img {
+    display: block; 
+    margin-bottom: 10px;
+    max-width: 70%;  
+    height: auto; 
     width 30%;
     border: 3px solid #2a2a2a;
     border-radius: 0.3rem;
     box-shadow: 0rem 0.125rem 0.4rem rgba(0, 0, 0, 0.5);
     padding: 0.25rem 0.4rem;
-}
+    text-align: center;
+  }
 
 .quiz h1 {
     font-size: 25px;

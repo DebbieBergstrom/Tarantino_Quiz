@@ -209,7 +209,7 @@ const allQuestions = [{
       },
       {
         text: "Tarantino intended it to be a spin-off featuring the character Django titled 'The D Is Silent'",
-        correct: true
+        correct: false
       },
       {
         text: "The initial idea was a crossover film combining characters from 'Inglourious Basterds' and 'Django Unchained'",
@@ -217,7 +217,7 @@ const allQuestions = [{
       },
       {
         text: "The concept began as a novel called 'Django in White Hell' before 'The Hateful Eight'",
-        correct: false
+        correct: true
       },
     ]
   },
@@ -266,8 +266,8 @@ function displayQuestion() {
   let questionNumber = activeQuestionIndex + 1;
   quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question;
 
-  movieImg.innerHTML = activeQuestion.image;
-  movieImg.classList.add("quiz movie-img");
+ // movieImg.innerHTML = activeQuestion.image;
+//  movieImg.classList.add("quiz-movie-img");
 
   activeQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
