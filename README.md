@@ -277,7 +277,7 @@ The website was tested on the following browsers:
 | ----------- | ----------- |
 | 1. Couldn't get the exit-buttons to work except for one place| Solutions to be fixed |
 | 2. Couldn't get the quearySelector to get elements by ID| I changed to getElementsById |
-| 3. Couldn't get the quearySelector to get elements by ID| I changed to getElementsById |
+| 3. Couldn't get the next button in the quiz to move to next question| I changed to getElementsById |
 
 
 &nbsp;
