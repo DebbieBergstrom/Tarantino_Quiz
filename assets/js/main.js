@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // QUIZ QUESTIONS ARRAY
 
 const allQuestions = [{
+    image: "<img src='assets/images/inglorious_basterds_s.jpg' alt='inglorious basterds movie picture'>",
     question: "How was the intense strangulation scene in the film 'Inglourious Basterds' achieved?",
     answers: [{
         text: "It was created using advanced visual effects and CGI techniques.",
@@ -53,6 +54,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/kill_bill_s.jpg' alt='kill bill movie picture'>",
     question: "In the film 'Kill Bill', what is a unique characteristic of the onscreen deaths of the characters?",
     answers: [{
         text: "All onscreen deaths are executed by male characters, emphasizing their dominance.",
@@ -73,6 +75,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/pulp-fiction_s.jpg' alt='pulp fiction movie picture'>",
     question: "What can be said about the biblical passage recited by Jules in 'Pulp Fiction', played by Samuel L. Jackson, known as Ezekiel 25:17?",
     answers: [{
         text: "It's a modified version of the original biblical passage, tailored specifically for the film's narrative",
@@ -93,6 +96,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/tarantino_actors_s.jpg' alt='various actors movie picture'>",
     question: "Among the following actors, who has been seen the most in Quentin Tarantino's movies, ranked from most to least appearances?",
     answers: [{
         text: "Samuel L. Jackson, Leonardo DiCaprio, Christoph Waltz",
@@ -113,6 +117,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/from_dusk_till_dawn_s.jpg' alt='from dusk till dawn movie picture'>",
     question: "What collaboration occurred between Tarantino and Robert Kurtzman that led to Tarantino writing the script to From Dusk Till Dawn?",
     answers: [{
         text: "They collaborated on a special effects project for Oliver Stone when the idea came up.",
@@ -133,6 +138,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/jackie_brown_s.jpg' alt='inglorious basterds movie picture'>",
     question: "In Jackie Brown, Samuel L. Jackson delivers an iconic performance with his character's dialogue. What notable word does he frequently use in the film?",
     answers: [{
         text: "motherfu**er",
@@ -153,6 +159,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/django_red_s.jpg' alt='django unchained movie picture'>",
     question: "What did Leonardo DiCaprio do after accidentally crushing a glass and started bleeding during the filming of a dinner scene in 'Django Unchained'?",
     answers: [{
         text: "He immediately called for medical assistance and halted the filming.",
@@ -173,6 +180,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/reservoir_dogs_s.jpg' alt='reservoir dogs movie picture'>",
     question: "In the iconic scene from 'Reservoir Dogs', what song does Mr. Blonde dance to while torturing a captured cop?",
     answers: [{
         text: "'You Can't Hurry Love' by The Supremes.",
@@ -193,6 +201,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/inglorious_basterds_s' alt='inglorious basterds movie picture'>",
     question: "In the early development stages, what was the original concept and intended title for 'The Hateful Eight'?",
     answers: [{
         text: "It was envisioned as a prequel to 'Django Unchained' titled 'The Birth of Hatred.'",
@@ -213,6 +222,7 @@ const allQuestions = [{
     ]
   },
   {
+    image: "<img src='assets/images/inglorious_basterds_s' alt='inglorious basterds movie picture'>",
     question: "Who portrayed the character of Sharon Tate in the film 'Once Upon a Time in Hollywood' and which infamous murderer was responsible for her death?",
     answers: [{
         text: "Jennifer Lawrence - Ted Bundy",
@@ -235,11 +245,10 @@ const allQuestions = [{
 
 ];
 
-
 const quizQuestions = document.getElementById('questions');
 const btnNext = document.getElementById('btn-next');
 const btnAnswers = document.getElementById('answer-btns');
-
+const movieImg = document.getElementById('quiz-movie-img');
 let activeQuestionIndex = 0;
 let score = 0;
 
@@ -256,6 +265,9 @@ function displayQuestion() {
   let activeQuestion = allQuestions[activeQuestionIndex];
   let questionNumber = activeQuestionIndex + 1;
   quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question;
+
+  movieImg.innerHTML = activeQuestion.image;
+  movieImg.classList.add("quiz movie-img");
 
   activeQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
