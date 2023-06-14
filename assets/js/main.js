@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnToQuiz = document.querySelector('.btn-to-quiz');
   const btnNameFirst = document.querySelector('.btn-to-name-first');
   const btnExit = document.querySelector('.btn-exit');
-  
+
   const btnSubmit = document.getElementById('btn-submit');
- 
+
 
 
   function toggleBoxes(ToShow, ...ToHide) {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // QUIZ QUESTIONS ARRAY
 
 const allQuestions = [{
-  question: "How was the intense strangulation scene in the film 'Inglourious Basterds' achieved?",
+    question: "How was the intense strangulation scene in the film 'Inglourious Basterds' achieved?",
     answers: [{
         text: "It was created using advanced visual effects and CGI techniques.",
         correct: false
@@ -240,7 +240,7 @@ const quizQuestions = document.getElementById('questions');
 const btnNext = document.getElementById('btn-next');
 const btnAnswers = document.getElementById('answer-btns');
 
-let activeQuestionIndex = 0 ;
+let activeQuestionIndex = 0;
 let score = 0;
 
 
@@ -255,14 +255,14 @@ function displayQuestion() {
   resetState();
   let activeQuestion = allQuestions[activeQuestionIndex];
   let questionNumber = activeQuestionIndex + 1;
-  quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question; 
+  quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question;
 
   activeQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerHTML = answer.text;
     button.classList.add("btn-answ");
     btnAnswers.appendChild(button);
-    if(answer.correct) {
+    if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
     button.addEventListener("click", selectAnswer);
@@ -271,28 +271,35 @@ function displayQuestion() {
 
 function resetState() {
   btnNext.style.display = "none";
-  while(btnAnswers.firstChild) {
+  while (btnAnswers.firstChild) {
     btnAnswers.removeChild(btnAnswers.firstChild);
   }
 }
 
-function selectAnswer(e){
-  const selectedBtn = e.target; 
+function selectAnswer(e) { //targets the four fields of answer options.
+  const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
-  if(isCorrect){
-    selectedBtn.classList.add("correct");
-  }else{
-    selectedBtn.classList.add("incorrect");
+  if (isCorrect) {
+    selectedBtn.classList.add("correct"); // this is where it colors the choice green for correct.
+    score++;
+  } else {
+    selectedBtn.classList.add("incorrect"); // this is where it colors the choice red for incorrect.
   }
   Array.from(btnAnswers.children).forEach(button => {
-    if(button.dataset.correct === "true"){ // this is where it colors the choice green for correct and red for incorrect.
+    if (button.dataset.correct === "true") {
       button.classList.add("correct");
     }
-    button.disabled = true; // this takes away the ability to choose more. Put my own popup here with fun facts?
+    button.disabled = true; // takes away the ability re-select another answer. Put my own popup here with fun facts?
   })
   btnNext.style.display = "block";
-
 }
 
+btnNext.addEventListener("click", () => {
+  if (activeQuestionIndex < quizQuestions.length) {
+  handleBtnNext();
+} else {
+  beginQuiz();
+}
+});
+
 beginQuiz();
-  
