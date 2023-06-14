@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   btnToQuiz.addEventListener("click", () => toggleBoxes(gameBox, homeBox, nameFirstBox));
   btnExit.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox));
 
-});
+
 
 
 // QUIZ QUESTIONS ARRAY
@@ -236,7 +236,7 @@ const allQuestions = [{
 ];
 
 
-let quizQuestions = document.getElementsByClassName('questions');
+const quizQuestions = document.getElementById('questions');
 const btnNext = document.getElementById('btn-next');
 const btnAnswers = document.getElementById('answer-btns');
 
@@ -286,7 +286,7 @@ function selectAnswer(e) { //targets the four fields of answer options.
     selectedBtn.classList.add("incorrect"); // this is where it colors the choice red for incorrect.
   }
   Array.from(btnAnswers.children).forEach(button => {
-    if (button.dataset.correct === "true"); {
+    if (button.dataset.correct === "true") {
       button.classList.add("correct");
     }
     button.disabled = true; // takes away the ability re-select another answer. Put my own popup here with fun facts?
@@ -294,22 +294,26 @@ function selectAnswer(e) { //targets the four fields of answer options.
   btnNext.style.display = "block";
 }
 
-function scores(){
+function displayScore(){
   resetState();
-  quizQuestions.innerHTML = `Your score: ${score} out of ${quizQuestions.length}!`;
+  quizQuestions.innerHTML = `Your score: ${score} out of ${allQuestions.length}!`;
   btnNext.innerHTML = "Play again";
   btnNext.style.display = "block";
 }
 
-function handleBtnNext(){
+
+
+function handleBtnNext() {
   activeQuestionIndex++;
-  if(activeQuestionIndex < quizQuestions.length){
-    showScore();
+  if (activeQuestionIndex < allQuestions.length) {
+    displayQuestion();
+  } else {
+    displayScore();
   }
 }
 
 btnNext.addEventListener("click", () => {
-  if (activeQuestionIndex < quizQuestions.length) {
+  if (activeQuestionIndex < allQuestions.length) {
   handleBtnNext();
 } else {
   beginQuiz();
@@ -317,3 +321,5 @@ btnNext.addEventListener("click", () => {
 });
 
 beginQuiz();
+
+});
