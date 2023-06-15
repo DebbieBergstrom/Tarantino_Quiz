@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameBox = document.querySelector('.game-box');
 
 
-  // Get buttons
+  // Get buttons 
   const btnToQuiz = document.querySelector('.btn-to-quiz');
   const btnNameFirst = document.querySelector('.btn-to-name-first');
   const btnExit = document.querySelector('.btn-exit');
@@ -249,6 +249,8 @@ const quizQuestions = document.getElementById('questions');
 const btnNext = document.getElementById('btn-next');
 const btnAnswers = document.getElementById('answer-btns');
 const movieImg = document.getElementById('quiz-img');
+let timeLeft = document.querySelector(".time-left");
+let countOfQuestion = document.querySelector("number-of-q");
 let activeQuestionIndex = 0;
 let score = 0;
 

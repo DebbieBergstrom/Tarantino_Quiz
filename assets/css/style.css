@@ -185,7 +185,7 @@ p {
 .btn-answ {
     background: #ffffff;
     color:#2a2a2a;
-    font-size: 0,8em;
+    font-size: 0.6em;
     width: 90%;
     border: 1px solid #2a2a2a;
     margin: 10px;
@@ -217,7 +217,7 @@ p {
 #btn-next {
     background: #ffffff;
     color:#2a2a2a;
-    font-weight: 500;
+    font-size: 0.7em;
     width: 50%;
     border: none;
     padding: 10px;
@@ -253,6 +253,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 0.5em 1.5em;
+    font-size: 0.8em;
 }
 
 .question-count {
@@ -262,6 +263,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 0.3em 1.5em;
+    font-size: 0.8em;
 }
 
 
@@ -370,6 +372,10 @@ footer li {
     .container-content {
         width: 70vw;
         margin-top: 38vh;
+    }
+
+    #quiz-img {
+        width: 50%;
     }
 
     h1 {
