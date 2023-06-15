@@ -279,6 +279,7 @@ The website was tested on the following browsers:
 | 2. Couldn't get the quearySelector to get elements by ID| I changed to getElementsById |
 | 3. Can't the images to size properly in the game-box contaner| Solutions to be fixed***********|
 | 4. Couldn't get the next button in the quiz to move to next question| I found the mixup between variables allQuestions and quizQuestions and corrected it.|
+| 5. When the quiz restarts, the images doesn't get displayed | Solutions to be fixed **************|
 
 
 &nbsp;
@@ -315,7 +316,7 @@ After the webpage refreshes, a ribbon will appear at the top saying that "Your s
 &nbsp;
 
 To better help me understand toggling betewwn elements: https://softauthor.com/javascript-toggle-class-element/
-
+To better help me understand the use of quearyselectors: https://www.w3schools.com/jsref/met_document_queryselector.asp
 
 Create some of the text content: Worked together with [ChatGPT](https://openai.com/)
 
