@@ -311,15 +311,6 @@ function selectAnswer(e) { //targets the four fields of answer options.
   btnNext.style.display = "block";
 }
 
-// Get score images 
-const resultImages = [
-  document.getElementById('lowscore'), 
-  document.getElementById('midscore'), 
-  document.getElementById('higherscore');  
-];
-
- // Get the score-images container
- let scoreImagesContainer = document.querySelector('.score-images');
 
 function displayScore(){
   resetState();
@@ -327,22 +318,6 @@ function displayScore(){
   timeLeft.style.display = "none"; //removes the timer counting down 
   timer.style.display = "none"; //removes timer div
   movieImg.style.display = "none"; // removes the last image from the question array 
-  
-   // Hide all the images initially
-   scoreImagesContainer.style.display = 'none';
-   
-   // Determine which image to display based on the score
-   
-if (score >= 1 && score <= 4) {
-  scoreImagesContainer.style.display = 'block'; // Show the container
-  resultImages[0].style.display = 'block'; // Show the first image
-} else if (score >= 5 && score <= 7) {
-  scoreImagesContainer.style.display = 'block'; // Show the container
-  resultImages[1].style.display = 'block'; // Show the second image
-} else if (score >= 8 && score <= 10) {
-  scoreImagesContainer.style.display = 'block'; // Show the container
-  resultImages[2].style.display = 'block'; // Show the third image
-}
 
   quizQuestions.innerHTML = `Your score: ${score} out of ${allQuestions.length}!`;
   btnNext.innerHTML = "Play again";
