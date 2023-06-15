@@ -140,6 +140,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
   }
 
   .btn-exit:hover {
@@ -191,9 +192,15 @@ footer li {
     flex-direction: column;
 }
 
+.img-wrapper {
+    overflow: hidden;
+    width: 70%;
+    max-height: 200px;
+}
+
  #quiz-img {
-    max-width: 100%;
-    object-fit: cover;
+    width: 70%;
+    height: auto;
   }
   
 
