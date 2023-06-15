@@ -1,30 +1,25 @@
-      <!--Rules Page Container--> 
-      
-    <div class="container-content">
-        <h1>The following rules apply:</h1>
-        <ol>
-            <li>
-                <p>Number One: Have fun!</p>
-            </li>
-            <li>
-                <p>Number Two: You have 15 seconds on each queastion and you can't change answer</p>
-            </li>
-            <li>
-                <p>Number Three: If you don't choose within 15 seconds, you'll lose a point.</p>
-            </li>
-            <li>
-                <p>Number Four: You get one point for each correct answer.</p>
-            </li>
-            <li>
-                <p>No quitters allowed, play till the end!</p>
-            </li>
-        </ol>
-        <h2>Now, are we absolutely, positively clear <br> about rule number one?”</h2>  
-            <h4>(From Dusk Till Dawn, Kill Bill: Vol 1.)</h4>
-        <div class="btns">
-            <button id="btn-game-rules" class="btn-game">START THE QUIZ!</button> <!-- Calls the quiz to begin-->
+       <!--FINISHED GAME CONTAINER-->
+       <div class="container-content finished-box hidden">
+        <div class="finished-quiz-img-bg">
+            <div class="users-score"></div> <!-- display this games score-->
         </div>
-    </div> 
+        <!-- Toggle back to Home Page-->
+        <div class="exit-back">
+            <button class="btn-exit" aria-label="exit go back">X</button>
+        </div>
+    </div>
+
+    <!--HIGH SCORE CONTAINER-->
+    <div class="container-content score-box hidden">
+        <div class="movie-img">
+        </div>
+        <div class="score-list">
+        </div>
+        <!-- Toggle back to Home Page-->
+        <div class="exit-back">
+            <button class="btn-exit" aria-label="exit go back">X</button>
+        </div>
+    </div>
            
             
     // Get boxes 
