@@ -194,12 +194,12 @@ footer li {
 
 .img-wrapper {
     overflow: hidden;
-    width: 70%;
+    width: 100%;
     max-height: 200px;
 }
 
  #quiz-img {
-    width: 70%;
+    width: 100%;
     height: auto;
   }
   
