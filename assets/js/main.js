@@ -248,7 +248,7 @@ const allQuestions = [{
 const quizQuestions = document.getElementById('questions');
 const btnNext = document.getElementById('btn-next');
 const btnAnswers = document.getElementById('answer-btns');
-const movieImg = document.getElementById('quiz-movie-img');
+const movieImg = document.getElementById('quiz-img');
 let activeQuestionIndex = 0;
 let score = 0;
 
@@ -266,8 +266,8 @@ function displayQuestion() {
   let questionNumber = activeQuestionIndex + 1;
   quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question;
 
- // movieImg.innerHTML = activeQuestion.image;
-//  movieImg.classList.add("quiz-movie-img");
+  movieImg.innerHTML = activeQuestion.image;
+  movieImg.classList.add("quiz-img");
 
   activeQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
