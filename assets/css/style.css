@@ -185,9 +185,17 @@ footer li {
 
 /* THE QUIZ GAME */
 
- #quiz-img img {
-    object-fit: contain;
+.game-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+ #quiz-img {
+    max-width: 100%;
+    object-fit: cover;
   }
+  
 
 .quiz h1 {
     font-size: 25px;
