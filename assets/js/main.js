@@ -250,7 +250,8 @@ const btnNext = document.getElementById('btn-next');
 const btnAnswers = document.getElementById('answer-btns');
 const movieImg = document.getElementById('quiz-img');
 let timeLeft = document.querySelector(".time-left");
-let countOfQuestion = document.querySelector("number-of-q");
+let timer = document.querySelector('.timer');
+let countOfQuestion = document.getElementById("number-of-q");
 let activeQuestionIndex = 0;
 let score = 0;
 
@@ -260,6 +261,7 @@ function beginQuiz() {
   score = 0;
   btnNext.innerHTML = "Next";
   displayQuestion();
+  countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
 }
 
 function displayQuestion() {
@@ -270,6 +272,7 @@ function displayQuestion() {
 
   movieImg.innerHTML = activeQuestion.image;
   movieImg.classList.add("quiz-img");
+  countOfQuestion.textContent = `${activeQuestionIndex + 1} out of ${allQuestions.length}`;
 
   activeQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
@@ -310,6 +313,10 @@ function selectAnswer(e) { //targets the four fields of answer options.
 
 function displayScore(){
   resetState();
+  countOfQuestion.style.display = "none"; //removes the question counter
+  timeLeft.style.display = "none"; //removes the timer counting down 
+  timer.style.display = "none"; //removes timer div
+  movieImg.style.display = "none"; // removes the last image from the question array  
   quizQuestions.innerHTML = `Your score: ${score} out of ${allQuestions.length}!`;
   btnNext.innerHTML = "Play again";
   btnNext.style.display = "block";
