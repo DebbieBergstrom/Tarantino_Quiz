@@ -316,7 +316,10 @@ function displayScore(){
   countOfQuestion.style.display = "none"; //removes the question counter
   timeLeft.style.display = "none"; //removes the timer counting down 
   timer.style.display = "none"; //removes timer div
-  movieImg.style.display = "none"; // removes the last image from the question array  
+  movieImg.style.display = "none"; // removes the last image from the question array 
+  document.getElementById("newImageId").src = "<img src='assets/images/lowscore_blew_my_mind_s.jpg' alt='lowscore image'>";
+  document.getElementById("newImageId").style.display = "block";
+  
   quizQuestions.innerHTML = `Your score: ${score} out of ${allQuestions.length}!`;
   btnNext.innerHTML = "Play again";
   btnNext.style.display = "block";

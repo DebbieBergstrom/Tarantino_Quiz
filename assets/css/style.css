@@ -266,6 +266,9 @@ p {
     font-size: 0.8em;
 }
 
+.score-images {
+    display: none;
+}
 
 
 /* FOOTER */
