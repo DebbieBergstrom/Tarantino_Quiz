@@ -324,6 +324,9 @@ Create some of the text content: Worked together with [ChatGPT](https://openai.c
 ### **Media**
 Pictures taken from 
 
+Timer icon taken from:
+https://www.flaticon.com/free-icon/stopwatch_10028890?term=timer&page=1&position=19&origin=tag&related_id=10028890
+
 &nbsp;
 
 ## **Acknowledgements**

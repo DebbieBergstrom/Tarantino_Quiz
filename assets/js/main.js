@@ -201,7 +201,7 @@ const allQuestions = [{
     ]
   },
   {
-    image: "<img src='assets/images/inglorious_basterds_s' alt='inglorious basterds movie picture'>",
+    image: "<img src='assets/images/django_red_s.jpg' alt='django movie picture'>",
     question: "In the early development stages, what was the original concept and intended title for 'The Hateful Eight'?",
     answers: [{
         text: "It was envisioned as a prequel to 'Django Unchained' titled 'The Birth of Hatred.'",
@@ -222,7 +222,7 @@ const allQuestions = [{
     ]
   },
   {
-    image: "<img src='assets/images/inglorious_basterds_s' alt='inglorious basterds movie picture'>",
+    image: "<img src='assets/images/once_upon_s.jpg' alt='once upon a time in hollywood movie picture'>",
     question: "Who portrayed the character of Sharon Tate in the film 'Once Upon a Time in Hollywood' and which infamous murderer was responsible for her death?",
     answers: [{
         text: "Jennifer Lawrence - Ted Bundy",

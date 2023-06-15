@@ -255,6 +255,15 @@ footer li {
     display: none;
 }
 
+#bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+}
+
 .correct {
     background: #69cd27;
 }
