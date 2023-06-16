@@ -147,11 +147,11 @@ p {
     cursor: pointer;
   }
 
-/* THE RULES BOX */
+/* LIST STYLING - RULES & HIGHSCORE */
 
-li {
+.lists {
     text-align: left;
-    list-style-type: disc;
+    padding-left: 1rem;
 }
 
 /* THE QUIZ GAME */
