@@ -42,7 +42,7 @@ p {
     font-size: 1vw;
 }
 
-.name-first-box h1 {
+#name-first-box h1 {
     padding-bottom: 0.1em;
 }
 
@@ -150,7 +150,7 @@ p {
 
 /* THE QUIZ GAME */
 
-.game-box {
+#game-box {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -165,10 +165,7 @@ p {
  #quiz-img {
     width: 100%;
     height: auto;
-  }
-  
-
-
+}
 
 .btn-answ {
     background: #ffffff;

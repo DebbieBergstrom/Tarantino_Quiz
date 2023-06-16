@@ -23,7 +23,7 @@
         <section class="section-container">
 
             <!--HOME PAGE CONTAINER-->
-            <div class="container-content home-box hidden">
+            <div id="home-box" class="container-content hidden">
                 <h1>Hey "Honey Bunny"!</h1>
                 <br>
                 <p>Test your knowledge of the legendary filmmaker Quentin Tarantino and his extraordinary movies. Get
@@ -46,7 +46,7 @@
             </div>
 
             <!--RULES PAGE CONTAINER-->
-            <div class="container-content rules-box hidden">
+            <div id="rules-box" class="container-content hidden">
                 <h1>The following rules apply:</h1>
                 <ol>
                     <li>
@@ -78,7 +78,7 @@
             </div>
 
             <!--ENTER NAME FIRST CONTAINER-->
-            <div class="container-content name-first-box hidden">
+            <div id="name-first-box" class="container-content hidden">
                 <h1>"Everyone Be Cool!"</h1>
                 <h4>(Pulp Fiction)</h4>
                 <p>We just need your name first.</p>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="msg-name-valid"></div>
                 <!--Make validation that the name is entered with a greeting W/ username and ask to press start button-->
-                <!-- Toggle to the Quiz Game-->
+                <!-- Toggle to the Game-box-->
                 <div class="btns">
                     <button class="btn-to-quiz" aria-label="start the quiz">LET THE QUIZ BEGIN!</button>
                 </div>
@@ -102,15 +102,15 @@
 
 
             <!--QUIZ GAME CONTAINER-->
-            <div class="container-content game-box">
+            <div id="game-box" class="container-content">
                 <div class="img-wrapper">
                     <div id="quiz-img"></div>
                 </div>
-                <div class="score-images">
+                <!--<div class="score-images"> NOT SURE HOW YET
                     <img id="lowscore" src="assets/images/lowscore_blew_my_mind_s.jpg">
                     <img id="midscore" src="assets/images/middlescore_not_too_bad_s.jpg">
                     <img id="higherscore" src="assets/images/highscore_bad_m_f_s.jpg">
-                </div>
+                </div>-->
                 <div class="quiz-content">
                     <!-- Quiz movie picture -->
                     <h2 id="questions">Questions go here</h2>
@@ -138,7 +138,7 @@
 
 
            <!--HIGHSCORE PAGE CONTAINER-->
-           <div class="container-content score-box hidden">
+           <div id="score-box"class="container-content hidden">
             <h1>Highscores of the day:</h1>
             <ol class="highscore-list">
                 <li>
@@ -158,11 +158,7 @@
                 </li>
             </ol>
             <h2>Now, are we absolutely, positively clear <br> about rule number one?”</h2>
-            <h4>(From Dusk Till Dawn, Kill Bill: Vol 1.)</h4>
-            <div class="btns">
-                <!-- Toggle to Enter Name before Quiz-->
-                <button class="btn-to-name-first" aria-label="yes start quiz">YES, START QUIZ!</button>
-            </div>
+            <h4>(From Dusk Till Dawn, Kill Bill: Vol 1.)</h4>           
             <!-- Toggle back to Home Page-->
             <div class="exit-back">
                 <button class="btn-exit" aria-label="exit go back">X</button>

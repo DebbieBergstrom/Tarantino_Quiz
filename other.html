@@ -31,12 +31,12 @@
     const scoreBox = document.querySelector('.score-box');
     
     // Get buttons
-    const btnRules = document.querySelector('.btn-rules');
+    const btnToRules = document.querySelector('.btn-rules');
     const btnToQuiz = document.querySelector('.btn-to-quiz');
-    const btnScore = document.querySelector('.btn-highscore');
-    const btnNameFirst = document.querySelector('.btn-to-name-first');
-    const btnExit = document.querySelector('.btn-exit');
-    let btnSubmit = document.querySelector('#btn-submit');
+    const btnToHighScoreList = document.querySelector('.btn-highscore');
+    const btnToNameFirst = document.querySelector('.btn-to-name-first');
+    const btnExitToHome = document.querySelector('.btn-exit');
+    let btnSubmitName = document.querySelector('#btn-submit');
     
     // Get Finished Quiz background & Scorelist
     let finishedImage = document.querySelector('.finished-quiz-img-bg');
@@ -50,8 +50,7 @@
         }
       }
     
-      btnRules.addEventListener("click", () => toggleBoxes(rulesBox, homeBox, nameFirstBox, gameBox, finishedBox, scoreBox));
-      btnScore.addEventListener("click", () => toggleBoxes(scoreBox, homeBox, rulesBox, nameFirstBox, gameBox, finishedBox));
+      
       
       btnNameFirst.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, rulesBox, gameBox, finishedBox, scoreBox));
       btnToQuiz.addEventListener("click", () => toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, finishedBox, scoreBox));
