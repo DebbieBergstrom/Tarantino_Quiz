@@ -280,6 +280,8 @@ The website was tested on the following browsers:
 | 3. Can't the images to size properly in the game-box contaner| Solutions to be fixed***********|
 | 4. Couldn't get the next button in the quiz to move to next question| I found the mixup between variables allQuestions and quizQuestions and corrected it.|
 | 5. When the quiz restarts, the images doesn't get displayed | Solutions to be fixed **************|
+| 6. When reloading page, both Home Page and Quiz is visible, but quiz should be hidden | Added !important to the hidden class with display:none|
+
 
 
 &nbsp;

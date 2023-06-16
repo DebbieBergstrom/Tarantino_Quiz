@@ -4,7 +4,6 @@
     padding: 0;
     border: none;
     text-decoration: none;
-    list-style: none;
     box-sizing: border-box;
 }
 
@@ -17,7 +16,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Headings & text styling */
@@ -147,6 +146,13 @@ p {
     color: white;
     cursor: pointer;
   }
+
+/* THE RULES BOX */
+
+li {
+    text-align: left;
+    list-style-type: disc;
+}
 
 /* THE QUIZ GAME */
 

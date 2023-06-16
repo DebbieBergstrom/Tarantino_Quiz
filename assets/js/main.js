@@ -8,15 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoreBox = document.getElementById('score-box');
 
   // Get buttons
-  const btnToRules = document.querySelector('.btn-rules');
-  const btnToQuiz = document.querySelector('.btn-to-quiz');
-  const btnToHighScoreList = document.querySelector('.btn-highscore');
-  const btnToNameFirst = document.querySelector('.btn-to-name-first');
-  const btnExitToHome = document.querySelector('.btn-exit');
+  const btnToRules = document.querySelector('.btn-rules'); //class, change to ID 
+  const btnToQuiz = document.querySelector('.btn-to-quiz'); //class 
+  const btnToHighScoreList = document.querySelector('.btn-highscore'); // class, change to ID
+  const btnToNameFirst = document.querySelector('.btn-to-name-first'); //class
+  const btnExitToHome = document.querySelector('.btn-exit'); //class
   let btnSubmitName = document.getElementById('btn-submit');
 
   // Scorelist
   let scoreList = document.querySelector('.score-list');
+
 
   // Initially hide all boxes except the homeBox
   gameBox.classList.add('hidden');
