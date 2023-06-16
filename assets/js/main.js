@@ -1,33 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // Get boxes 
-  const homeBox = document.querySelector('.home-box');
+  const homeBox = document.querySelector('.home-box'); 
+  const rulesBox = document.querySelector('.rules-box'); 
   const nameFirstBox = document.querySelector('.name-first-box');
   const gameBox = document.querySelector('.game-box');
-
-
-  // Get buttons 
+  const finishedBox = document.querySelector('.finished-box');
+  const scoreBox = document.querySelector('.score-box');
+  
+  // Get buttons
+  const btnToRules = document.querySelector('.btn-rules');
   const btnToQuiz = document.querySelector('.btn-to-quiz');
-  const btnNameFirst = document.querySelector('.btn-to-name-first');
-  const btnExit = document.querySelector('.btn-exit');
+  const btnToHighScoreList = document.querySelector('.btn-highscore');
+  const btnToNameFirst = document.querySelector('.btn-to-name-first');
+  const btnExitToHome = document.querySelector('.btn-exit');
+  let btnSubmitName = document.getElementById('btn-submit');
+  
+  // Get Finished Quiz background & Scorelist
+  let finishedImage = document.querySelector('.finished-quiz-img-bg');
+  let scoreList = document.querySelector('.score-list');
+ 
 
-  const btnSubmit = document.getElementById('btn-submit');
+// Toggles between the desired "boxes" to be shown/hidden
+  function toggleBoxes(elementToShow, ...elementToHide) {
+    elementToShow.classList.remove("hidden"); // This shows the first element
 
-
-
-  function toggleBoxes(ToShow, ...ToHide) {
-    ToShow.classList.remove("hidden"); // This shows the first element
-
-    for (const element of ToHide) {
+    for (const element of elementToHide) {
       element.classList.add("hidden"); // This hides the rest of the elements
     }
   }
 
-  btnNameFirst.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, gameBox));
+  btnToNameFirst.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, gameBox));
   btnToQuiz.addEventListener("click", () => toggleBoxes(gameBox, homeBox, nameFirstBox));
-  btnExit.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox));
-
-
+  btnExitToHome.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox));
+  btnToRules.addEventListener("click", () => toggleBoxes(rulesBox, homeBox, nameFirstBox, gameBox, finishedBox, scoreBox));
+  btnToHighScoreList.addEventListener("click", () => toggleBoxes(scoreBox, homeBox, rulesBox, nameFirstBox, gameBox, finishedBox));
 
 
 // QUIZ QUESTIONS ARRAY
