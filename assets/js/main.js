@@ -220,7 +220,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
       ]
     },
     {
-      image: "<img src='assets/images/django_red_s.jpg' alt='hateful eight movie picture'>",
+      image: "<img src='assets/images/hateful_eight_s.jpg' alt='hateful eight movie picture'>",
       question: "In the early development stages, what was the original concept and intended title for 'The Hateful Eight'?",
       answers: [{
           text: "It was envisioned as a prequel to 'Django Unchained' titled 'The Birth of Hatred.'",

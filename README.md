@@ -277,7 +277,7 @@ The website was tested on the following browsers:
 | ----------- | ----------- |
 | 1. When reloading page, both Home Page and Quiz is visible, but quiz should be hidden | Added !important to the hidden class with display:none|
 | 2. Couldn't get the quearySelector to get elements by ID| I changed to getElementsById |
-| 3. Can't the images to size properly in the game-box contaner| Solutions to be fixed***********|
+| 3. Can't get the images to size properly in the game-box contaner| Changed image sizes and width to 100%, height auto.|
 | 4. Couldn't get the next button in the quiz to move to next question| I found the mixup between variables allQuestions and quizQuestions and corrected it.|
 | 5. When the quiz restarts, the images doesn't get displayed | Solutions to be fixed **************|
 | 6. Couldn't get the exit-buttons to work except for one place| Had to make several exit-buttons with different IDs|
