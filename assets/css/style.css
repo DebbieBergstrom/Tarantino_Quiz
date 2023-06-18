@@ -126,7 +126,16 @@ p {
     background-color: rgb(168, 26, 38);
     color: white;
     cursor: pointer;
-} 
+}
+
+.exit-back {
+    width: 6em;
+    border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1.5em;
+}
 
 .exit {
     font-size: 1rem;
@@ -139,13 +148,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .exit:hover {
+.exit:hover {
     background-color: rgb(168, 26, 38);
     color: white;
     cursor: pointer;
-  }
+}
 
 /* LIST STYLING - RULES & HIGHSCORE */
 
@@ -168,14 +177,14 @@ p {
     max-height: 200px;
 }
 
- #quiz-img {
+#quiz-img {
     width: 100%;
     height: auto;
 }
 
 .btn-answ {
     background: #ffffff;
-    color:#2a2a2a;
+    color: #2a2a2a;
     font-size: 0.7em;
     width: 90%;
     border: 1px solid #2a2a2a;
@@ -190,7 +199,7 @@ p {
 
 .btn-answ:hover:not([disabled]) {
     background: rgb(236, 236, 3);
-    color:black
+    color: black
 }
 
 .btn-answ:disabled {
@@ -207,7 +216,7 @@ p {
 
 #btn-next {
     background: #ffffff;
-    color:#2a2a2a;
+    color: #2a2a2a;
     font-size: 0.7em;
     width: 50%;
     border: none;
@@ -225,15 +234,6 @@ p {
     justify-content: space-between;
     align-items: center;
     padding-top: 0.6em;
-}
-
-.exit-back {
-    width: 6em;
-    border-radius: 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5em 1.5em;
 }
 
 .timer {
@@ -417,7 +417,7 @@ footer li {
     .container-content {
         width: 85vw;
         background-color: rgba(0, 0, 0, 0.7);
-        margin-top: 29vh;
+        margin-top: 30vh;
     }
 
     .btns button {
@@ -429,6 +429,29 @@ footer li {
     h1 {
         font-size: 7vw;
         padding: 0.6rem;
+    }
+
+    #rules-box h1 {
+        font-size: 6vw;
+        padding: 0.1rem;
+    }
+
+    #rules-box h2 {
+        font-size: 4vw;
+    }
+
+    
+    #rules-box h4 {
+        font-size: 2vw;
+    }
+
+    #rules-box p {
+        font-size: 3.5vw;
+        padding-bottom: 0.1rem;
+    }
+
+    #btn-to-name-first-2 {
+        margin-top: 1rem;
     }
 
     h2 {
@@ -449,7 +472,17 @@ footer li {
     }
 
     .btn-answ {
-        font-size: 0.4em;
+        font-size: 0.6em;
+    }
+
+    .exit-back {
+        padding: 0.2em;
+    }
+
+    .exit {
+        font-size: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     footer {
