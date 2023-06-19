@@ -285,9 +285,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     timer = setInterval(() => {
       currentTime--;
   
-      if (currentTime <= 5 && currentTime >= 3) {
-        timerElement.style.color = "yellow";
-      } else if (currentTime < 3 && currentTime >= 0) {
+      if (currentTime <= 5 && currentTime >= 0) {
         timerElement.style.color = "red";
       } else {
         timerElement.style.color = "green";
