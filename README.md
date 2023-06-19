@@ -317,8 +317,12 @@ After the webpage refreshes, a ribbon will appear at the top saying that "Your s
 ### Here's a collection of sites that were helpful in creating this website:
 &nbsp;
 
-To better help me understand toggling betewwn elements: https://softauthor.com/javascript-toggle-class-element/
+To better help me understand toggling between elements: https://softauthor.com/javascript-toggle-class-element/
 To better help me understand the use of quearyselectors: https://www.w3schools.com/jsref/met_document_queryselector.asp
+
+Quiz tutorials:
+https://www.youtube.com/watch?v=xZXW5SnCiWI&t=224s
+https://www.youtube.com/watch?v=PBcqGxrr9g8
 
 Create some of the text content: Worked together with [ChatGPT](https://openai.com/)
 

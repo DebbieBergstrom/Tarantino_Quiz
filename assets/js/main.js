@@ -51,6 +51,8 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     beginQuiz();
   });
 
+  btnSubmitName.addEventListener("click", initialize); //Validates the input name, stores the name value, initializes the beginQuiz funtiion.
+
 
   // QUIZ QUESTIONS ARRAY
 
@@ -279,6 +281,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   let timerElement = document.querySelector('.timer');
   let questionTime = 15; // Total time for each question in seconds
   
+  let username = "";
   
   function startTimer() {
     let currentTime = questionTime;
@@ -301,10 +304,9 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
       }
     }, 1000);
   }
-
-
-  function beginQuiz() {
-    let nameInput = document.getElementById("name-input"); // Checks the name input
+  
+  function initialize() {
+    let nameInput = document.getElementById("name-input");
     let nameError = document.getElementById("name-error");
   
     let name = nameInput.value.trim();
@@ -320,11 +322,20 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
       nameError.textContent = "Name should only contain letters (maximum 12 characters).";
       return;
     }
-    
+  
     // Clear the error message
     nameError.textContent = "";
+  
+    // Store the username
+    username = name;
+    alert("Name submitted successfully!");
+  
     // Start the quiz
+    beginQuiz();
+  }
 
+
+  function beginQuiz() {
     activeQuestionIndex = 0;
     score = 0;
     startTimer(questionTime);
