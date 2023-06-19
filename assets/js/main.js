@@ -393,6 +393,8 @@ document.addEventListener("DOMContentLoaded", () => {
           movieImg.classList.add("quiz-img");
           countOfQuestion.textContent = `${activeQuestionIndex + 1} out of ${allQuestions.length}`;
 
+          btnAnswers.innerHTML = "";
+
           activeQuestion.answers.forEach(answer => {
             const button = document.createElement("button");
             button.innerHTML = answer.text;
@@ -410,7 +412,6 @@ document.addEventListener("DOMContentLoaded", () => {
           while (btnAnswers.firstChild) {
             btnAnswers.removeChild(btnAnswers.firstChild);
           }
-
         }
 
         function selectAnswer(e) { //targets the four fields of answer options.
@@ -441,7 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
           movieImg.style.display = "none"; // removes the last image from the question array 
 
           quizQuestions.innerHTML = `${username}, you scored ${score} out of ${allQuestions.length}!`;
-          btnNext.innerHTML = "Play again";
+          btnNext.innerHTML = "See Highscore List";
           btnNext.style.display = "block";
         }
 
@@ -455,10 +456,9 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
 
-        function toggleToFirstNameBox() {
-          location.reload();
-          toggleBoxes(nameFirstBox, homeBox, gameBox, rulesBox, scoreBox);
-
+        function toggleToScoreBox() {
+          
+          toggleBoxes(scoreBox, nameFirstBox, homeBox, gameBox, rulesBox);
         }
 
         btnNext.addEventListener("click", () => {
@@ -466,7 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
             handleBtnNext();
           } else {
             btnNext.removeEventListener("click", handleBtnNext);
-            btnNext.addEventListener("click", toggleToFirstNameBox);
+            btnNext.addEventListener("click", toggleToScoreBox);
           }
 
         });
