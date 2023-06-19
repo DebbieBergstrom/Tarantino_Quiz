@@ -339,6 +339,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   }
 
   function selectAnswer(e) { //targets the four fields of answer options.
+    clearInterval(timer);
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
@@ -360,7 +361,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   function displayScore() {
     resetState();
     countOfQuestion.style.display = "none"; //removes the question counter
-    timeLeft.style.display = "none"; //removes the timer counting down 
+    timerElement.style.display = "none"; //removes the timer counting down 
     movieImg.style.display = "none"; // removes the last image from the question array 
 
     quizQuestions.innerHTML = `Your score: ${score} out of ${allQuestions.length}!`;
