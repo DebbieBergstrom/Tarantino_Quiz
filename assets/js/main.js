@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
           timerElement.style.display = "none"; //removes the timer counting down 
           movieImg.style.display = "none"; // removes the last image from the question array 
 
-          quizQuestions.innerHTML = `Your score: ${score} out of ${allQuestions.length}!`;
+          quizQuestions.innerHTML = `${username}, you scored ${score} out of ${allQuestions.length}!`;
           btnNext.innerHTML = "Play again";
           btnNext.style.display = "block";
         }
