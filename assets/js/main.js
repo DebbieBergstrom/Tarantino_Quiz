@@ -298,7 +298,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   
       timerElement.textContent = currentTime;
   
-      if (currentTime === 0) {
+      if (currentTime <= 0) {
         clearInterval(timer);
         handleNextButton();
       }
