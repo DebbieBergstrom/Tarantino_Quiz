@@ -39,14 +39,17 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
 
   btnToNameFirst.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, gameBox, rulesBox, scoreBox));
   btnToNameFirst2.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, gameBox, rulesBox, scoreBox));
-  
-  btnToQuiz.addEventListener("click", () => toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, scoreBox));
+
   btnToRules.addEventListener("click", () => toggleBoxes(rulesBox, homeBox, nameFirstBox, gameBox, scoreBox));
   btnToHighScoreList.addEventListener("click", () => toggleBoxes(scoreBox, homeBox, rulesBox, nameFirstBox, gameBox));
   
   btnExitToHome.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
   btnExitToHome2.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
   btnExitToHome3.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
+
+  btnToQuiz.addEventListener("click", () => {toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, scoreBox);
+    beginQuiz();
+  });
 
 
   // QUIZ QUESTIONS ARRAY
@@ -273,10 +276,9 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   let activeQuestionIndex = 0;
   let score = 0;
 
-  let timeLeft = document.querySelector(".time-left");
   let timerElement = document.querySelector('.timer');
   let questionTime = 15; // Total time for each question in seconds
-
+  
   
   function startTimer() {
     let currentTime = questionTime;
@@ -300,7 +302,29 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     }, 1000);
   }
 
+
   function beginQuiz() {
+    let nameInput = document.getElementById("name-input"); // Checks the name input
+    let nameError = document.getElementById("name-error");
+  
+    let name = nameInput.value.trim();
+  
+    // Validate the name
+    if (name === "") {
+      nameError.textContent = "You must enter a name first.";
+      return;
+    }
+  
+    // Validate the name format
+    if (!/^[a-zA-Z]{1,12}$/.test(name)) {
+      nameError.textContent = "Name should only contain letters (maximum 12 characters).";
+      return;
+    }
+    
+    // Clear the error message
+    nameError.textContent = "";
+    // Start the quiz
+
     activeQuestionIndex = 0;
     score = 0;
     startTimer(questionTime);
