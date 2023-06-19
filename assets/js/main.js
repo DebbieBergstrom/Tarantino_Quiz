@@ -268,16 +268,44 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   const btnNext = document.getElementById('btn-next');
   const btnAnswers = document.getElementById('answer-btns');
   const movieImg = document.getElementById('quiz-img');
-  let timeLeft = document.querySelector(".time-left");
-  let timer = document.querySelector('.timer');
+
   let countOfQuestion = document.getElementById("number-of-q");
   let activeQuestionIndex = 0;
   let score = 0;
 
+  let timeLeft = document.querySelector(".time-left");
+  let timerElement = document.querySelector('.timer');
+  let questionTime = 15; // Total time for each question in seconds
+
+  
+  function startTimer() {
+    let currentTime = questionTime;
+    timerElement.textContent = currentTime;
+  
+    timer = setInterval(() => {
+      currentTime--;
+  
+      if (currentTime <= 5 && currentTime >= 3) {
+        timerElement.style.color = "yellow";
+      } else if (currentTime < 3 && currentTime >= 0) {
+        timerElement.style.color = "red";
+      } else {
+        timerElement.style.color = "green";
+      }
+  
+      timerElement.textContent = currentTime;
+  
+      if (currentTime === 0) {
+        clearInterval(timer);
+        handleNextButton();
+      }
+    }, 1000);
+  }
 
   function beginQuiz() {
     activeQuestionIndex = 0;
     score = 0;
+    startTimer(questionTime);
     btnNext.innerHTML = "Next";
     displayQuestion();
     countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
@@ -335,7 +363,6 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     resetState();
     countOfQuestion.style.display = "none"; //removes the question counter
     timeLeft.style.display = "none"; //removes the timer counting down 
-    timer.style.display = "none"; //removes timer div
     movieImg.style.display = "none"; // removes the last image from the question array 
 
     quizQuestions.innerHTML = `Your score: ${score} out of ${allQuestions.length}!`;
@@ -347,6 +374,8 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     activeQuestionIndex++;
     if (activeQuestionIndex < allQuestions.length) {
       displayQuestion();
+      clearInterval(timer);
+      startTimer(questionTime);
     } else {
       displayScore();
     }
