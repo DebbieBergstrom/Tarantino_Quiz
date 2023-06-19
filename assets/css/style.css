@@ -45,6 +45,11 @@ p {
     padding-bottom: 0.1em;
 }
 
+#name-error {
+    font-size: 0.8rem;
+    font-family: inherit;
+}
+
 /* BACKGROUND */
 #background-image {
     background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_wide.jpg);
@@ -79,7 +84,7 @@ p {
 .btns {
     display: flex;
     align-items: center;
-    
+
     justify-content: center;
 }
 
@@ -445,7 +450,7 @@ footer li {
         font-size: 4vw;
     }
 
-    
+
     #rules-box h4 {
         font-size: 2vw;
     }
