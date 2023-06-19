@@ -51,8 +51,45 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     beginQuiz();
   });
 
+
+  const quizQuestions = document.getElementById('questions');
+  const btnNext = document.getElementById('btn-next');
+  const btnAnswers = document.getElementById('answer-btns');
+  const movieImg = document.getElementById('quiz-img');
+  let username = "";
+ 
   btnSubmitName.addEventListener("click", initialize); //Validates the input name, stores the name value, initializes the beginQuiz funtiion.
 
+
+
+  function initialize() {
+    let nameInput = document.getElementById("name-input");
+    let nameError = document.getElementById("name-error");
+  
+    let name = nameInput.value.trim();
+  
+    // Validate the name
+    if (name === "") {
+      nameError.textContent = "You must enter a name first.";
+      return;
+    }
+  
+    // Validate the name format
+    if (!/^[a-zA-Z]{1,12}$/.test(name)) {
+      nameError.textContent = "Name should only contain letters (maximum 12 characters).";
+      return;
+    }
+  
+    // Clear the error message
+    nameError.textContent = "";
+  
+    // Store the username
+    username = name;
+    alert("Name submitted successfully!");
+  
+    // Start the quiz
+    beginQuiz();
+  }
 
   // QUIZ QUESTIONS ARRAY
 
@@ -269,10 +306,6 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
 
   ];
 
-  const quizQuestions = document.getElementById('questions');
-  const btnNext = document.getElementById('btn-next');
-  const btnAnswers = document.getElementById('answer-btns');
-  const movieImg = document.getElementById('quiz-img');
 
   let countOfQuestion = document.getElementById("number-of-q");
   let activeQuestionIndex = 0;
@@ -281,7 +314,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   let timerElement = document.querySelector('.timer');
   let questionTime = 15; // Total time for each question in seconds
   
-  let username = "";
+ 
   
   function startTimer() {
     let currentTime = questionTime;
@@ -300,39 +333,12 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
   
       if (currentTime <= 0) {
         clearInterval(timer);
-        handleNextButton();
+        currentTime = 0; // Set the time to 0 to avoid negative numbers
+        timerElement.textContent = currentTime; // Update the displayed time to 0
       }
     }, 1000);
   }
   
-  function initialize() {
-    let nameInput = document.getElementById("name-input");
-    let nameError = document.getElementById("name-error");
-  
-    let name = nameInput.value.trim();
-  
-    // Validate the name
-    if (name === "") {
-      nameError.textContent = "You must enter a name first.";
-      return;
-    }
-  
-    // Validate the name format
-    if (!/^[a-zA-Z]{1,12}$/.test(name)) {
-      nameError.textContent = "Name should only contain letters (maximum 12 characters).";
-      return;
-    }
-  
-    // Clear the error message
-    nameError.textContent = "";
-  
-    // Store the username
-    username = name;
-    alert("Name submitted successfully!");
-  
-    // Start the quiz
-    beginQuiz();
-  }
 
 
   function beginQuiz() {
@@ -371,6 +377,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     while (btnAnswers.firstChild) {
       btnAnswers.removeChild(btnAnswers.firstChild);
     }
+
   }
 
   function selectAnswer(e) { //targets the four fields of answer options.
@@ -394,6 +401,7 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
 
 
   function displayScore() {
+    clearInterval(timer)
     resetState();
     countOfQuestion.style.display = "none"; //removes the question counter
     timerElement.style.display = "none"; //removes the timer counting down 
@@ -409,18 +417,25 @@ function toggleBoxes(elementToShow, ...elementsToHide) {
     if (activeQuestionIndex < allQuestions.length) {
       displayQuestion();
       clearInterval(timer);
-      startTimer(questionTime);
     } else {
       displayScore();
     }
+  }
+
+  function toggleToFirstNameBox() {
+    location.reload();
+    toggleBoxes(nameFirstBox, homeBox, gameBox, rulesBox, scoreBox);
+
   }
 
   btnNext.addEventListener("click", () => {
     if (activeQuestionIndex < allQuestions.length) {
       handleBtnNext();
     } else {
-      beginQuiz();
+      btnNext.removeEventListener("click", handleBtnNext);
+      btnNext.addEventListener("click", toggleToFirstNameBox);
     }
+   
   });
 
   beginQuiz();
