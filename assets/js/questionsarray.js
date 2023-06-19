@@ -212,3 +212,7 @@
   },
 
 ];
+
+
+// Export the array to main.js
+export default allQuestions;

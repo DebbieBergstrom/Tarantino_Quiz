@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameBox = document.getElementById('game-box');
   const scoreBox = document.getElementById('score-box');
 
-  // Get buttons
+  // Get main buttons
   const btnToRules = document.getElementById('btn-rules');
   const btnToQuiz = document.getElementById('btn-to-quiz');
   const btnToHighScoreList = document.getElementById('btn-highscore');
@@ -20,12 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnExitToHome2 = document.getElementById('btn-exit-2');
   const btnExitToHome3 = document.getElementById('btn-exit-3');
 
+  // Initially hide all boxes except the homeBox
+console.log('Before adding "hidden" class:');
+console.log('gameBox:', gameBox.classList.contains('hidden'));
+console.log('rulesBox:', rulesBox.classList.contains('hidden'));
+console.log('nameFirstBox:', nameFirstBox.classList.contains('hidden'));
+console.log('scoreBox:', scoreBox.classList.contains('hidden'));
+
 
   // Initially hide all boxes except the homeBox
   gameBox.classList.add('hidden');
   rulesBox.classList.add('hidden');
   nameFirstBox.classList.add('hidden');
   scoreBox.classList.add('hidden');
+
+console.log('After adding "hidden" class:');
+console.log('gameBox:', gameBox.classList.contains('hidden'));
+console.log('rulesBox:', rulesBox.classList.contains('hidden'));
+console.log('nameFirstBox:', nameFirstBox.classList.contains('hidden'));
+console.log('scoreBox:', scoreBox.classList.contains('hidden'));
+
+
 
   // Toggles between the desired "boxes" to be shown/hidden
   function toggleBoxes(elementToShow, ...elementsToHide) {
@@ -103,18 +118,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
- 
-
-
   let countOfQuestion = document.getElementById("number-of-q");
   let activeQuestionIndex = 0;
   let score = 0;
 
   let timerElement = document.querySelector('.timer');
   let questionTime = 15; // Total time for each question in seconds
-
-
 
   function startTimer() {
     let currentTime = questionTime;
@@ -138,7 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, 1000);
   }
-
 
 
   function beginQuiz() {
