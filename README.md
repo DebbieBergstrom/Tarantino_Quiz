@@ -284,6 +284,7 @@ The website was tested on the following browsers:
 | 7. Couldn't get the btn-to-name-first to work except for one place| Had to make another button with different ID|
 | 8. The timer kept counting down below 0 and showed negative numbers| Changed the code to (currentTime <= 0) instead of (currentTime === 0) |
 | 9. The timer numbers became jumpy when counting down| TO BE SOLVED**************** |
+| 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| TO BE SOLVED**************** |
 
 
 &nbsp;
