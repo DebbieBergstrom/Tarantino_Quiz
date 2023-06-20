@@ -18,13 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnExitToHome2 = document.getElementById('btn-exit-2');
   const btnExitToHome3 = document.getElementById('btn-exit-3');
 
-  // Initially hide all boxes except the homeBox
   console.log('Before adding "hidden" class:');
   console.log('gameBox:', gameBox.classList.contains('hidden'));
   console.log('rulesBox:', rulesBox.classList.contains('hidden'));
   console.log('nameFirstBox:', nameFirstBox.classList.contains('hidden'));
   console.log('scoreBox:', scoreBox.classList.contains('hidden'));
-
 
   // Initially hide all boxes except the homeBox
   gameBox.classList.add('hidden');
@@ -59,17 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
   btnExitToHome2.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
   btnExitToHome3.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
 
-  btnToQuiz.addEventListener("click", () => {
-    toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, scoreBox);
-    beginQuiz();
-  });
-
-
-  const quizQuestions = document.getElementById('questions');
-  const btnNext = document.getElementById('btn-next');
-  const btnAnswers = document.getElementById('answer-btns');
-  const movieImg = document.getElementById('quiz-img');
-
 
   /**
    * ############################## NAME FIRST BOX #####################################
@@ -102,14 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clear the error message
     nameError.textContent = "";
 
-    // Store the username
+    // Store the username for the Highscore List
     username = name;
 
-    // Show the "Let the Quiz Begin!" button when a valid name is submitted
+    // Shows the "Let the Quiz Begin!" button when a valid name is submitted
     btnToQuiz.style.display = "block";
 
-
-    // STARTS THE QUIZ
+    // Button to start the quiz
     btnToQuiz.addEventListener("click", () => {
       toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, scoreBox);
       beginQuiz();
@@ -148,12 +134,142 @@ document.addEventListener("DOMContentLoaded", () => {
         timerElement.textContent = currentTime; // Update the displayed time to 0
       }
     }, 1000);
+  }
+  
+    /**
+   * ############################## QUIZ FUNCTIONS #####################################
+   */
+
+    function beginQuiz() {
+      activeQuestionIndex = 0;
+      score = 0;
+      startTimer(questionTime);
+      btnNext.innerHTML = "Next";
+      displayQuestion();
+      countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
+    }
+  
+    function displayQuestion() {
+      resetState();
+      let activeQuestion = allQuestions[activeQuestionIndex];
+      let questionNumber = activeQuestionIndex + 1;
+      quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question;
+  
+      movieImg.innerHTML = activeQuestion.image;
+      movieImg.classList.add("quiz-img");
+      countOfQuestion.textContent = `${activeQuestionIndex + 1} out of ${allQuestions.length}`;
+  
+      btnAnswers.innerHTML = "";
+  
+      activeQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn-answ");
+        btnAnswers.appendChild(button);
+        if (answer.correct) {
+          button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+      });
+    }
+  
+    function resetState() {
+      btnNext.style.display = "none";
+      while (btnAnswers.firstChild) {
+        btnAnswers.removeChild(btnAnswers.firstChild);
+      }
+    }
+  
+    function selectAnswer(e) { //targets the four fields of answer options.
+      clearInterval(timer);
+      const selectedBtn = e.target;
+      const isCorrect = selectedBtn.dataset.correct === "true";
+      if (isCorrect) {
+        selectedBtn.classList.add("correct"); // this is where it colors the choice green for correct.
+        score++;
+      } else {
+        selectedBtn.classList.add("incorrect"); // this is where it colors the choice red for incorrect.
+      }
+      Array.from(btnAnswers.children).forEach(button => {
+        if (button.dataset.correct === "true") {
+          button.classList.add("correct");
+        }
+        button.disabled = true; // takes away the ability re-select another answer. Put my own popup here with fun facts?
+      })
+      btnNext.style.display = "block";
+    }
+  
+  /**
+     * ############################## NEXT BUTTON & HIGHSCORES #####################################
+     */
+  
+    // Declare the highscores array
+    let highscores = [];
+  
+    // Function to display the score after the quiz
+    function displayScore() {
+      clearInterval(timer);
+      resetState();
+      countOfQuestion.style.display = "none";
+      timerElement.style.display = "none";
+      movieImg.style.display = "none";
+  
+      quizQuestions.innerHTML = `${username}, you scored ${score} out of ${allQuestions.length}!`;
+  
+      // Create the user's score object
+      let userScore = {
+        name: username,
+        score: score
+      };
+  
+      // Push the user's score object into the highscores array
+      highscores.push(userScore);
+  
+      btnNext.innerHTML = "See Highscore List";
+      btnNext.style.display = "block";
+    }
+  
+    function handleBtnNext() {
+      activeQuestionIndex++;
+      if (activeQuestionIndex < allQuestions.length) {
+        displayQuestion();
+        clearInterval(timer);
+      } else {
+        displayScore();
+        btnNext.removeEventListener("click", handleBtnNext);
+        btnNext.addEventListener("click", toggleToScoreBox);
+      }
+    }
+  
+    function toggleToScoreBox() {
+      updateHighscoreList();
+      toggleBoxes(scoreBox, nameFirstBox, homeBox, gameBox, rulesBox);
+    }
+  
+    // Update the highscore list
+    function updateHighscoreList() {
+      let highscoreList = document.getElementById("highscore-list");
+  
+      // Clear the existing highscore list
+      highscoreList.innerHTML = "";
+  
+      // Update the highscore list with the new data
+      for (let highscore of highscores) {
+        let listItem = document.createElement("li");
+        let nameElement = document.createElement("p");
+        nameElement.textContent = `${highscore.name} - ${highscore.score}`;
+        listItem.appendChild(nameElement);
+        highscoreList.appendChild(listItem);
+      }
+    }
+  
+    btnNext.addEventListener("click", handleBtnNext);
+  
+    beginQuiz();
 
     /**
      * ############################## QUESTIONS ARRAY #####################################
      */
-
-  }
   const allQuestions = [{
       image: "<img src='assets/images/inglorious_basterds_s.jpg' alt='inglorious basterds movie picture'>",
       question: "How was the intense strangulation scene in the film 'Inglourious Basterds' achieved?",
@@ -366,136 +482,5 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
   ];
-
-  /**
-   * ############################## QUIZ FUNCTIONS #####################################
-   */
-
-  function beginQuiz() {
-    activeQuestionIndex = 0;
-    score = 0;
-    startTimer(questionTime);
-    btnNext.innerHTML = "Next";
-    displayQuestion();
-    countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
-  }
-
-  function displayQuestion() {
-    resetState();
-    let activeQuestion = allQuestions[activeQuestionIndex];
-    let questionNumber = activeQuestionIndex + 1;
-    quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question;
-
-    movieImg.innerHTML = activeQuestion.image;
-    movieImg.classList.add("quiz-img");
-    countOfQuestion.textContent = `${activeQuestionIndex + 1} out of ${allQuestions.length}`;
-
-    btnAnswers.innerHTML = "";
-
-    activeQuestion.answers.forEach(answer => {
-      const button = document.createElement("button");
-      button.innerHTML = answer.text;
-      button.classList.add("btn-answ");
-      btnAnswers.appendChild(button);
-      if (answer.correct) {
-        button.dataset.correct = answer.correct;
-      }
-      button.addEventListener("click", selectAnswer);
-    });
-  }
-
-  function resetState() {
-    btnNext.style.display = "none";
-    while (btnAnswers.firstChild) {
-      btnAnswers.removeChild(btnAnswers.firstChild);
-    }
-  }
-
-  function selectAnswer(e) { //targets the four fields of answer options.
-    clearInterval(timer);
-    const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.correct === "true";
-    if (isCorrect) {
-      selectedBtn.classList.add("correct"); // this is where it colors the choice green for correct.
-      score++;
-    } else {
-      selectedBtn.classList.add("incorrect"); // this is where it colors the choice red for incorrect.
-    }
-    Array.from(btnAnswers.children).forEach(button => {
-      if (button.dataset.correct === "true") {
-        button.classList.add("correct");
-      }
-      button.disabled = true; // takes away the ability re-select another answer. Put my own popup here with fun facts?
-    })
-    btnNext.style.display = "block";
-  }
-
-/**
-   * ############################## NEXT BUTTON & HIGHSCORES #####################################
-   */
-
-  // Declare the highscores array
-  let highscores = [];
-
-  // Function to display the score after the quiz
-  function displayScore() {
-    clearInterval(timer);
-    resetState();
-    countOfQuestion.style.display = "none";
-    timerElement.style.display = "none";
-    movieImg.style.display = "none";
-
-    quizQuestions.innerHTML = `${username}, you scored ${score} out of ${allQuestions.length}!`;
-
-    // Create the user's score object
-    let userScore = {
-      name: username,
-      score: score
-    };
-
-    // Push the user's score object into the highscores array
-    highscores.push(userScore);
-
-    btnNext.innerHTML = "See Highscore List";
-    btnNext.style.display = "block";
-  }
-
-  function handleBtnNext() {
-    activeQuestionIndex++;
-    if (activeQuestionIndex < allQuestions.length) {
-      displayQuestion();
-      clearInterval(timer);
-    } else {
-      displayScore();
-      btnNext.removeEventListener("click", handleBtnNext);
-      btnNext.addEventListener("click", toggleToScoreBox);
-    }
-  }
-
-  function toggleToScoreBox() {
-    updateHighscoreList();
-    toggleBoxes(scoreBox, nameFirstBox, homeBox, gameBox, rulesBox);
-  }
-
-  // Update the highscore list
-  function updateHighscoreList() {
-    let highscoreList = document.getElementById("highscore-list");
-
-    // Clear the existing highscore list
-    highscoreList.innerHTML = "";
-
-    // Update the highscore list with the new data
-    for (let highscore of highscores) {
-      let listItem = document.createElement("li");
-      let nameElement = document.createElement("p");
-      nameElement.textContent = `${highscore.name} - ${highscore.score}`;
-      listItem.appendChild(nameElement);
-      highscoreList.appendChild(listItem);
-    }
-  }
-
-  btnNext.addEventListener("click", handleBtnNext);
-
-  beginQuiz();
 
 });
