@@ -279,12 +279,12 @@ The website was tested on the following browsers:
 | 2. Couldn't get the quearySelector to get elements by ID| I changed to getElementsById |
 | 3. Can't get the images to size properly in the game-box contaner| Changed image sizes and width to 100%, height auto.|
 | 4. Couldn't get the next button in the quiz to move to next question| I found the mixup between variables allQuestions and quizQuestions and corrected it.|
-| 5. When the quiz restarts, the images doesn't get displayed | Solutions to be fixed **************|
+| 5. When the quiz restarts, the images doesn't get displayed | Added location.reload(); to the btnExitToHome3 which user clicks at end of quiz|
 | 6. Couldn't get the exit-buttons to work except for one place| Had to make several exit-buttons with different IDs|
 | 7. Couldn't get the btn-to-name-first to work except for one place| Had to make another button with different ID|
 | 8. The timer kept counting down below 0 and showed negative numbers| Changed the code to (currentTime <= 0) instead of (currentTime === 0) |
-| 9. The timer numbers became jumpy when counting down| TO BE SOLVED**************** |
-| 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| TO BE SOLVED**************** |
+| 9. The timer numbers became jumpy when counting down| Went through the code and saw that the function startTimer was called on to many times, removed unneccessary ones |
+| 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| Made a variable of name and score and pushed it to the array using "highscores.push(userScore);" |
 
 
 &nbsp;

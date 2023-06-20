@@ -57,7 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnExitToHome.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
   btnExitToHome2.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
-  btnExitToHome3.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
+  
+  btnExitToHome3.addEventListener("click", () => { //button exits scoreBox and reloads the page to reset quiz
+    toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox);
+    location.reload();
+  });
 
 
   const quizQuestions = document.getElementById('questions');
@@ -484,11 +488,9 @@ document.addEventListener("DOMContentLoaded", () => {
         highscoreList.appendChild(listItem);
       }
     }
-  
-    btnNext.addEventListener("click", handleBtnNext);
-  
-    beginQuiz();
 
-    
+    btnNext.addEventListener("click", handleBtnNext);
+
+    beginQuiz();
 
 });
