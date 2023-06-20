@@ -75,6 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
   btnToQuiz.style.display = "none"; // Initially hides the button until a valid name is submitted in the unername input field.
 
   btnSubmitName.addEventListener("click", initialize); //Validates the input name, stores the name value, initializes the beginQuiz funtiion.
+ 
+  btnToQuiz.addEventListener("click", () => {toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, scoreBox); // Button to start the quiz
+    beginQuiz();
+  });
 
   function initialize() {
     let nameError = document.getElementById("name-error");
@@ -100,12 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Shows the "Let the Quiz Begin!" button when a valid name is submitted
     btnToQuiz.style.display = "block";
-
-    // Button to start the quiz
-    btnToQuiz.addEventListener("click", () => {
-      toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, scoreBox);
-      beginQuiz();
-    });
   }
 
   /**
@@ -332,10 +330,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeQuestionIndex = 0;
   let score = 0;
 
-  let timerElement = document.querySelector('.timer');
+  let timerElement = document.getElementById('time-left');
   let questionTime = 15; // Total time for each question in seconds
+  let timer;
 
-  function startTimer() {
+  function startTimer() { 
     let currentTime = questionTime;
     timerElement.textContent = currentTime;
 
@@ -365,7 +364,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function beginQuiz() {
       activeQuestionIndex = 0;
       score = 0;
-      startTimer(questionTime);
       btnNext.innerHTML = "Next";
       displayQuestion();
       countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
@@ -373,6 +371,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function displayQuestion() {
       resetState();
+      clearInterval(timer);
+      startTimer();
       let activeQuestion = allQuestions[activeQuestionIndex];
       let questionNumber = activeQuestionIndex + 1;
       quizQuestions.innerHTML = questionNumber + ". " + activeQuestion.question;
@@ -455,7 +455,6 @@ document.addEventListener("DOMContentLoaded", () => {
       activeQuestionIndex++;
       if (activeQuestionIndex < allQuestions.length) {
         displayQuestion();
-        clearInterval(timer);
       } else {
         displayScore();
         btnNext.removeEventListener("click", handleBtnNext);
