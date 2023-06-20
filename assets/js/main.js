@@ -375,13 +375,25 @@ document.addEventListener("DOMContentLoaded", () => {
    * ############################## QUIZ FUNCTIONS #####################################
    */
 
-  function beginQuiz() {
-    activeQuestionIndex = 0;
-    score = 0;
-    btnNext.innerHTML = "Next";
-    displayQuestion();
-    countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
+
+
+ // Function to shuffle the array
+function shuffleArray(allQuestions) {
+  for (let i = allQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
   }
+  return allQuestions;
+}
+
+function beginQuiz() {
+  activeQuestionIndex = 0;
+  score = 0;
+  btnNext.innerHTML = "Next";
+  shuffleArray(allQuestions);
+  displayQuestion();
+  countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
+}
 
   function displayQuestion() {
     resetState();
