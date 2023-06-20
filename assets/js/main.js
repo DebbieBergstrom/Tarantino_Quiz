@@ -1,5 +1,3 @@
-import allQuestions from './questionsarray.js';
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
