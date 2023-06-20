@@ -241,7 +241,7 @@ p {
     padding-top: 0.6em;
 }
 
-.timer {
+#timer {
     background-color: white;
     color: #2a2a2a;
     width: 5em;
@@ -250,6 +250,11 @@ p {
     justify-content: space-between;
     padding: 0.4em 1em;
     font-size: 0.8em;
+}
+
+#timer i {
+    color: black;
+    size: 50px;
 }
 
 .question-count {

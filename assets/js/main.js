@@ -435,6 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
       countOfQuestion.style.display = "none";
       timerElement.style.display = "none";
       movieImg.style.display = "none";
+      document.getElementById("timer").style.display = "none"; 
   
       quizQuestions.innerHTML = `${username}, you scored ${score} out of ${allQuestions.length}!`;
   
