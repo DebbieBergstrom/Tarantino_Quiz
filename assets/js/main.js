@@ -456,7 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scoreImgBox = document.getElementById("score-img"); // Append the image to div
     scoreImgBox.appendChild(scoreImage);
 
-    quizQuestions.innerHTML = `<div style="font-size: 3rem; color: yellow;">Wooow! <br>${username}, you scored <br>${score} out of ${allQuestions.length}!</div>`;
+    quizQuestions.innerHTML = `<div style="font-size: 2rem; color: yellow;">Wooow! <br>${username}, you scored <br>${score} out of ${allQuestions.length}!</div>`;
 
     // Retrieve highscores from local storage
     let storedHighscores = JSON.parse(localStorage.getItem("highscores"));
