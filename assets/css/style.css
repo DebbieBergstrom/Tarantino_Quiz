@@ -183,16 +183,21 @@ input {
 /* THE QUIZ GAME */
 
 #game-box {
-    margin-top: 30vh;
+    margin-top: 25vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
+.wrapper {
+    flex: 8;
+}
+
 .img-wrapper {
     overflow: hidden;
     width: 100%;
-    max-height: 200px;
+    max-height: 138px;
 }
 
 #quiz-img {
@@ -252,6 +257,10 @@ input {
     margin: none;
 }
 
+.game-bottom {
+    flex: 2;
+}
+
 #timer {
         background-color: white;
         color: #2a2a2a;
@@ -277,7 +286,7 @@ input {
 }
 
 .space {
-    margin-left: 6rem;
+    margin-right: 4.5rem;
 }
 
 

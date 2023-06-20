@@ -450,10 +450,16 @@ document.addEventListener("DOMContentLoaded", () => {
     movieImg.style.display = "none";
     document.getElementById("timer").style.display = "none";
 
-    quizQuestions.innerHTML = `${username}, you scored ${score} out of ${allQuestions.length}!`;
+    // Add image when score is displayed
+    const scoreImage = document.createElement("img");
+    scoreImage.src = 'assets/images//collection_border.jpg';
+    const scoreImgBox = document.getElementById("score-img"); // Append the image to div
+    scoreImgBox.appendChild(scoreImage);
 
-       // Retrieve highscores from local storage
-  let storedHighscores = JSON.parse(localStorage.getItem("highscores"));
+    quizQuestions.innerHTML = `<div style="font-size: 3rem; color: yellow;">Wooow! <br>${username}, you scored <br>${score} out of ${allQuestions.length}!</div>`;
+
+    // Retrieve highscores from local storage
+    let storedHighscores = JSON.parse(localStorage.getItem("highscores"));
 
     storedHighscores.forEach((userData) => {
       if (userData.name === username) {
@@ -514,7 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const listItem = document.createElement("li");
         listItem.textContent = ` Name ${userScore.name}: Score ${userScore.score}`;
         highscoreList.appendChild(listItem);
-      }      
+      }
     }
   }
 

@@ -101,36 +101,36 @@
 
             <!--QUIZ GAME CONTAINER-->
             <div class="container-content" id="game-box">
-                <div class="img-wrapper">
-                    <div id="quiz-img"></div>
-                </div>
-                <div class="quiz-content">
-                    <!-- Quiz movie picture -->
-                    <h2 id="questions">Questions go here</h2>
-                    <div id="answer-btns">
-                        <button class="btn-answ">A1</button>
-                        <button class="btn-answ">A2</button>
-                        <button class="btn-answ">A3</button>
-                        <button class="btn-answ">A4</button>
+                <div class="wrapper">
+                    <div class="img-wrapper">
+                        <div id="score-img"></div>
+                        <div id="quiz-img"></div>
                     </div>
-                    
+                        <div class="quiz-content">
+                            <!-- Quiz movie picture -->
+                            <h2 id="questions">Questions go here</h2>
+                            <div id="answer-btns">
+                                <button class="btn-answ">A1</button>
+                                <button class="btn-answ">A2</button>
+                                <button class="btn-answ">A3</button>
+                                <button class="btn-answ">A4</button>
+                            </div>
+                        </div>   
                 </div>
-                <div id="bottom">
+                <div id="bottom" class="game-bottom">
                     <!-- Counts what number of question user's currently on-->
                     <div class="question-count">
                         <span id="number-of-q">1 out of 10</span>
+                    </div>
+                    <div class="space">
+                        <button id="btn-next">Next</button>
                     </div>
                     <!-- Counts down time to answer question-->
                     <div id="timer">
                         <i class="fa-solid fa-hourglass"></i>
                         <p id="time-left"></p>
                     </div>
-                    <div class="space">
-                     <button id="btn-next">Next</button>
-                    </div>
-                    
-
-                </div>
+                </div>               
             </div>
 
 
