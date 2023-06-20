@@ -20,11 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnAnswers = document.getElementById('answer-btns');
 
 
-  console.log('Before adding "hidden" class:');
-  console.log('gameBox:', gameBox.classList.contains('hidden'));
-  console.log('rulesBox:', rulesBox.classList.contains('hidden'));
-  console.log('nameFirstBox:', nameFirstBox.classList.contains('hidden'));
-  console.log('scoreBox:', scoreBox.classList.contains('hidden'));
+
 
   // Initially hide all boxes except the homeBox
   gameBox.classList.add('hidden');
@@ -32,11 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   nameFirstBox.classList.add('hidden');
   scoreBox.classList.add('hidden');
 
-  console.log('After adding "hidden" class:');
-  console.log('gameBox:', gameBox.classList.contains('hidden'));
-  console.log('rulesBox:', rulesBox.classList.contains('hidden'));
-  console.log('nameFirstBox:', nameFirstBox.classList.contains('hidden'));
-  console.log('scoreBox:', scoreBox.classList.contains('hidden'));
+
 
 
 
@@ -106,6 +98,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Store the username for the Highscore List
     username = name;
+
+    // Create the user's score object
+    let userScore = {
+      name,
+      score: -1,
+    };
+
+    // Retrieve highscores from local storage
+    let storedHighscores = JSON.parse(localStorage.getItem("highscores"));
+
+    // Push the user's score object into the highscores array
+    storedHighscores.push(userScore);
+
+    // Save the highscores array to local storage
+    localStorage.setItem("highscores", JSON.stringify(storedHighscores));
+
+
 
     // Shows the "Let the Quiz Begin!" button when a valid name is submitted
     btnToQuiz.style.display = "block";
@@ -431,7 +440,6 @@ document.addEventListener("DOMContentLoaded", () => {
    */
 
   // Declare the highscores array
-  let highscores = [];
 
   // Function to display the score after the quiz
   function displayScore() {
@@ -444,17 +452,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     quizQuestions.innerHTML = `${username}, you scored ${score} out of ${allQuestions.length}!`;
 
-    // Create the user's score object
-    let userScore = {
-      name: username,
-      score: score,
-    };
+       // Retrieve highscores from local storage
+  let storedHighscores = JSON.parse(localStorage.getItem("highscores"));
 
-    // Push the user's score object into the highscores array
-    highscores.push(userScore);
+    storedHighscores.forEach((userData) => {
+      if (userData.name === username) {
+        userData.score = score
+      }
+    })
 
     // Save the highscores array to local storage
-    localStorage.setItem("highscores", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(storedHighscores));
 
     btnNext.innerHTML = "See Highscore List";
     btnNext.style.display = "block";
@@ -484,27 +492,31 @@ document.addEventListener("DOMContentLoaded", () => {
     highscoreList.innerHTML = "";
 
     // Retrieve highscores from local storage
-  let storedHighscores = localStorage.getItem("highscores");
+    let storedHighscores = localStorage.getItem("highscores");
+    let highscores = [];
 
-  // If there are stored highscores, parse and set the highscores array
-  if (storedHighscores) {
-    highscores = JSON.parse(storedHighscores);
+    // If there are stored highscores, parse and set the highscores array
+    if (storedHighscores) {
+      highscores = JSON.parse(storedHighscores);
+    }
+
+    // Sort the highscores array by score in descending order
+    highscores.sort((a, b) => b.score - a.score);
+
+    // Truncate the highscores array to a maximum of 5 entries
+    highscores = highscores.slice(0, 5);
+
+    // Loop through the highscore array and display each name and score pair
+    for (let i = 0; i < highscores.length; i++) {
+      const userScore = highscores[i];
+      console.log(userScore.score, userScore.name)
+      if (userScore.score > -1) {
+        const listItem = document.createElement("li");
+        listItem.textContent = ` Name ${userScore.name}: Score ${userScore.score}`;
+        highscoreList.appendChild(listItem);
+      }      
+    }
   }
-
-   // Sort the highscores array by score in descending order
-   highscores.sort((a, b) => b.score - a.score);
-
-   // Truncate the highscores array to a maximum of 5 entries
-   highscores = highscores.slice(0, 5);
-
-   // Loop through the highscore array and display each name and score pair
-  for (let i = 0; i < highscores.length; i++) {
-    const userScore = highscores[i];
-    const listItem = document.createElement("li");
-    listItem.textContent = ` Name ${userScore.name}: Score ${userScore.score}`;
-    highscoreList.appendChild(listItem);
-  }
-}
 
   btnNext.addEventListener("click", handleBtnNext);
 
