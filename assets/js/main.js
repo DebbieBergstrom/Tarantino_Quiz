@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const userScore = highscores[i];
     const listItem = document.createElement("li");
     listItem.textContent = ` Name ${userScore.name}: Score ${userScore.score}`;
-    highscoreListElement.appendChild(listItem);
+    highscoreList.appendChild(listItem);
   }
 }
 

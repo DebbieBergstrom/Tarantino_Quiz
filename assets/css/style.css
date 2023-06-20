@@ -194,7 +194,7 @@ p {
     font-size: 0.7em;
     width: 90%;
     border: 1px solid #2a2a2a;
-    margin-block: 5px;
+    margin-block: 4px;
     text-align: left;
     cursor: pointer;
     transform: all 0.3s;
@@ -223,11 +223,10 @@ p {
 #btn-next {
     background: #ffffff;
     color: #2a2a2a;
-    font-size: 0.7em;
-    width: 50%;
-    border: none;
+    font-size: 0.8em;
+    font-weight: bolder;
+    border: 1px solid #2a2a2a;
     padding: 10px;
-    margin: 10px auto;
     border-radius: 4px;
     cursor: pointer;
     display: none;
@@ -236,38 +235,41 @@ p {
 /* bottom of game-box w/ question counter & timer */
 #bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: column;
     align-items: center;
-    padding-top: 0.6em;
+    margin: none;
 }
 
 #timer {
     background-color: white;
     color: #2a2a2a;
     width: 5em;
-    border-radius: 0.5em;
+    border-radius: 50%;
     display: flex;
     justify-content: space-between;
-    padding: 0.4em 1em;
-    font-size: 0.8em;
+    align-items: center;
+    padding: 0.3em 1em;
+    font-size: 1rem;
+    margin-right: 8px;
+
 }
 
 #timer i {
     color: black;
-    size: 50px;
 }
 
 .question-count {
-    width: 6em;
-    border-radius: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.3em 1.5em;
-    font-size: 0.8em;
+    width: 7em;
+    font-size: 1rem;
+    margin-right: 8px;
 }
 
 .score-images {
     display: none;
+}
+
+.space {
+    margin: 10px
 }
 
 
