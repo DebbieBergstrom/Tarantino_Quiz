@@ -323,6 +323,8 @@ After the webpage refreshes, a ribbon will appear at the top saying that "Your s
 To better help me understand toggling between elements: https://softauthor.com/javascript-toggle-class-element/
 To better help me understand the use of quearyselectors: https://www.w3schools.com/jsref/met_document_queryselector.asp
 To better help me understand arrays of different kinds: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array, https://javascript.info/array, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+To help me understand local storage using JSON: https://plainenglish.io/blog/how-to-store-json-data-in-local-storage-js-react-angular
+To help me understand making a highscorelist:https://www.youtube.com/watch?v=jfOv18lCMmw
 
 Quiz tutorials:
 https://www.youtube.com/watch?v=xZXW5SnCiWI&t=224s
