@@ -79,23 +79,25 @@
 
             <!--ENTER NAME FIRST CONTAINER, DISPLAYS BEFORE ENETERING THE GAME -->
             <div id="name-first-box" class="container-content">
-                <h1>"Everyone Be Cool!"</h1>
-                <h4>(Pulp Fiction)</h4>
-                <p>We just need your name first.</p>
-                <input type="text" id="name-input" name="name" required="" placeholder="Enter your name here">
-                <div>
-                    <h4 id="name-error"></h4>
-                </div>
-                <div class="btns">
-                    <button id="btn-submit" type="submit" aria-label="submit name">Submit</button>
-                </div>
-                <!-- Toggle to the Game-box-->
-                <div class="btns">
-                    <button id="btn-to-quiz" aria-label="start the quiz" style="display: none;">LET THE QUIZ BEGIN!</button>
-                </div>
-                <!-- Toggle back to Home Page-->
-                <div class="exit-back">
-                    <button class="exit" id="btn-exit-2" aria-label="exit go back">X</button>
+                <div class="wrapper">
+                    <h1>"Everyone Be Cool!"</h1>
+                    <h4>(Pulp Fiction)</h4>
+                    <p>We just need your name first.</p>
+                    <input type="text" id="name-input" name="name" required="" placeholder="Enter your name here">
+                    <div>
+                        <h4 id="name-error"></h4>
+                    </div>
+                    <div class="btns">
+                        <button id="btn-submit" type="submit" aria-label="submit name">Submit</button>
+                    </div>
+                    <!-- Toggle to the Game-box-->
+                    <div class="btns">
+                        <button id="btn-to-quiz" aria-label="start the quiz" style="display: none;">LET THE QUIZ BEGIN!</button>
+                    </div>
+                    <!-- Toggle back to Home Page-->
+                    <div class="exit-back container-bottom">
+                        <button class="exit" id="btn-exit-2" aria-label="exit go back">X</button>
+                    </div>
                 </div>
             </div>
 
@@ -117,7 +119,7 @@
                             </div>
                         </div>   
                 </div>
-                <div id="bottom" class="game-bottom">
+                <div id="bottom" class="container-bottom">
                     <!-- Counts what number of question user's currently on-->
                     <div class="question-count">
                         <span id="number-of-q">1 out of 10</span>
@@ -136,18 +138,17 @@
 
             <!--HIGHSCORE PAGE CONTAINER-->
             <div id="score-box" class="container-content">
-                <h1>Highscores of the day:</h1>
-                <ul id="highscore-list" class="lists"></ul>
-
-                <!-- Toggle back to Home Page-->
-                <div class="exit-back">
+                <div class="wrapper">
+                    <h1>Highscores of the day:</h1>
+                    <ul id="highscore-list" class="lists"></ul>
+                </div>
+                    <!-- Toggle back to Home Page-->
+                <div class="exit-back container-bottom">
                     <button class="exit" id="btn-exit-3" aria-label="exit go back">X</button>
                 </div>
             </div>
 
-
         </section>
-
     </main>
 
     <footer>

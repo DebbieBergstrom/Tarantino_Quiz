@@ -191,7 +191,7 @@ input {
 }
 
 .wrapper {
-    flex: 8;
+    flex: 9;
 }
 
 .img-wrapper {
@@ -257,8 +257,8 @@ input {
     margin: none;
 }
 
-.game-bottom {
-    flex: 2;
+.container-bottom {
+    flex: 1;
 }
 
 #timer {
