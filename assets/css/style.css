@@ -157,7 +157,7 @@ input {
 
 #btn-submit {
     font-size: 30px;
-    background-color: white;
+    background-color: rgb(236, 236, 3);
     color: #2a2a2a;
     transition: all 0.3s ease;
     margin-top: 20px;
@@ -276,12 +276,12 @@ input {
 }
 
 #btn-next {
-    background: #ffffff;
-    color: #2a2a2a;
-    font-size: 0.8em;
+    background: rgb(236, 236, 3);
+    color: black;
+    font-size: 18px;
     font-weight: bolder;
     border: 1px solid #2a2a2a;
-    padding: 10px;
+    padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     display: none;
@@ -306,17 +306,23 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.3em 0.3em;
-    font-size: 1.5rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
 }
 
 #timer i {
     color: black;
 }
 
+#timer p {
+    color: black;
+    padding: 5px;
+}
+
 .question-count {
     width: 7em;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .score-images {
@@ -368,8 +374,8 @@ footer li {
 
 /* **********************MEDIA QUERIES************************* */
 
-/* Laptop max-width 1400 px  */
-@media screen and (max-width: 1400px) {
+/* Laptop max-width 1600 px  */
+@media screen and (max-width: 1600px) {
 
     .container-content {
         width: 30%;
@@ -410,8 +416,6 @@ footer li {
         font-size: 18px;
     }
 
-
-
     #rules-box p {
         font-size: 15px;
     }
@@ -443,10 +447,42 @@ footer li {
         font-size: 22px;
     }
 
-    /* MOBILE 375x812px iPhoneX */
-    @media screen and (max-width: 426px) {
-        #background-image {
-            background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
-        }
+    .btns button {
+        margin: 0.6rem;
+        width: 1.2vl;
+        font-size: 1vw;
+}
+}
 
+
+/* Laptop max-width 1460 px  */
+@media screen and (max-width: 1460px) {
+
+    .container-content {
+        width: 28%;
+        padding: 8px;
     }
+    
+    #game-box {
+        margin-top: 21vh;
+    }
+   
+    #rules-box {
+        margin-top: 18vh;
+    }
+
+    .btn-answ {
+        font-size: 12px;
+    }
+   
+
+}
+
+
+/* MOBILE 375x812px iPhoneX */
+@media screen and (max-width: 426px) {
+    #background-image {
+        background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
+    }
+
+}
