@@ -20,16 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnAnswers = document.getElementById('answer-btns');
 
 
-
-
   // Initially hide all boxes except the homeBox
   gameBox.classList.add('hidden');
   rulesBox.classList.add('hidden');
   nameFirstBox.classList.add('hidden');
   scoreBox.classList.add('hidden');
-
-
-
 
 
   // Toggles between the desired "boxes" to be shown/hidden
@@ -45,7 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
   btnToNameFirst2.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, gameBox, rulesBox, scoreBox));
 
   btnToRules.addEventListener("click", () => toggleBoxes(rulesBox, homeBox, nameFirstBox, gameBox, scoreBox));
-  btnToHighScoreList.addEventListener("click", () => toggleBoxes(scoreBox, homeBox, rulesBox, nameFirstBox, gameBox));
+
+  btnToHighScoreList.addEventListener("click", () => {
+    toggleBoxes(scoreBox, homeBox, rulesBox, nameFirstBox, gameBox);
+    updateHighscoreList();
+  });
 
   btnExitToHome.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
   btnExitToHome2.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));

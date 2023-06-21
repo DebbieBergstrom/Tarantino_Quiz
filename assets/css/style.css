@@ -448,10 +448,7 @@ footer li {
 
 /* TABLETS 700x1000 */
 @media screen and (max-width: 1000px) {
-    #background-image {
-        background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_tab.jpg);
-    }
-
+    
     .container-content {
         width: 70vw;
         margin-top: 42vh;
@@ -511,6 +508,9 @@ footer li {
 
 /* TABLET S */
 @media screen and (max-width: 800px) {
+    #background-image {
+        background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_tab.jpg);
+    }
 
     #game-box {
         width: 70vw;
