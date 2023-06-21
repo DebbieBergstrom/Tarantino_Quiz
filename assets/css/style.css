@@ -334,9 +334,55 @@ footer li {
     height: 100%;
 }
 
+
+
 /* MEDIA QUERIES */
 
-/* LAPTOP 1024px */
+/* LAPTOP XL/DESKTOP */
+@media screen and (max-width: 1700px) {
+.btn-answ {
+    font-size: 1rem;
+    width: 95%;
+}
+
+#game-box {
+    height: 50vh;
+    width: 45vw
+}
+
+}
+
+/* LAPTOP M 1400px */
+@media screen and (max-width: 1400px) {
+    .btn-answ {
+        font-size: 0.6rem;
+        width: 97%;
+    }
+
+    #game-box {
+        height: 55vh;
+        width: 40vw
+    }
+
+    #game-box h2 {
+        font-size: 1vw;
+    }
+
+    #timer {
+        font-size: 1rem;
+    }
+
+    .question-count {
+        width: 7em;
+        font-size: 0.8rem;
+    }
+    
+        #btn-next {
+    font-size: 0.7rem;
+    }
+}
+
+/* LAPTOP S 1024px */
 @media screen and (max-width: 1200px) {
 
     #background-image {
@@ -346,6 +392,12 @@ footer li {
     .container-content {
         width: 38vw;
         margin-top: 28vh;
+    }
+
+    
+    #game-box {
+        height: 60vh;
+        width: 42vw
     }
 
     h1 {
@@ -394,7 +446,7 @@ footer li {
 
 }
 
-/* 500 px - 767px */
+/* TABLETS 700x1000 */
 @media screen and (max-width: 1000px) {
     #background-image {
         background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_tab.jpg);
@@ -402,11 +454,21 @@ footer li {
 
     .container-content {
         width: 70vw;
-        margin-top: 38vh;
+        margin-top: 42vh;
+    }
+
+    #game-box {
+        height: 50vh;
+        width: 61vw;
+        margin-top: 27vh;
+    }
+
+    #game-box h2 {
+        font-size: 1.4rem;
     }
 
     #quiz-img {
-        width: 50%;
+        width: 100%;
     }
 
     h1 {
@@ -438,7 +500,7 @@ footer li {
     }
 
     .btn-answ {
-        font-size: 0.55em;
+        font-size: 1.1rem;
     }
 
     footer {
@@ -446,6 +508,33 @@ footer li {
         border-top: 5px solid;
     }
 }
+
+/* TABLET S */
+@media screen and (max-width: 800px) {
+
+    #game-box {
+        width: 70vw;
+    }
+
+    .btn-answ {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* TABLET S */
+@media screen and (max-width: 650px) {
+
+    #game-box {
+        width: 80vw;
+        height: 55vh;
+    }
+
+    .btn-answ {
+        font-size: 0.8rem;
+    }
+}
+
 
 /* MOBILE 499px */
 @media screen and (max-width: 499px) {
@@ -458,6 +547,16 @@ footer li {
         height: 50vh;
         background-color: rgba(0, 0, 0, 0.7);
         margin-top: 30vh;
+    }
+
+    
+    #game-box {
+        width: 85vw;
+        height: 60vh;
+    }
+
+    #game-box h2 {
+        font-size: 0.8rem;
     }
 
     .btns {
@@ -527,9 +626,12 @@ footer li {
         padding-block: 0.7rem;
     }
 
+    #answer-btns {
+        margin-top: 0.1rem;
+    }
+
     .btn-answ {
-        font-size: 0.55em;
-        margin: 0.15em;
+        font-size: 0.7rem;
     }
 
     #btn-next {
@@ -571,6 +673,13 @@ footer li {
         height: 60vh;
         background-color: rgba(0, 0, 0, 0.7);
         margin-top: 30vh;
+    }
+
+    
+    #game-box {
+        width: 85vw;
+        height: 80vh;
+        margin-top: 23vh;
     }
 
     .btns {
