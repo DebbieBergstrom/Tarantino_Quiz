@@ -377,23 +377,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
- // Function to shuffle the array
-function shuffleArray(allQuestions) {
-  for (let i = allQuestions.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
+  // Function to shuffle the array
+  function shuffleArray(allQuestions) {
+    for (let i = allQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
+    }
+    return allQuestions;
   }
-  return allQuestions;
-}
 
-function beginQuiz() {
-  activeQuestionIndex = 0;
-  score = 0;
-  btnNext.innerHTML = "Next";
-  shuffleArray(allQuestions);
-  displayQuestion();
-  countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
-}
+  function beginQuiz() {
+    activeQuestionIndex = 0;
+    score = 0;
+    btnNext.innerHTML = "Next";
+    shuffleArray(allQuestions);
+    displayQuestion();
+    countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
+  }
 
   function displayQuestion() {
     resetState();
@@ -530,7 +530,10 @@ function beginQuiz() {
       console.log(userScore.score, userScore.name)
       if (userScore.score > -1) {
         const listItem = document.createElement("li");
-        listItem.textContent = ` Name ${userScore.name}: Score ${userScore.score}`;
+        listItem.textContent = `${userScore.name} | score: ${userScore.score}`;
+        listItem.style.margin = "8px";
+        listItem.style.display = "flex";
+        listItem.style.justifyContent = "space-between";
         highscoreList.appendChild(listItem);
       }
     }

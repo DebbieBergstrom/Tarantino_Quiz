@@ -42,6 +42,8 @@ p {
 
 input {
     margin-top: 10px;
+    width: 150px;
+    height: 30px;
 }
 
 #name-first-box h1 {
@@ -134,9 +136,10 @@ input {
 }
 
 #btn-submit {
-    font-size: 0.7vw;
+    font-size: 0.9vw;
     background-color: white;
     color: #2a2a2a;
+    transition: all 0.3s ease;
 }
 
 #btn-submit:hover {
@@ -152,6 +155,7 @@ input {
     align-items: center;
     justify-content: space-between;
     padding: 0.5em 1.5em;
+    transition: all 0.3s ease;
 }
 
 .exit {
@@ -178,13 +182,14 @@ input {
 .lists {
     text-align: left;
     padding-left: 3rem;
+    padding-bottom: 3rem;
 }
 
 /* THE QUIZ GAME */
 
 #game-box {
     margin-top: 25vh;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -205,10 +210,14 @@ input {
     height: auto;
 }
 
+#answer-btns {
+    margin-top: 1rem;
+}
+
 .btn-answ {
     background: #ffffff;
     color: #2a2a2a;
-    font-size: 0.7em;
+    font-size: 1rem;
     width: 90%;
     border: 1px solid #2a2a2a;
     margin-block: 4px;
@@ -488,8 +497,8 @@ footer li {
         margin-top: 1rem;
     }
 
-    #name-first-box input {
-        font-size: 1rem;
+    input {
+        font-size: 3rem;
     }
 
     #btn-submit {
