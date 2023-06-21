@@ -535,24 +535,48 @@ footer li {
     }
 }
 
+/* MOBILE 414x812px iPhone 6/7/8P lus
+@media screen and (min-width: 400px) {
 
-/* MOBILE 499px */
-@media screen and (max-width: 499px) {
+    .container-content {
+        width: 75vw;
+        margin-top: 35vh;
+    }
+
+    #game-box {
+        height: 57vh;
+        margin-top: 20vh;
+    }
+
+} */
+
+/* MOBILE 375x812px iPhoneX */
+@media screen and (max-width: 426px) {
     #background-image {
         background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
     }
 
     .container-content {
-        width: 85vw;
-        height: 50vh;
-        background-color: rgba(0, 0, 0, 0.7);
+        width: 75vw;
+        margin-top: 35vh;
+    }
+
+    #game-box {
+        height: 57vh;
+        margin-top: 20vh;
+    }
+
+
+    #name-first-box {
+        width: 80vw;
+        height: 42vh;
         margin-top: 30vh;
     }
 
 
     #game-box {
-        width: 85vw;
         height: 60vh;
+        margin-top: 20vh;
     }
 
     #game-box h2 {
@@ -571,6 +595,10 @@ footer li {
 
     h1 {
         font-size: 7vw;
+    }
+
+    #rules-box {
+        margin-top: 26vh;
     }
 
     #rules-box h1 {
@@ -663,8 +691,8 @@ footer li {
     }
 }
 
-/* MOBILE 320px */
-@media screen and (max-width: 320px) {
+/* MOBILE 320x568px iPhone5s */
+@media screen and (max-width: 330px) {
     #background-image {
         background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
     }
@@ -723,6 +751,15 @@ footer li {
         padding-bottom: 5rem;
     }
 
+    #rules-box {
+        height: 67vh;
+    }
+
+    #rules-box .exit-back {
+        padding: 0.2em;
+        margin-top: 0px;
+    }
+
     #rules-box h1 {
         font-size: 6vw;
         padding: 0.1rem;
@@ -742,6 +779,15 @@ footer li {
         padding-bottom: 0.1rem;
     }
 
+    .lists {
+        padding-left: 3rem;
+        padding-bottom: 0rem;
+    }
+
+    #name-first-box .wrapper {
+        width: auto;
+    }
+
     #btn-to-name-first-2 {
         margin-top: 1rem;
     }
@@ -750,16 +796,21 @@ footer li {
         font-size: 0.85rem;
     }
 
-
     #name-first-box h4 {
         padding-bottom: 0.5rem;
         padding-top: 0.1rem;
     }
 
+    #score-box {
+        width: 80vw;
+        height: 40vh;
+        margin-top: 30vh;
+    }
+
     #btn-submit {
         font-size: 0.8rem;
-    padding: 0.4rem;
-    margin: 1rem;
+        padding: 0.4rem;
+        margin: 0.3rem;
     }
 
     h2 {
@@ -767,7 +818,7 @@ footer li {
     }
 
     h4 {
-        font-size: 1.8vw;
+        font-size: 3vw;
     }
 
     p {
@@ -792,6 +843,7 @@ footer li {
 
     .exit-back {
         padding: 0.2em;
+        margin-top: 20px;
     }
 
     .exit {

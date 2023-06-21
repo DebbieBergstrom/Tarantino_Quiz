@@ -467,6 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scoreImage.src = 'assets/images//collection_border.jpg';
     const scoreImgBox = document.getElementById("score-img"); // Append the image to div
     scoreImgBox.appendChild(scoreImage);
+    scoreImage.style.marginTop = "50px";
 
     quizQuestions.innerHTML = `<div style="font-size: 2rem; color: yellow;">Wooow! <br>${username}, you scored <br>${score} out of ${allQuestions.length}!</div>`;
 
@@ -484,6 +485,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnNext.innerHTML = "See Highscore List";
     btnNext.style.display = "block";
+    btnNext.style.backgroundColor = "rgb(168, 26, 38)";
+    btnNext.style.color = "white";
+    btnNext.style.fontWeight = "bold";
+    btnNext.style.marginRight = "60px";
+    btnNext.style.width = "115px";
   }
 
   function handleBtnNext() {
