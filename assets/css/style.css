@@ -7,7 +7,7 @@
 
 /* Max width set to keep content within 1500px on bigger desktop screens */
 #page-max-width {
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -26,14 +26,14 @@ body {
 /* Headings & text styling */
 h1 {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 50px;
     padding: 10px;
     margin: none;
 }
 
 h2 {
-    padding-top: 20px;
-    font-size: 40px;
+    padding-top: 15px;
+    font-size: 30px;
 }
 
 h4 {
@@ -43,7 +43,7 @@ h4 {
 
 p {
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #home-box p {
@@ -90,16 +90,29 @@ input {
 }
 
 .container-content {
-        width: 50%;
-        height: fit-content;
-        background-color: rgba(0, 0, 0, 0.7);
-        margin-top: 33vh;
-        color: white;
-        padding: 40px;
-        box-shadow: 0.125rem 0.1875 1.25rem 1, 2rem rgba(0, 0, 0, 0.39);
-        border-radius: 0.3rem;
-        text-align: center;
+    width: 50%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 33vh;
+    color: white;
+    padding: 40px;
+    box-shadow: 0.125rem 0.1875 1.25rem 1, 2rem rgba(0, 0, 0, 0.39);
+    border-radius: 0.3rem;
+    text-align: center;
 }
+
+#home-box {
+    margin-top: 30vh;
+}
+
+#rules-box {
+    margin-top: 30vh;
+}
+
+#rules-box p {
+    font-size: 20px;
+}
+
 
 /* BUTTONS  */
 .btns {
@@ -195,6 +208,7 @@ input {
     text-align: left;
     padding-left: 3rem;
     padding-bottom: 3rem;
+    font-size: 30px;
 }
 
 /* THE QUIZ GAME */
@@ -278,7 +292,7 @@ input {
     display: flex;
     justify-content: column;
     align-items: center;
-    margin: none;
+    margin-top: 10px;
 }
 
 .container-bottom {
@@ -348,12 +362,91 @@ footer li {
     height: 100%;
 }
 
-/* MEDIA QUERIES */
 
-/* MOBILE 375x812px iPhoneX */
-@media screen and (max-width: 426px) {
-    #background-image {
-        background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
+
+
+
+/* **********************MEDIA QUERIES************************* */
+
+/* Laptop max-width 1400 px  */
+@media screen and (max-width: 1400px) {
+
+    .container-content {
+        width: 30%;
+        padding: 10px;
     }
 
-}
+    #home-box {
+        margin-top: 26vh;
+    }
+
+    #home-box p {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    #score-box {
+        margin-top: 35vh;
+    }
+
+    #rules-box {
+        margin-top: 20vh;
+    }
+
+    #rules-box h1 {
+        font-size: 25px;
+    }
+
+    #rules-box h2 {
+        font-size: 18px;
+    }
+
+
+
+    #rules-box p {
+        font-size: 15px;
+    }
+
+    .lists {
+        padding-bottom: 5px;
+        font-size: 20px;
+    }
+
+    #first-name-box {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    #btn-submit {
+        font-size: 20px;
+    }
+
+    #game-box h2 {
+        font-size: 16px;
+    }
+
+    .btn-answ {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #btn-to-quiz {
+        font-size: 22px;
+    }
+
+    /* MOBILE 375x812px iPhoneX */
+    @media screen and (max-width: 426px) {
+        #background-image {
+            background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_mobile.jpg);
+        }
+
+    }
