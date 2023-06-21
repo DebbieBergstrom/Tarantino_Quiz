@@ -448,10 +448,10 @@ footer li {
 
 /* TABLETS 700x1000 */
 @media screen and (max-width: 1024px) {
-    
+
     .container-content {
-        width: 70vw;
-        margin-top: 42vh;
+        width: 47vw;
+        margin-top: 31vh;
     }
 
     #game-box {
@@ -459,6 +459,12 @@ footer li {
         width: 61vw;
         margin-top: 27vh;
     }
+
+    #rules-box {
+        width: 49vw;
+        margin-top: 15vh;
+    }
+
 
     #game-box h2 {
         font-size: 1.4rem;
@@ -525,23 +531,19 @@ footer li {
 /* TABLET S */
 @media screen and (max-width: 650px) {
 
-#home-box {
-    width: 80vw;
-    height: 55vh;
-}
+    #home-box {
+        width: 80vw;
+        height: 55vh;
+    }
 
     .btn-answ {
         font-size: 1rem;
     }
+
     #home-box {
         width: 75vw;
         margin-top: 30vh;
         height: 40vh;
-    }
-
-    #home-box p {
-        font-size: 1.2rem;
-        padding: 2rem;
     }
 
 
@@ -556,7 +558,8 @@ footer li {
         height: 42vh;
         margin-top: 30vh;
     }
-
+}
+/* 
     #game-box h2 {
         font-size: 0.8rem;
     }
@@ -668,7 +671,7 @@ footer li {
         margin-top: 20vh;
     }
 
-} */
+} */ */
 
 /* MOBILE 375x812px iPhoneX */
 @media screen and (max-width: 426px) {
@@ -679,6 +682,7 @@ footer li {
     #home-box {
         width: 75vw;
         margin-top: 30vh;
+        height: 50vh;
     }
 
     #game-box {
@@ -689,7 +693,7 @@ footer li {
 
     #name-first-box {
         width: 80vw;
-        height: 42vh;
+        height: 48vh;
         margin-top: 30vh;
     }
 
@@ -762,6 +766,7 @@ footer li {
 
     p {
         font-size: 4vw;
+        padding-bottom: 1.5rem;
     }
 
     #btn-game-rules {
@@ -791,12 +796,6 @@ footer li {
         padding: 0.2em;
     }
 
-    .exit {
-        font-size: 1rem;
-        width: 2rem;
-        height: 2rem;
-        margin-top: 30px;
-    }
 
     #bottom {
         margin-top: 0.1em;
@@ -822,6 +821,11 @@ footer li {
         margin-top: 25vh;
     }
 
+    #home-box {
+        width: 75vw;
+        margin-top: 30vh;
+        height: 59vh;
+    }
 
     #game-box {
         width: 85vw;
@@ -866,11 +870,13 @@ footer li {
 
     #highscore-list {
         padding-left: 0rem;
-        padding-bottom: 5rem;
+        padding-bottom: 0rem;
     }
 
     #rules-box {
         height: 67vh;
+        width: 76vw;
+        margin-top: 15vh;
     }
 
     #rules-box .exit-back {
@@ -900,6 +906,12 @@ footer li {
     .lists {
         padding-left: 3rem;
         padding-bottom: 0rem;
+    }
+
+    #name-first-box {
+        width: 80vw;
+        height: 55vh;
+        margin-top: 27vh;
     }
 
     #name-first-box .wrapper {
@@ -961,7 +973,6 @@ footer li {
 
     .exit-back {
         padding: 0.2em;
-        margin-top: 20px;
     }
 
     .exit {

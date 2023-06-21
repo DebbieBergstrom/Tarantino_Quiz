@@ -76,7 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     beginQuiz();
   });
 
-  function initialize() {
+  function initialize(event) {
+    event.preventDefault();
     let nameError = document.getElementById("name-error");
     let name = nameInput.value.trim();
 
