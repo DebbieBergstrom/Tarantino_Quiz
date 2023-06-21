@@ -285,7 +285,9 @@ The website was tested on the following browsers:
 | 8. The timer kept counting down below 0 and showed negative numbers| Changed the code to (currentTime <= 0) instead of (currentTime === 0) |
 | 9. The timer numbers became jumpy when counting down| Went through the code and saw that the function startTimer was called on to many times, removed unneccessary ones |
 | 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| Made a variable of name and score and pushed it to the array using "highscores.push(userScore);|
-| 7. The submit-button does'nt work on mobile diveces, making it impossible to play the quiz| TBC|
+| 11. The submit-button does'nt work on mobile diveces, making it impossible to play the quiz| TBC|
+| 12. Timer stops at zero, but user can still choose answer| TBC|
+| 13. The scorelist doesn't display an ordered list with numbers as wanted"| TBC|
 
 
 &nbsp;

@@ -447,7 +447,7 @@ footer li {
 }
 
 /* TABLETS 700x1000 */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     
     .container-content {
         width: 70vw;
@@ -507,7 +507,7 @@ footer li {
 }
 
 /* TABLET S */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #background-image {
         background-image: url(https://debbiebergstrom.github.io/tarantino_quiz/assets/images/bg_tab.jpg);
     }
@@ -525,13 +525,133 @@ footer li {
 /* TABLET S */
 @media screen and (max-width: 650px) {
 
-    #game-box {
-        width: 80vw;
-        height: 55vh;
-    }
+#home-box {
+    width: 80vw;
+    height: 55vh;
+}
 
     .btn-answ {
+        font-size: 1rem;
+    }
+    #home-box {
+        width: 75vw;
+        margin-top: 30vh;
+        height: 40vh;
+    }
+
+    #home-box p {
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+
+
+    #game-box {
+        height: 57vh;
+        margin-top: 20vh;
+    }
+
+
+    #name-first-box {
+        width: 80vw;
+        height: 42vh;
+        margin-top: 30vh;
+    }
+
+    #game-box h2 {
         font-size: 0.8rem;
+    }
+
+    .btns {
+        padding: 0.1rem;
+    }
+
+    .btns button {
+        margin: 0.3rem;
+        font-size: 1rem;
+        padding: 0.3rem 0.4rem;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    #score-box {
+        margin-top: 31vh;
+    }
+
+    #rules-box {
+        margin-top: 30vh;
+    }
+
+    #rules-box h1 {
+        font-size: 6vw;
+        padding: 0.1rem;
+    }
+
+    #rules-box h2 {
+        font-size: 4vw;
+    }
+
+
+    #rules-box h4 {
+        font-size: 2vw;
+    }
+
+    #rules-box p {
+        font-size: 3.5vw;
+        padding-bottom: 0.1rem;
+    }
+
+    #btn-to-name-first-2 {
+        margin-top: 1rem;
+    }
+
+    #name-first-box {
+        width: 80vw;
+        height: 30vh;
+        margin-top: 40vh;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
+
+    #btn-submit {
+        font-size: 1rem;
+        padding: 0.4rem;
+        margin: 0.3rem;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    h4 {
+        font-size: 1.8vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    #btn-game-rules {
+        margin: 1.6rem;
+    }
+
+    #questions {
+        padding-block: 0.7rem;
+    }
+
+
+    #btn-next {
+        margin-block: 0.7rem;
+        width: 90px;
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    footer {
+        height: 3rem;
     }
 }
 
@@ -571,12 +691,6 @@ footer li {
         width: 80vw;
         height: 42vh;
         margin-top: 30vh;
-    }
-
-
-    #game-box {
-        height: 60vh;
-        margin-top: 20vh;
     }
 
     #game-box h2 {
