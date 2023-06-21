@@ -451,7 +451,7 @@ footer li {
         margin: 0.6rem;
         width: 1.2vl;
         font-size: 1vw;
-}
+    }
 }
 
 
@@ -462,11 +462,11 @@ footer li {
         width: 28%;
         padding: 8px;
     }
-    
+
     #game-box {
         margin-top: 21vh;
     }
-   
+
     #rules-box {
         margin-top: 18vh;
     }
@@ -474,10 +474,106 @@ footer li {
     .btn-answ {
         font-size: 12px;
     }
-   
+
 
 }
 
+
+/* Laptop max-width 1200 px  */
+@media screen and (max-width: 1200px) {
+
+    .container-content {
+        width: 30%;
+    }
+
+    #home-box p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    #game-box {
+        margin-top: 20vh;
+    }
+
+    #rules-box {
+        margin-top: 18vh;
+    }
+
+    .btn-answ {
+        font-size: 12px;
+    }
+
+    #rules-box {
+        margin-top: 20vh;
+    }
+
+    #rules-box h1 {
+        font-size: 25px;
+    }
+
+    #rules-box h2 {
+        font-size: 18px;
+    }
+
+    #rules-box p {
+        font-size: 15px;
+        padding: 3px;
+    }
+
+    .lists {
+        padding-bottom: 5px;
+        font-size: 20px;
+    }
+
+    .btns button {
+        margin: 5px;
+        font-size: 16px;
+    }
+
+    #btn-to-name-first-2 {
+        margin-top: 22px;
+    }
+
+    input {
+        margin-top: 14px;
+        width: 180px;
+        height: 27px;
+    }
+
+    h4 {
+        font-size: 10px;
+    }
+
+}
+
+
+/* Laptop max-width 1000 px  */
+@media screen and (max-width: 1000px) {
+
+    .container-content {
+        width: 35%;
+    }
+
+    #game-box {
+        margin-top: 20vh;
+    }
+
+
+    #game-box h2 {
+        font-size: 14px;
+        padding-top: 3px;
+    }
+
+    .btn-answ {
+        font-size: 11px;
+        width: 99%;
+        border: 1px solid #2a2a2a;
+        margin-block: 3px;
+        margin-top: 4px;
+    }
+
+
+}
 
 /* MOBILE 375x812px iPhoneX */
 @media screen and (max-width: 426px) {
