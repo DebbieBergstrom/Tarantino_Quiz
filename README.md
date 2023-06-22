@@ -1,8 +1,8 @@
 # **The Ultimate Tarantino Quiz**
 
-Welcome to 
+Welcome to the Quentin Tarantino Movie Quiz, a trivia experience crafted for movie fans. This quiz is a celebration of the iconic films directed by Quentin Tarantino, known for his unique storytelling style and unforgettable characters. With a passion for Tarantino's movies at its core, this quiz aims to test your knowledge and immerse you in the thrilling world of his cinematic masterpieces.
 
-![responsivedesign](/workspace/tarantino_quiz/docs/validation/amiresponsive_pp2.png)
+![](/docs/validation/amiresponsive_pp2.png)
 
 <b>Visit the deployed site:</b> [the Ultimate Tarantino Quiz](https://debbiebergstrom.github.io/tarantino_quiz/)
 
@@ -45,23 +45,40 @@ Welcome to
 
 ## **GOALS**
 ### **Project Goals**
-
+The goal of this project is to create an engaging and entertaining quiz experience centered around Quentin Tarantino's movies. The quiz aims to captivate users, test their knowledge, and provide interesting insights about Tarantino's films. The website's design will reflect the vibrant and dynamic nature of his movies, while the user interface will be intuitive and user-friendly. Overall, the Tarantino Movie Quiz strives to provide a fun and immersive experience for movie enthusiasts to celebrate the work of this renowned director.
 
 ### **User Goals**
 
-- 
+- An engaging and visually appealing quiz app that captures the essence of Tarantino's movies.
+- Clear and concise rules and instructions on how to play the quiz.
+- Easy navigation between the home page, rules page, highscores page, and quiz page.
+- A fun and interactive quiz experience with 10 challenging questions about Tarantino's films.
+- Well-placed Tarantino quotes throughout the app to enhance the overall experience.
+- Clear display of the user's score at the end of the quiz to celebrate their achievement.
+- Responsive design that ensures the app works on all devices.
+- Easy access to social media links in the footer for further engagement and interaction.
+- A visually appealing and immersive environment that reflects the style and atmosphere of Tarantino's movies.
+- A memorable and enjoyable experience that leaves users entertained and motivated to share their scores and invite others to take the quiz.
 
 ### **Returning Visitor Goals**
 
-- 
+- Easily access the quiz and start playing without any hassle.
+- Review the quiz rules or instructions for a quick refresher.
+- Check the updated highscores list to see if their previous score is still among the top.
+- Challenge themselves to improve their previous score and beat their own record.
 
 ### **Site Owner Goals**
 
-- 
+- Promote the quiz app as a fun and engaging activity related to Quentin Tarantino and his movies.
+- Increase user engagement and time spent on the website by offering an entertaining quiz experience with more future features.
+- Provide clear visibility in the footer with links to the owner's GitHub and LinkedIn pages, allowing users to easily contact and provide feedback.
 
 ### **Developer Goals**
 
-- 
+- Develop an engaging and interactive quiz app that captures the essence of Quentin Tarantino's movies.
+- Implement a responsive and user-friendly design that ensures a seamless experience across all devices.
+- Create a well-structured and organized codebase to facilitate easy maintenance and future updates.
+- Implement efficient functions for scoring and displaying quiz results accurately and dynamically.
 
 &nbsp;
 
@@ -71,23 +88,20 @@ Welcome to
 &nbsp;
 ### **USER STORIES**
 #### **First time users**
-1. _As a first-time user, I want to 
-2. _As a first-time user, I want to 
-3. _As a first-time user, I want to 
-4. _As a first-time user, I want to 
-5. _As a first-time user, I want to 
+1. _As a first-time user, I want to easily understand the instructions and rules of the quiz.
+2. _As a first-time user, I want to navigate through the quiz questions effortlessly.
+3. _As a first-time user, I want to see my score and know how well I performed in the quiz.
+4. _As a first-time user, I want to have an enjoyable and engaging experience while answering the quiz questions. 
+5. _As a first-time user, I want to easily access the highscores list to see how my score compares to others.
 
 #### **Returning users**
-8. _As a returning user, I want to
-9. _As a returning user, I want to
-10. _As a returning user, I want to
-11. _As a returning user, I want to 
+8. _As a returning user, I want to challenge myself with new quiz questions and test my knowledge again.
+9. _As a returning user, I want to easily navigate back to the highscores list to see if my previous score has improved.
 
 #### **Site owner**
-14. _As the site owner, I want users to 
-15. _As the site owner, I want users to 
-16. _As the site owner, I want users to 
-17. _As the site owner, I want users to 
+11. _As the site owner, I want users to have an enjoyable experience while playing the quiz.
+12. _As the site owner, I want users to share their quiz results with friends, helping to increase the visibility and reach of the quiz and attract more users to play.
+
 
 &nbsp;
 
@@ -115,24 +129,32 @@ By using correct HTML markup and labels it is ensured screen readers can accurat
 ## **DESIGN**
 
 ### **Colors**
-- Color scheme inspiration was taken from the movies themselves, with a lot of sharp contrast with black, white, blood red and fiery yellow.
-- A complementary color was added for sharp contrast 
+- Color scheme inspiration was taken from the movies themselves, with a lot of sharp contrast with black, white, blood red and fiery yellow. 
 - These design choices was thought to help create a visually appealing and cohesive website that will leave a positive impression on our visitors.
 
-![](image url)
+The colour palette was created using the [Coolors website](https://coolors.co/521313-2a2a2a-ffffff-ecec03-c59849).
+![](/docs/screenshots/color_scheme.png)
 
 ### **Fonts**
 
-- Logo /h1: Arial??? 
+- Logo which is sesigned into the background image was made with the fontstyle Aachen Bold, which is used in the famous Tarantino movie “Pulp Fiction”. 
+- Througout the rest of the site font 'Franklin Gothic Medium''(Arial Narrow', Arial, sans-serif as backups) is used as a fitting simple font that goes well with the logo font.
 
 ### **Structure**
-The site has been designed with a user-friendly and intuitive structure. Upon arrival, the user is greeted with a ????????????????????????????????
+The site has been designed with a user-friendly and intuitive structure. Upon arrival, the user is greeted with a "Hey Honey Bunny" message, inspired by a famous line from the movie Pulp Fiction, adding a touch of fun and engagement to the experience.
 
-The website is composed of :
+The website is composed of the following pages:
 
-- The homepage, which features ?????????????????
+Home Page: The home page serves as the entry point to the quiz app. It welcomes users with the "Hey Honey Bunny" message and provides a brief introduction to the quiz. Users can easily navigate to other pages from the home page.
 
-By organizing the content into distinct pages, the website makes it easy for users to navigate and find the information they are looking for. Additionally, the use of a consistent navigation bar and footer throughout the website ensures that users can always find their way back to the main sections of the website and find the social media links.
+Rules Page: The rules page provides users with a clear understanding of the quiz rules and instructions. 
+
+Highscores Page: The highscores page displays a list of top scorers in the quiz. Users can see their own score and compare it with others. .
+
+Quiz Page: The quiz page is where the actual quiz takes place. It presents users with a series of 10 questions related to Tarantino's movies. Each question is accompanied by multiple-choice options, allowing users to select their answers. Upon completing the quiz, users receive an immediate score display.
+
+The site's structure aims to guide users seamlessly through these pages, providing an enjoyable and interactive experience while exploring the quiz and testing their knowledge of Tarantino's movies.
+
 
 ### **Wireframes**
 
@@ -366,3 +388,5 @@ I would like to take the opportunity to thank:
 - To the teachers at Code Institute and Slack for providing help and updates.
 - Friends who shared amazing photos of our dive trips. 
 - My boss at my job who's been supportive and helpful with working scheduls.
+
+[def]: /workspace/tarantino_quiz/docs/validation/JSHint_validation.png
