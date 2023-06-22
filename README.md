@@ -107,14 +107,58 @@ The goal of this project is to create an engaging and entertaining quiz experien
 ## **FEATURES**
 &nbsp;
 ### **PAGES: HOME, RULES, SCORE LIST, NAME FIRST, QUIZ, DISPLAYED SCORE**
-&nbsp;
-The website has 15 responsive pages, counting the Home page, the Rules page, the Highscore page, the Enter name first page, the quiz and finally a page that dispays the users score after the game. The Quiz contains 10 pages with different questions/ answers and a unique images displayed for each one. 
+
+The website has 15 responsive pages, counting the Home page, the Rules page, the Highscore page, the Enter name first page, the quiz and finally a page that dispays the users score after the game. The Quiz contains 10 pages with randomly selected different questions/ answers and a unique images displayed for each one. 
 By using correct HTML markup and labels it is ensured screen readers can accurately interpret the pages.
-&nbsp;
+The website is composed of the following pages:
+
+- **Home Page:** The home page serves as the entry point to the quiz app. It welcomes users with the *"Hey Honey Bunny"* message inspired by a famous line from the movie *Pulp Fiction*, adding a touch of fun and engagement to the experience.and provides a brief introduction to the quiz. Users can easily navigate to other pages from the home page.
+/docs/screenshots/home_page.png
+
+- **Rules Page:** The rules page provides users with a clear understanding of the quiz rules and instructions.
+/docs/screenshots/rules_page.png
+
+- **Highscores Page:** The highscores page displays a list of top scorers in the quiz. Users can see their own score and compare it with others.
+/docs/screenshots/score_displays_latest.png
+
+- **Name first Page:** The name page is the initial page where the user is prompted to enter their name. It is designed to collect the user's name and store it to later pair it with their quiz score.
+Features of the Name Page:
+
+    - An input field with a placeholder text saying "Enter name here." The input field has an HTML label that is visibly hidden but still accessible to screen readers.
+    - The input field has certain requirements: it allows only letters, has a maximum character limit of 12, and displays an error message if the entered name is not valid.
+    - If the user enters an invalid name, an error message is shown, specifying the required format for a valid name.
+    - Once the user enters a valid name and submits it, a previously hidden button is displayed, saying "Let the quiz begin!" This button serves as the trigger to start the quiz.
+
+The Name Page ensures that the user provides a valid name and allows them to proceed to the quiz only when the name input meets the specified requirements.
+
+- **Quiz Page:** The quiz page is where the actual quiz takes place. Eanh time a user plays the questions are randomly selected. It presents users with a series of 10 questions related to Tarantino's movies. Each question is accompanied by multiple-choice options, allowing users to select their answers. Upon completing the quiz, users receive an immediate score display.<br>
+    - The next-button doesn't get displayed until the user chooses an option.
+    - If they are correct, the field turns green, otherwise the incorrect choice turns red and the correct answer shows with green. 
+    - A question counter is added to the bottom left for the user to know how many questions they've answered and how many there's left.
+    - A timer function is placed at the bottom left, counting down from 15 seconds. The numbers are green until it reaches 5 seconds left, then it turns red. This makes the user hurry up to not loose a point. When an answer has been selected, the timer stops and the user can't change the option, only press the now displayed Next-button.
+/workspace/tarantino_quiz/docs/screenshots/quiz_new_question.png
+/workspace/tarantino_quiz/docs/screenshots/quiz_showing_counter_timer.png
+
 
 ### **FOOTER**
 
 - The footer is fixed on every page and contains the media links to owners LinkedIn page and GitHub page, so that anyone who plays the quiz can easily can get in contact withe owner for feedback.
+
+&nbsp;
+### **FUTURE FEATURES**
+
+&nbsp;
+In the future, there will be exciting plans to enhance this movie quiz project. The focus will be on improving various aspects to make the quiz more engaging and enjoyable for users.
+
+- Expanded Question Library: One of the key future enhancements is to create a much larger library of questions. This will ensure that each time a user plays the quiz, they will be presented with a different set of questions. Having a diverse and extensive question pool will add variety and prevent users from memorizing the answers, making the quiz more challenging and fun.
+
+- Enhanced Scoreboard: The scoreboard will undergo significant improvements to make it visually appealing and provide a clearer representation of users' scores. The goal is to incorporate funny images and text based on how well users scored, adding a touch of humor and entertainment to the experience.
+
+- Time-Based Scoring: The scoring system will be updated to take into account the speed at which users answer questions. The final score will be determined not only by the number of correct answers but also by how quickly users respond. This time-based scoring mechanism will add an element of urgency and encourage users to think fast and act swiftly.
+
+- Keyboard Navigation: To enhance accessibility and user convenience, keyboard navigation will be implemented. This feature will allow users to navigate and interact with the quiz using keyboard shortcuts, providing an alternative input method for those who prefer or require it.
+
+These future implementations will significantly elevate the movie quiz experience, offering a larger question pool, improved scoring, entertaining visuals, and enhanced accessibility. These enhancements aim to make the quiz more engaging, challenging, and enjoyable for all users.
 
 &nbsp;
 
@@ -133,19 +177,13 @@ The colour palette was created using the [Coolors website](https://coolors.co/52
 - Througout the rest of the site font 'Franklin Gothic Medium''(Arial Narrow', Arial, sans-serif as backups) is used as a fitting simple font that goes well with the logo font.
 
 ### **Structure**
-The site has been designed with a user-friendly and intuitive structure. Upon arrival, the user is greeted with a "Hey Honey Bunny" message, inspired by a famous line from the movie Pulp Fiction, adding a touch of fun and engagement to the experience.
 
-The website is composed of the following pages:
+The site has been designed with a user-friendly and intuitive structure. 
 
-Home Page: The home page serves as the entry point to the quiz app. It welcomes users with the "Hey Honey Bunny" message and provides a brief introduction to the quiz. Users can easily navigate to other pages from the home page.
 
-Rules Page: The rules page provides users with a clear understanding of the quiz rules and instructions. 
-
-Highscores Page: The highscores page displays a list of top scorers in the quiz. Users can see their own score and compare it with others. .
-
-Quiz Page: The quiz page is where the actual quiz takes place. It presents users with a series of 10 questions related to Tarantino's movies. Each question is accompanied by multiple-choice options, allowing users to select their answers. Upon completing the quiz, users receive an immediate score display.
 
 The site's structure aims to guide users seamlessly through these pages, providing an enjoyable and interactive experience while exploring the quiz and testing their knowledge of Tarantino's movies.
+
 
 
 ### **Wireframes**
@@ -256,19 +294,10 @@ See link to [results](https://wave.webaim.org/report#/https://debbiebergstrom.gi
 &nbsp;
 
 ### **Performance**
-Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. 
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. Due to experiencing trouble getting Lighthouse to work, a tutor att Code Institute had to run the test and send me a screenshot of the result. The result couldn't be perfected because the specifications on the result wasn't able to get. Therefore, when submitting this project, potential issues couldn't be resolved. 
 
-<details><summary>Home</summary>
-<img src="docs/validation/lighthouse_index.png">
-</details>
-<details><summary>Courses</summary>
-<img src="docs/validation/lighthouse_courses.png">
-</details>
-<details><summary>Dive Sites</summary>
-<img src="docs/validation/lighthouse_divesites.png">
-</details>
-<details><summary>Gallery</summary>
-<img src="docs/validation/lighthouse_gallery.png">
+<details><summary>LightHouse Testing</summary>
+<img src="docs/validation/lighthouse_testing.png">
 </details>
 
 ### **Performing tests on various devices**
@@ -293,34 +322,17 @@ The website was tested on the following browsers:
 
 ### **Testing User Stories**
 
-1. As a first-time user, I want to 
+The user stories and features were thoroughly tested to ensure interactivity, feedback, notification, responsiveness, accessibility, and validation. Both manual and automated testing techniques were employed to cover various scenarios and edge cases.
 
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
+By evaluating each user story against its corresponding feature, we ensured that the intended goals were met and a satisfactory user experience was provided.
 
+Testing the individual features focused on input validation, proper display of information, accurate calculations, user interactions, and responsiveness across different devices.
 
-<details><summary>Screenshots</summary>
-<img src="">
-</details>
+Any bugs or issues encountered that did not meet the desired outcome were documented and listed under the Bugs section. These will be addressed in future iterations to enhance the user experience.
 
+Screenshots were taken to showcase the features in action, illustrating their expected behavior and visual presentation.
 
-&nbsp;
-
-2. As a returning user, I want to 
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-
-
-3. As the site owner, I want users to have a custom made 404 error message with the websites familiar design to direct them back to the website when needed.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| 404 error page | On 404 error page click on link ?????????????????????????????????? (link starts at Home) or any link up in the navigation bar | Find back to home page | Works as expected |
-
-<details><summary>Screenshots</summary>
-<img src="">
-</details>
+In conclusion, the testing process confirmed the successful implementation of user stories and the functional behavior of features, ensuring interactivity, feedback, notification, responsiveness, accessibility, and validation were effectively incorporated into the project.
 
 &nbsp;
 
