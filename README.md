@@ -102,22 +102,14 @@ The goal of this project is to create an engaging and entertaining quiz experien
 11. _As the site owner, I want users to have an enjoyable experience while playing the quiz.
 12. _As the site owner, I want users to share their quiz results with friends, helping to increase the visibility and reach of the quiz and attract more users to play.
 
-
 &nbsp;
 
 ## **FEATURES**
-
+&nbsp;
+### **PAGES: HOME, RULES, SCORE LIST, NAME FIRST, QUIZ, DISPLAYED SCORE**
+&nbsp;
 The website has 15 responsive pages, counting the Home page, the Rules page, the Highscore page, the Enter name first page, the quiz and finally a page that dispays the users score after the game. The Quiz contains 10 pages with different questions/ answers and a unique images displayed for each one. 
 By using correct HTML markup and labels it is ensured screen readers can accurately interpret the pages.
-
-&nbsp;
-
-### **HEADER & NAVIGATION BAR**
-
-
-### **LANDING PAGE / HERO IMAGE**
-
-
 &nbsp;
 
 ### **FOOTER**
@@ -204,6 +196,8 @@ The site's structure aims to guide users seamlessly through these pages, providi
 - Balsamiq
 - Google Fonts
 - Adobe Photo Shop
+- Adobe Express
+- Snapseed
 - Font Awsome
 - Favicon.io 
 - W3C validator
@@ -344,16 +338,17 @@ The website was tested on the following browsers:
 | 8. The timer kept counting down below 0 and showed negative numbers| Changed the code to (currentTime <= 0) instead of (currentTime === 0) |
 | 9. The timer numbers became jumpy when counting down| Went through the code and saw that the function startTimer was called on to many times, removed unneccessary ones |
 | 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| Made a variable of name and score and pushed it to the array using "highscores.push(userScore);|
-| 11. The submit-button doesn't work on mobile diveces, making it impossible to play the quiz| Making several changes in the initialize-function it became accessible in mobile.|
+| 11. The submit-button doesn't work on mobile diveces, making it impossible to play the quiz| Making several changes in the initialize-function it became accessible in mobile. |
 
 
 &nbsp;
 
-| **Known Bugs** | **Comments** |
-| ----------- | ----------- |
-| 12. Timer stops at zero, but user can still choose answer| This bug was detected too late to be able to fix before project submission deadline. Will be fixed when possible.|
-| 13. The scorelist doesn't display an ordered list with numbers as wanted"| This was displayed earlier in the project but an undetected bug made it disappear and no time was left to fix it before project submission deadline. Will be fixed when possible.|
-| 14. Couldn't get the scoreList array to collect userScore and display them in highscore-box. This was previously fixed in line 10 displayed in "Fixed bugs" but unfortunately some undetected bug made it disfunctional again.| This bug was detected too late to be able to fix before project submission deadline. Will be fixed when possible.|
+| **Known Bugs to be resolved** | **Comments** |
+| ------------- | ------------ |
+| 12. Timer stops at zero, but user can still choose an answer | This bug was detected too late to fix before the project submission deadline. It will be addressed as soon as possible. <details><summary>See image: Timer</summary><img src="/docs/screenshots/quiz_bug_timer_zero.png"></details> |
+| 13. The score list doesn't display an ordered list with numbers as desired | This bug was present earlier in the project, but an undetected issue caused it to disappear. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be resolved in future updates. <details><summary>See image: Score List</summary><img src="/docs/screenshots/score_displays_latest.png"></details> |
+| 14. Unable to collect user scores and display them in the highscore box | This bug was previously fixed in line 10 as mentioned in the "Fixed Bugs" section. Unfortunately, an undetected bug caused its functionality to break again. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be rectified in future updates. <details><summary>See image: Score List</summary><img src="/docs/screenshots/bug_no_scores.png"></details> |
+
 
 
 &nbsp;
@@ -389,35 +384,53 @@ After the webpage refreshes, a ribbon will appear at the top saying that "Your s
 ### Here's a collection of sites that were helpful in creating this website:
 &nbsp;
 
-To better help me understand toggling between elements: https://softauthor.com/javascript-toggle-class-element/
-To better help me understand the use of quearyselectors: https://www.w3schools.com/jsref/met_document_queryselector.asp
-To better help me understand arrays of different kinds: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array, https://javascript.info/array, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-To help me understand local storage using JSON: https://plainenglish.io/blog/how-to-store-json-data-in-local-storage-js-react-angular
-To help me understand making a highscorelist:https://www.youtube.com/watch?v=jfOv18lCMmw
+To help me understand toggling between elements: [SoftAuthor](https://softauthor.com/javascript-toggle-class-element/)
+<br>
+To help me understand the use of quearyselectors: [W3cSchools](https://www.w3schools.com/jsref/met_document_queryselector.asp)
+<br>
+To help me understand arrays of different kinds: [MozillaDeveloper](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), 
+ [JavaScriptInfo](https://javascript.info/array)
+<br>
+To help me understand local storage using JSON: [PlainEnglish](https://plainenglish.io/blog/how-to-store-json-data-in-local-storage-js-react-angular)
+<br>
+To help me understand making a highscorelist: [youTubeTutorial](https://www.youtube.com/watch?v=jfOv18lCMmw)
+<br>
+&nbsp;
 
 Quiz tutorials:
-https://www.youtube.com/watch?v=xZXW5SnCiWI&t=224s
-https://www.youtube.com/watch?v=PBcqGxrr9g8
+<br>
+[youTubeQuizTutorial1](https://www.youtube.com/watch?v=xZXW5SnCiWI&t=224s)
+<br>
+[youTubeQuizTutorial2](https://www.youtube.com/watch?v=PBcqGxrr9g8)
 
-Create some of the text content: Worked together with [ChatGPT](https://openai.com/)
+
+Create some of the text content:<br> Worked together with [ChatGPT](https://openai.com/)
 
 &nbsp;
 
 ### **Media**
-Pictures taken from 
+Free movie images taken from [Wallpaperflare](https://www.wallpaperflare.com/search?wallpaper=quentin+tarantino)<br>and [Pixabay](https://www.pixabay.com)
 
-Timer icon taken from:
-https://www.flaticon.com/free-icon/stopwatch_10028890?term=timer&page=1&position=19&origin=tag&related_id=10028890
+Timer icon taken from: [FlatIcon](https://www.flaticon.com/free-icon/stopwatch_10028890?term=timer&page=1&position=19&origin=tag&related_id=10028890)
+
+Facts to the movie questions were taken from the following sites:<br>
+https://www.thefactsite.com/quentin-tarantino-facts/<br>
+https://videolibrarian.com/articles/lists/quentin-tarantino-10-facts-for-10-films/<br>
+https://screenrant.com/reservoir-dogs-movie-uncut-ear-slicing-scene-deleted/<br>
+https://www.kickassfacts.com/25-interesting-facts-about-django-unchained/<br>
+https://variety.com/2017/film/news/7-facts-about-reservoir-dogs-1202403659/<br>
+https://www.imdb.com/title/tt3460252/trivia/<br>
+https://screenrant.com/hateful-eight-quentin-tarantino-behind-the-scenes-facts-trivia/#there-was-a-scrapped-connection-to-django-unchained<br>
+https://www.esquire.com/entertainment/a28527935/once-upon-a-time-in-hollywood-charles-manson-what-happened/
+
 
 &nbsp;
 
 ## **Acknowledgements**
 
 I would like to take the opportunity to thank:
-- My mentor Mo Shami for his support, advice and for pushing me in the right way. 
-- My family for being really supportive.
+- My mentors at Code Institute for his support, advice and for pushing me in the right way. 
+- My family for being really supportive. Extra credits to two testers who have made significant contributions: [Kim B](https://github.com/KimBergstroem) and [Sandra B](https://github.com/SandraBergstrom). They have been instrumental in providing necessary feedback, identifying errors, and offering valuable tips.
 - To the teachers at Code Institute and Slack for providing help and updates.
-- Friends who shared amazing photos of our dive trips. 
 - My boss at my job who's been supportive and helpful with working scheduls.
 
-[def]: /workspace/tarantino_quiz/docs/validation/JSHint_validation.png
