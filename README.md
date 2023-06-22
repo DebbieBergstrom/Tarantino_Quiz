@@ -158,8 +158,32 @@ The site's structure aims to guide users seamlessly through these pages, providi
 
 ### **Wireframes**
 
-<details><summary>Home</summary>
-<img src="">
+<details><summary>HOME</summary>
+<img src="/docs/wireframes/wireframe_displayed_score.png">
+</details>
+
+<details><summary>RULES</summary>
+<img src="/docs/wireframes/wireframe_rules.png">
+</details>
+
+<details><summary>QUIZ</summary>
+<img src="/docs/wireframes/wireframe_quiz.png">
+</details>
+
+<details><summary>SUBMIT NAME</summary>
+<img src="/docs/wireframes/wireframe_submitname.png">
+</details>
+
+<details><summary>HIGHSCORE LIST</summary>
+<img src="/docs/wireframes/wireframe_scorelist.png">
+</details>
+
+<details><summary>QUIZ</summary>
+<img src="/docs/wireframes/wireframe_quiz.png">
+</details>
+
+<details><summary>DISPLAYED SCORE</summary>
+<img src="/docs/wireframes/wireframe_displayed_score.png">
 </details>
 
 &nbsp;
@@ -320,10 +344,14 @@ The website was tested on the following browsers:
 | 8. The timer kept counting down below 0 and showed negative numbers| Changed the code to (currentTime <= 0) instead of (currentTime === 0) |
 | 9. The timer numbers became jumpy when counting down| Went through the code and saw that the function startTimer was called on to many times, removed unneccessary ones |
 | 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| Made a variable of name and score and pushed it to the array using "highscores.push(userScore);|
-| 11. The submit-button does'nt work on mobile diveces, making it impossible to play the quiz| TBC|
-| 12. Timer stops at zero, but user can still choose answer| TBC|
+| 11. The submit-button doesn't work on mobile diveces, making it impossible to play the quiz| Making several changes in the initialize-function it became accessible in mobile.|
 | 13. The scorelist doesn't display an ordered list with numbers as wanted"| TBC|
 
+&nbsp;
+
+| **Known Bugs** | **Comments** |
+| ----------- | ----------- |
+| 12. Timer stops at zero, but user can still choose answer| TBC|
 
 &nbsp;
 
@@ -334,7 +362,7 @@ The website was tested on the following browsers:
 1. Navigate to the Settings tab in the GitHub repository.
 2. Select Pages from the left-hand menu.
 3. Choose the branch Main as the source.
-After the webpage refreshes, a ribbon will appear at the top saying that "Your site is published at https://debbiebergstrom.github.io/CI_PP1_DS/".
+After the webpage refreshes, a ribbon will appear at the top saying that "Your site is published at https://debbiebergstrom.github.io/tarantino_quiz/".
 
 **To fork the repository, follow these steps:**
 
@@ -348,7 +376,7 @@ After the webpage refreshes, a ribbon will appear at the top saying that "Your s
 3. Select your preferred method of cloning using HTTPS, SSH, or Github CLI, and click the copy button to copy the URL to your clipboard.
 4. Open Git Bash.
 5. Change the current working directory to the one where you want the cloned directory to be.
-6. Type "git clone" and paste the URL from the clipboard (e.g., "$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY").
+6. Type "git clone" and paste the URL from the clipboard (e.g., "$ git clone https://github.com/DebbieBergstrom/tarantino_quiz").
 7. Press Enter to create your local clone.
 
 &nbsp;
