@@ -345,13 +345,16 @@ The website was tested on the following browsers:
 | 9. The timer numbers became jumpy when counting down| Went through the code and saw that the function startTimer was called on to many times, removed unneccessary ones |
 | 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| Made a variable of name and score and pushed it to the array using "highscores.push(userScore);|
 | 11. The submit-button doesn't work on mobile diveces, making it impossible to play the quiz| Making several changes in the initialize-function it became accessible in mobile.|
-| 13. The scorelist doesn't display an ordered list with numbers as wanted"| TBC|
+
 
 &nbsp;
 
 | **Known Bugs** | **Comments** |
 | ----------- | ----------- |
-| 12. Timer stops at zero, but user can still choose answer| TBC|
+| 12. Timer stops at zero, but user can still choose answer| This bug was detected too late to be able to fix before project submission deadline. Will be fixed when possible.|
+| 13. The scorelist doesn't display an ordered list with numbers as wanted"| This was displayed earlier in the project but an undetected bug made it disappear and no time was left to fix it before project submission deadline. Will be fixed when possible.|
+| 14. Couldn't get the scoreList array to collect userScore and display them in highscore-box. This was previously fixed in line 10 displayed in "Fixed bugs" but unfortunately some undetected bug made it disfunctional again.| This bug was detected too late to be able to fix before project submission deadline. Will be fixed when possible.|
+
 
 &nbsp;
 
