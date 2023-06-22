@@ -6,12 +6,12 @@
 }
 
 .visually-hidden {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 /* Max width set to keep content within 1500px on bigger desktop screens */
 #page-max-width {
@@ -104,7 +104,7 @@ input {
     margin-top: 33vh;
     color: white;
     padding: 40px;
-    box-shadow: 0.125rem 0.1875rem 1.25rem 1, 2rem rgba(0, 0, 0, 0.39);
+    box-shadow: 0.1rem 0.18rem 1.5rem 0.5rem rgba(0, 0, 0, 0.39);
     border-radius: 0.3rem;
     text-align: center;
 }

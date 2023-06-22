@@ -2,9 +2,9 @@
 
 Welcome to 
 
-![amiresponsive](image url)
+![responsivedesign](/workspace/tarantino_quiz/docs/validation/amiresponsive_pp2.png)
 
-*Please have a look at the deployed website![here.](https://debbiebergstrom.github.io/tarantino_quiz/)*
+<b>Visit the deployed site:</b> [the Ultimate Tarantino Quiz](https://debbiebergstrom.github.io/tarantino_quiz/)
 
 &nbsp;
 
@@ -171,9 +171,16 @@ By organizing the content into distinct pages, the website makes it easy for use
 
 ### **HTML Validation**
 
-The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors except index-page. It states a contrast error of the Google-map at the bottom of the page.
+The W3C Markup Validation Service was used to validate the HTML of the website. It passes except for one error:
+<br>
+Empty heading.
+From line 90, column 25; to line 90, column 44
 
-index.html [results](https://validator.w3.org/??????????????????????????)
+          <h4 id="name-error"></h4>↩
+
+It concerns a hidden error-message that occurs if the user doesn't type their name correctly in the input field. Also mentioned in the below Accessibility section.
+
+index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdebbiebergstrom.github.io%2Ftarantino_quiz%2F)
 
 &nbsp;
 
@@ -203,7 +210,9 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 
 See [results](https://wave.webaim.org/report???????????????????)
 
-Image of listed error: 
+<details><summary>See image of listed error</summary>
+<img src="/workspace/tarantino_quiz/docs/validation/wave_webaim_accessibility.png">
+</details>
 
 &nbsp;
 
