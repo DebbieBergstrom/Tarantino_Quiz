@@ -807,12 +807,12 @@ footer li {
 @media screen and (max-width: 335px) {
     
     .container-content {
-        width: 90%;
+        width: 85%;
         margin-top: 25vh;
     }
 
     #home-box {
-        margin-top: 30vh;
+        margin-top: 28vh;
     }
 
     #home-box p {
@@ -820,12 +820,12 @@ footer li {
     }
 
     #game-box {
-        margin-top: 21vh;
+        margin-top: 14vh;
         margin-bottom: 10px;
     }
 
     #game-box h2 {
-        font-size:16px;
+        font-size:13px;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
@@ -844,6 +844,10 @@ footer li {
         padding: 0.1rem;
     }
 
+    #answer-btns {
+         margin-top: 1px;
+    }
+    
     .btns button {
         margin: 0.3rem;
         font-size: 12px;
