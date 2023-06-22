@@ -76,7 +76,7 @@ Welcome to
 3. _As a first-time user, I want to 
 4. _As a first-time user, I want to 
 5. _As a first-time user, I want to 
-6. _As a first-time user, 
+
 #### **Returning users**
 8. _As a returning user, I want to
 9. _As a returning user, I want to
@@ -93,7 +93,8 @@ Welcome to
 
 ## **FEATURES**
 
-The website has NUMBER OF responsive pages, although the "Home" page consists of NUMBER OF sections that corresponds to approximatley NUMBER OF pages. By using correct HTML markup and labels it is ensured screen readers can accurately interpret the pages.
+The website has 15 responsive pages, counting the Home page, the Rules page, the Highscore page, the Enter name first page, the quiz and finally a page that dispays the users score after the game. The Quiz contains 10 pages with different questions/ answers and a unique images displayed for each one. 
+By using correct HTML markup and labels it is ensured screen readers can accurately interpret the pages.
 
 &nbsp;
 
@@ -107,24 +108,14 @@ The website has NUMBER OF responsive pages, although the "Home" page consists of
 
 ### **FOOTER**
 
-- The footer is fixed on every page and contains the social media links. It's important these links are easily accessed because 
-- User stories covered: 
-
-&nbsp;
-
-### **404 - PAGE NOT FOUND ERROR MESSAGE**
-
-A custom-made 404 error page was made since it is a simple yet effective way to improve the user experience on your website and keep users happy even if an error page occurs. It has the header, footer and colors from the original design.
-- User stories covered: 
-
-![](image url)
+- The footer is fixed on every page and contains the media links to owners LinkedIn page and GitHub page, so that anyone who plays the quiz can easily can get in contact withe owner for feedback.
 
 &nbsp;
 
 ## **DESIGN**
 
 ### **Colors**
-- Color scheme inspiration was taken from 
+- Color scheme inspiration was taken from the movies themselves, with a lot of sharp contrast with black, white, blood red and fiery yellow.
 - A complementary color was added for sharp contrast 
 - These design choices was thought to help create a visually appealing and cohesive website that will leave a positive impression on our visitors.
 
@@ -171,6 +162,7 @@ By organizing the content into distinct pages, the website makes it easy for use
 - Favicon.io 
 - W3C validator
 - Jigsaw CSS validator
+- JSHint JavaScript validator
 - WAVE Web Accessibility Evaluation Tool
 
 &nbsp;
@@ -182,8 +174,6 @@ By organizing the content into distinct pages, the website makes it easy for use
 The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors except index-page. It states a contrast error of the Google-map at the bottom of the page.
 
 index.html [results](https://validator.w3.org/??????????????????????????)
-
-404.html [results](https://validator.w3.org/??????????????????????????)
 
 &nbsp;
 
@@ -198,11 +188,22 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 &nbsp;
 
 ### **Accessibility**
-The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
 
-index.html [results](https://wave.webaim.org/report???????????????????)
+I have coded to ensure that the website is as accessible friendly as possible. This was done by:
 
-404.html [results](https://wave.webaim.org/report???????????????????)
+* Using semantic HTML elements.
+* Declare the Language in the beginning the html page.
+* Using descriptive alt-attributes on images and links on the site.
+* Using a hover funtion on all buttons so it's clear for the user if they are hovering over a button.
+* Providing information for screen readers where there are icons used and no text.
+* Ensuring that there is a sufficient colour contrast throughout the site.
+* Ensuring menus are accessible by marking the current page as current for screen readers.
+
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. The application pass except for one error, see provided image below. It concerns a hidden error-message that occurs if the user doesn't type their name correctly in the input field. 
+
+See [results](https://wave.webaim.org/report???????????????????)
+
+Image of listed error: 
 
 &nbsp;
 
@@ -234,7 +235,6 @@ The website was tested on the following browsers:
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Egde
-- Apple Safari
 
 &nbsp;
 
