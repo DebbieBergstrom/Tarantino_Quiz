@@ -447,7 +447,11 @@ document.addEventListener("DOMContentLoaded", () => {
    * ############################## NEXT BUTTON & HIGHSCORES #####################################
    */
 
-  // Declare the highscores array
+
+  function toggleToScoreBox() {
+    updateHighscoreList();
+    toggleBoxes(scoreBox, nameFirstBox, homeBox, gameBox, rulesBox);
+  }
 
   // Function to display the score after the quiz
   function displayScore() {
@@ -467,6 +471,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     quizQuestions.innerHTML = `<div style="font-size: 2rem; color: yellow;">Wooow! <br>${username}, you scored <br>${score} out of ${allQuestions.length}!</div>`;
 
+     // Save the highscores array to local storage
+     localStorage.setItem("highscores", JSON.stringify(storedHighscores));
+
     // Retrieve highscores from local storage
     storedHighscores = JSON.parse(localStorage.getItem("highscores"));
 
@@ -476,9 +483,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
 
-    // Save the highscores array to local storage
-    localStorage.setItem("highscores", JSON.stringify(storedHighscores));
-
+  
     btnNext.innerHTML = "See Highscore List";
     btnNext.style.display = "block";
     btnNext.style.backgroundColor = "rgb(168, 26, 38)";
@@ -498,12 +503,6 @@ document.addEventListener("DOMContentLoaded", () => {
       btnNext.addEventListener("click", toggleToScoreBox);
     }
   }
-
-  function toggleToScoreBox() {
-    updateHighscoreList();
-    toggleBoxes(scoreBox, nameFirstBox, homeBox, gameBox, rulesBox);
-  }
-  console.log(toggleToScoreBox)
 
   // Update the highscore list
   function updateHighscoreList() {
@@ -540,7 +539,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   }
-console.log(updateHighscoreList);
 
   btnNext.addEventListener("click", handleBtnNext);
 
