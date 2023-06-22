@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const quizQuestions = document.getElementById('questions');
   const movieImg = document.getElementById('quiz-img');
 
-  let storedHighscores = []
+  let storedHighscores = [];
     localStorage.setItem("highscores", JSON.stringify(storedHighscores));
     // Retrieve highscores from local storage
     storedHighscores = JSON.parse(localStorage.getItem("highscores"));
@@ -80,8 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     beginQuiz();
   });
 
-  function initialize(event) {
-    event.preventDefault();
+  function initialize() {
     let nameError = document.getElementById("name-error");
     let name = nameInput.value.trim();
 
@@ -439,7 +438,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.classList.add("correct");
       }
       button.disabled = true; // takes away the ability re-select another answer. Put my own popup here with fun facts?
-    })
+    });
     btnNext.style.display = "block";
   }
 
@@ -479,9 +478,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     storedHighscores.forEach((userData) => {
       if (userData.name === username) {
-        userData.score = score
+        userData.score = score;
       }
-    })
+    });
 
   
     btnNext.innerHTML = "See Highscore List";
@@ -528,7 +527,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Loop through the highscore array and display each name and score pair
     for (let i = 0; i < highscores.length; i++) {
       const userScore = highscores[i];
-      console.log(userScore.score, userScore.name)
+      console.log(userScore.score, userScore.name);
       if (userScore.score > -1) {
         const listItem = document.createElement("li");
         listItem.textContent = `${userScore.name} | score: ${userScore.score}`;
