@@ -131,13 +131,36 @@ Features of the Name Page:
 
 The Name Page ensures that the user provides a valid name and allows them to proceed to the quiz only when the name input meets the specified requirements.
 
+<details><summary>First Name Page<summary>
+<img src=/workspace/tarantino_quiz/docs/screenshots/name_not_valid_error.png>
+</details>
+
+<details><summary>Validation that name input is not correct</summary>
+<img src="/workspace/tarantino_quiz/docs/screenshots/name_not_valid_error.png">
+</details>
+
+<details><summary>Validation for user after correct name input</summary>
+<img src="/workspace/tarantino_quiz/docs/screenshots/name_valid_button_pops.png">
+</details>
+&nbsp;
+
 - **Quiz Page:** The quiz page is where the actual quiz takes place. Eanh time a user plays the questions are randomly selected. It presents users with a series of 10 questions related to Tarantino's movies. Each question is accompanied by multiple-choice options, allowing users to select their answers. Upon completing the quiz, users receive an immediate score display.<br>
     - The next-button doesn't get displayed until the user chooses an option.
     - If they are correct, the field turns green, otherwise the incorrect choice turns red and the correct answer shows with green. 
     - A question counter is added to the bottom left for the user to know how many questions they've answered and how many there's left.
     - A timer function is placed at the bottom left, counting down from 15 seconds. The numbers are green until it reaches 5 seconds left, then it turns red. This makes the user hurry up to not loose a point. When an answer has been selected, the timer stops and the user can't change the option, only press the now displayed Next-button.
-/workspace/tarantino_quiz/docs/screenshots/quiz_new_question.png
-/workspace/tarantino_quiz/docs/screenshots/quiz_showing_counter_timer.png
+<details><summary>Quiz showing new question</summary>
+<img src="/workspace/tarantino_quiz/docs/screenshots/quiz_new_question.png">
+</details>
+
+<details><summary>Quiz showing timer, and the Next button</summary>
+<img src="/workspace/tarantino_quiz/docs/screenshots/quiz_showing_counter_timer.png">
+</details>
+&nbsp;
+
+- **Displayed Score Page:** After completing the quiz, users are shown a concise score page displaying their results. They are then redirected to the highscore list, where they can view their score and compare it with other participants by clicking the "Show me Highscore list" button.
+
+
 
 
 ### **FOOTER**
