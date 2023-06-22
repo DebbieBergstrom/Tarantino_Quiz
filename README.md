@@ -180,17 +180,16 @@ From line 90, column 25; to line 90, column 44
 
 It concerns a hidden error-message that occurs if the user doesn't type their name correctly in the input field. Also mentioned in the below Accessibility section.
 
-index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdebbiebergstrom.github.io%2Ftarantino_quiz%2F)
+index.html, link to [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdebbiebergstrom.github.io%2Ftarantino_quiz%2F)
 
 &nbsp;
 
 ### **CSS Validation**
 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
+&nbsp;
 
-<details><summary>style.css</summary>
-<img src="">
-</details>
+style.css, link to [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdebbiebergstrom.github.io%2Ftarantino_quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
 
 &nbsp;
 
@@ -208,7 +207,7 @@ I have coded to ensure that the website is as accessible friendly as possible. T
 
 The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. The application pass except for one error, see provided image below. It concerns a hidden error-message that occurs if the user doesn't type their name correctly in the input field. 
 
-See [results](https://wave.webaim.org/report???????????????????)
+See link to [results](https://wave.webaim.org/report#/https://debbiebergstrom.github.io/tarantino_quiz/)
 
 <details><summary>See image of listed error</summary>
 <img src="/workspace/tarantino_quiz/docs/validation/wave_webaim_accessibility.png">
@@ -238,6 +237,11 @@ The website was tested on the following devices:
 - Samsung s22 Ultra
 - iPhone XR
 - Samsung 360 Laptop
+
+Tested for responsivness through Google Chrome Dev Tools different preset devices. 
+<details><summary>See image for list of devices </summary>
+<img src="/workspace/tarantino_quiz/docs/validation/responsive_devices.png">
+</details>
 
 ### **Browser compatability**
 The website was tested on the following browsers:
