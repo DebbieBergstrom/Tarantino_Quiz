@@ -4,7 +4,7 @@ Welcome to
 
 ![amiresponsive](image url)
 
-*Please have a look at the deployed website ![here.](site url)*
+*Please have a look at the deployed website![here.](https://debbiebergstrom.github.io/tarantino_quiz/)*
 
 &nbsp;
 

@@ -80,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
     beginQuiz();
   });
 
-  function initialize() {
+  function initialize(event) {
+    event.preventDefault();
     let nameError = document.getElementById("name-error");
     let name = nameInput.value.trim();
 
@@ -110,6 +111,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Push the user's score object into the highscores array
     storedHighscores.push(userScore);
+
+     // Save the highscores array to local storage
+     localStorage.setItem("highscores", JSON.stringify(storedHighscores));
+
+    // Retrieve highscores from local storage
+    storedHighscores = JSON.parse(localStorage.getItem("highscores"));
 
     // Shows the "Let the Quiz Begin!" button when a valid name is submitted
     btnToQuiz.style.display = "block";
