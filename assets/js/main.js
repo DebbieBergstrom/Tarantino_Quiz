@@ -468,7 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
     quizQuestions.innerHTML = `<div style="font-size: 2rem; color: yellow;">Wooow! <br>${username}, you scored <br>${score} out of ${allQuestions.length}!</div>`;
 
     // Retrieve highscores from local storage
-    let storedHighscores = JSON.parse(localStorage.getItem("highscores"));
+    storedHighscores = JSON.parse(localStorage.getItem("highscores"));
 
     storedHighscores.forEach((userData) => {
       if (userData.name === username) {
@@ -503,36 +503,42 @@ document.addEventListener("DOMContentLoaded", () => {
     updateHighscoreList();
     toggleBoxes(scoreBox, nameFirstBox, homeBox, gameBox, rulesBox);
   }
+  console.log(toggleToScoreBox)
 
   // Update the highscore list
-  function updateHighscoreList() {	
-    let highscoreList = document.getElementById("highscore-list");	
-    
-    // Clear the existing highscore list	
-    highscoreList.innerHTML = "";	
-    
-    storedHighscores = JSON.parse(localStorage.getItem("highscores"));	
-    let highscores = storedHighscores || [];	
-   
-    // Sort the highscores array by score in descending order	
-    highscores.sort((a, b) => b.score - a.score);	
-    
-    // Truncate the highscores array to a maximum of 5 entries	
-    highscores = highscores.slice(0, 5);	
-   
-    // Loop through the highscore array and display each name and score pair	
-    for (let i = 0; i < highscores.length; i++) {	
-      const userScore = highscores[i];	
-      console.log(userScore.score, userScore.name)	
-      if (userScore.score > -1) {	
-        const listItem = document.createElement("li");	
-        listItem.textContent = `${userScore.name} | score: ${userScore.score}`;	
-        listItem.style.margin = "8px";	
-        listItem.style.display = "flex";	
-        listItem.style.justifyContent = "space-between";	
-        highscoreList.appendChild(listItem);	
-      }	
-    }	
+  function updateHighscoreList() {
+    let highscoreList = document.getElementById("highscore-list");
+
+    // Clear the existing highscore list
+    highscoreList.innerHTML = "";
+
+    let highscores = [];
+
+    // If there are stored highscores, parse and set the highscores array
+    if (storedHighscores) {
+      highscores = storedHighscores;
+    }
+    console.log(storedHighscores);
+
+    // Sort the highscores array by score in descending order
+    highscores.sort((a, b) => b.score - a.score);
+
+    // Truncate the highscores array to a maximum of 5 entries
+    highscores = highscores.slice(0, 5);
+
+    // Loop through the highscore array and display each name and score pair
+    for (let i = 0; i < highscores.length; i++) {
+      const userScore = highscores[i];
+      console.log(userScore.score, userScore.name)
+      if (userScore.score > -1) {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${userScore.name} | score: ${userScore.score}`;
+        listItem.style.margin = "8px";
+        listItem.style.display = "flex";
+        listItem.style.justifyContent = "space-between";
+        highscoreList.appendChild(listItem);
+      }
+    }
   }
 console.log(updateHighscoreList);
 
