@@ -554,7 +554,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(userScore.score, userScore.name);
       if (userScore.score > -1) {
         const listItem = document.createElement("li");
-        listItem.textContent = `${userScore.name} | score: ${userScore.score}`;
+        listItem.textContent = `${i + 1}. ${userScore.name} | score: ${userScore.score}`;
         listItem.style.margin = "8px";
         listItem.style.display = "flex";
         listItem.style.justifyContent = "space-between";
