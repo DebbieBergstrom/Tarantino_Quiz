@@ -369,8 +369,18 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(timer);
         currentTime = 0; // Set the time to 0 to avoid negative numbers
         timerElement.textContent = currentTime; // Update the displayed time to 0
+        // Disable answer buttons and show the next button
+      disableAnswerButtons();
+      btnNext.style.display = "block";
       }
     }, 1000);
+
+    function disableAnswerButtons() {
+      Array.from(btnAnswers.children).forEach(button => {
+        button.disabled = true;
+      });
+    }
+
   }
 
   /**
@@ -444,7 +454,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (button.dataset.correct === "true") {
         button.classList.add("correct");
       }
-      button.disabled = true; // takes away the ability re-select another answer. Put my own popup here with fun facts?
+      button.disabled = true; // takes away the ability re-select another answer. 
     });
     btnNext.style.display = "block";
   }

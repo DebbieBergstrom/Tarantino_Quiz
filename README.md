@@ -157,6 +157,7 @@ The Name Page ensures that the user provides a valid name and allows them to pro
     - If they are correct, the field turns green, otherwise the incorrect choice turns red and the correct answer shows with green. 
     - A question counter is added to the bottom left for the user to know how many questions they've answered and how many there's left.
     - A timer function is placed at the bottom left, counting down from 15 seconds. The numbers are green until it reaches 5 seconds left, then it turns red. This makes the user hurry up to not loose a point. When an answer has been selected, the timer stops and the user can't change the option, only press the now displayed Next-button.
+    - If timer reaches 0, the user can no longer choose option, and has to press the Next button to move forward. No score received. 
 <details><summary>Quiz showing new question</summary>
 <img src="/workspace/tarantino_quiz/docs/screenshots/quiz_new_question.png">
 </details>
@@ -377,15 +378,14 @@ In conclusion, the testing process confirmed the successful implementation of us
 | 9. The timer numbers became jumpy when counting down| Went through the code and saw that the function startTimer was called on to many times, removed unneccessary ones |
 | 10. Couldn't get the scoreList array to collect userScore and display them in highscore-box| Made a variable of name and score and pushed it to the array using "highscores.push(userScore);|
 | 11. The submit-button doesn't work on mobile diveces, making it impossible to play the quiz| Making several changes in the initialize-function it became accessible in mobile. |
-
+| 12. Timer stops at zero, but user can still choose an answer | Added function to disable question answers when timer is at 0 and to display Next-button |
 
 &nbsp;
 
 | **Known Bugs to be resolved** | **Comments** |
 | ------------- | ------------ |
-| 12. Timer stops at zero, but user can still choose an answer | This bug was detected too late to fix before the project submission deadline. It will be addressed as soon as possible. <details><summary>See image: Timer</summary><img src="/workspace/tarantino_quiz/docs/screenshots/quiz_bug_timer_zero.png"></details> |
-| 13. The score list doesn't display an ordered list with numbers as desired | This bug was present earlier in the project, but an undetected issue caused it to disappear. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be resolved in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/score_displays_latest.png"></details> |
-| 14. Unable to collect user scores and display them in the highscore box | This bug was previously fixed in line 10 as mentioned in the "Fixed Bugs" section. Unfortunately, an undetected bug caused its functionality to break again. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be rectified in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/bug_no_scores.png"></details> |
+| 1. The score list doesn't display an ordered list with numbers as desired | This bug was present earlier in the project, but an undetected issue caused it to disappear. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be resolved in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/score_displays_latest.png"></details> |
+| 2. Unable to collect user scores and display them in the highscore box | This bug was previously fixed in line 10 as mentioned in the "Fixed Bugs" section. Unfortunately, an undetected bug caused its functionality to break again. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be rectified in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/bug_no_scores.png"></details> |
 
 
 
