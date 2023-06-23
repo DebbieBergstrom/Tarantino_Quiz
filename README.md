@@ -114,18 +114,18 @@ The website is composed of the following pages:
 
 - **Home Page:** The home page serves as the entry point to the quiz app. It welcomes users with the *"Hey Honey Bunny"* message inspired by a famous line from the movie *Pulp Fiction*, adding a touch of fun and engagement to the experience.and provides a brief introduction to the quiz. Users can easily navigate to other pages from the home page.
 <details><summary>Home Page<summary>
-<img src=/workspace/tarantino_quiz/docs/screenshots/home_page.png>
+<img src="docs/screenshots/home_page.png">
 </details>
 
 
 - **Rules Page:** The rules page provides users with a clear understanding of the quiz rules and instructions.
 <details><summary>Rules Page<summary>
-<img src=/workspace/tarantino_quiz/docs/screenshots/rules_page.png>
+<img src="docs/screenshots/rules_page.png">
 </details>
 
 - **Highscores Page:** The highscores page displays a list of top scorers in the quiz. Users can see their own score and compare it with others.
 <details><summary>Highscores Page<summary>
-<img src=/workspace/tarantino_quiz/docs/screenshots/score_displays_latest.png>
+<img src="docs/screenshots/score_displays_latest.png">
 </details>
 
 
@@ -140,15 +140,15 @@ Features of the Name Page:
 The Name Page ensures that the user provides a valid name and allows them to proceed to the quiz only when the name input meets the specified requirements.
 
 <details><summary>First Name Page<summary>
-<img src=/workspace/tarantino_quiz/docs/screenshots/name_not_valid_error.png>
+<img src="docs/screenshots/name_first_page.png">
 </details>
 
 <details><summary>Validation that name input is not correct</summary>
-<img src="/workspace/tarantino_quiz/docs/screenshots/name_not_valid_error.png">
+<img src="docs/screenshots/name_not_valid_error.png">
 </details>
 
 <details><summary>Validation for user after correct name input</summary>
-<img src="/workspace/tarantino_quiz/docs/screenshots/name_valid_button_pops.png">
+<img src="docs/screenshots/name_valid_button_pops.png">
 </details>
 &nbsp;
 
@@ -159,11 +159,11 @@ The Name Page ensures that the user provides a valid name and allows them to pro
     - A timer function is placed at the bottom left, counting down from 15 seconds. The numbers are green until it reaches 5 seconds left, then it turns red. This makes the user hurry up to not loose a point. When an answer has been selected, the timer stops and the user can't change the option, only press the now displayed Next-button.
     - If timer reaches 0, the user can no longer choose option, and has to press the Next button to move forward. No score received. 
 <details><summary>Quiz showing new question</summary>
-<img src="/workspace/tarantino_quiz/docs/screenshots/quiz_new_question.png">
+<img src="docs/screenshots/quiz_new_question.png">
 </details>
 
 <details><summary>Quiz showing timer, and the Next button</summary>
-<img src="/workspace/tarantino_quiz/docs/screenshots/quiz_showing_counter_timer.png">
+<img src="docs/screenshots/quiz_showing_counter_timer.png">
 </details>
 &nbsp;
 
@@ -220,27 +220,27 @@ The site's structure aims to guide users seamlessly through these pages, providi
 ### **Wireframes**
 
 <details><summary>HOME</summary>
-<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_home.png">
+<img src="docs/wireframes/wireframe_home.png">
 </details>
 
 <details><summary>RULES</summary>
-<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_rules.png">
+<img src="docs/wireframes/wireframe_rules.png">
 </details>
 
 <details><summary>SUBMIT NAME</summary>
-<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_submitname.png">
+<img src="docs/wireframes/wireframe_submitname.png">
 </details>
 
 <details><summary>HIGHSCORE LIST</summary>
-<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_scorelist.png">
+<img src="docs/wireframes/wireframe_scorelist.png">
 </details>
 
 <details><summary>QUIZ</summary>
-<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_quiz.png">
+<img src="docs/wireframes/wireframe_quiz.png">
 </details>
 
 <details><summary>DISPLAYED SCORE</summary>
-<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_displayed_score.png">
+<img src="docs/wireframes/wireframe_displayed_score.png">
 </details>
 
 &nbsp;
@@ -315,7 +315,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 See link to [results](https://wave.webaim.org/report#/https://debbiebergstrom.github.io/tarantino_quiz/)
 
 <details><summary>See image of listed error</summary>
-<img src="/workspace/tarantino_quiz/docs/validation/wave_webaim_accessibility.png">
+<img src="docs/validation/wave_webaim_accessibility.png">
 </details>
 
 &nbsp;
@@ -336,7 +336,7 @@ The website was tested on the following devices:
 
 Tested for responsivness through Google Chrome Dev Tools different preset devices. 
 <details><summary>See image for list of devices </summary>
-<img src="/workspace/tarantino_quiz/docs/validation/responsive_devices.png">
+<img src="docs/validation/responsive_devices.png">
 </details>
 
 ### **Browser compatability**
