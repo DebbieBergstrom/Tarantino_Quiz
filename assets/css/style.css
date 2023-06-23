@@ -6,11 +6,11 @@
 }
 
 .visually-hidden {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 /* Max width set to keep content within 1500px on bigger desktop screens */
@@ -693,7 +693,7 @@ footer li {
     #name-first-box {
         margin-top: 30vh;
     }
- 
+
     #game-box h2 {
         font-size: 0.8rem;
     }
@@ -802,21 +802,60 @@ footer li {
         width: 85%;
     }
 
-  footer {
+    footer {
         height: 56px;
-  }
+    }
 }
+
+/* MOBILE 375px*/
+@media screen and (max-width: 376px) {
+
+    .container-content {
+        width: 80%;
+    }
+
+    #home-box {
+        margin-top: 10vh;
+    }
+
+    #rules-box {
+        margin-top: 16vh;
+    }
+
+    #game-box {
+        margin-top: 10vh;
+    }
+
+    #name-first-box {
+        margin-top: 28vh;
+    }
+
+    #bottom {
+        margin-top: 2px;
+        width:80%;
+    }
+
+    footer {
+        height: 30px;
+    }
+
+    .space {
+        margin-right: 0.5rem;
+    }
+}
+
+
 
 /* MOBILE 320x568px iPhone5s */
 @media screen and (max-width: 335px) {
-    
+
     .container-content {
         width: 85%;
         margin-top: 25vh;
     }
 
     #home-box {
-        margin-top: 28vh;
+        margin-top: 18vh;
     }
 
     #home-box p {
@@ -824,12 +863,12 @@ footer li {
     }
 
     #game-box {
-        margin-top: 14vh;
+        margin-top: 10vh;
         margin-bottom: 10px;
     }
 
     #game-box h2 {
-        font-size:13px;
+        font-size: 13px;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
@@ -849,9 +888,9 @@ footer li {
     }
 
     #answer-btns {
-         margin-top: 1px;
+        margin-top: 1px;
     }
-    
+
     .btns button {
         margin: 0.3rem;
         font-size: 12px;
@@ -872,7 +911,7 @@ footer li {
     }
 
     #rules-box {
-        margin-top: 21vh;
+        margin-top: 18vh;
     }
 
     #rules-box .exit-back {
@@ -943,7 +982,7 @@ footer li {
         font-size: 3vw;
     }
 
-    
+
     #btn-game-rules {
         margin: 1.6rem;
     }
@@ -955,7 +994,7 @@ footer li {
     #btn-next {
         margin-block: 0.7rem;
         width: 70px;
-        font-size:12px;
+        font-size: 12px;
         padding: 5px;
     }
 
@@ -975,6 +1014,6 @@ footer li {
     }
 
     footer {
-        height: 28px;
+        height: 20px;
     }
 }
