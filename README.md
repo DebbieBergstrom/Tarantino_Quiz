@@ -1,8 +1,8 @@
+![](/docs/validation/amiresponsive_pp2.png)
+
 # **The Ultimate Tarantino Quiz**
 
 Welcome to the Quentin Tarantino Movie Quiz, a trivia experience crafted for movie fans. This quiz is a celebration of the iconic films directed by Quentin Tarantino, known for his unique storytelling style and unforgettable characters. With a passion for Tarantino's movies at its core, this quiz aims to test your knowledge and immerse you in the thrilling world of his cinematic masterpieces.
-
-![](/docs/validation/amiresponsive_pp2.png)
 
 <b>Visit the deployed site:</b> [the Ultimate Tarantino Quiz](https://debbiebergstrom.github.io/tarantino_quiz/)
 
@@ -88,19 +88,19 @@ The goal of this project is to create an engaging and entertaining quiz experien
 &nbsp;
 ### **USER STORIES**
 #### **First time users**
-1. _As a first-time user, I want to easily understand the instructions and rules of the quiz.
-2. _As a first-time user, I want to navigate through the quiz questions effortlessly.
-3. _As a first-time user, I want to see my score and know how well I performed in the quiz.
-4. _As a first-time user, I want to have an enjoyable and engaging experience while answering the quiz questions. 
-5. _As a first-time user, I want to easily access the highscores list to see how my score compares to others.
+1. _As a first-time user, I want to easily understand the instructions and rules of the quiz._
+2. _As a first-time user, I want to navigate through the quiz questions effortlessly._
+3. _As a first-time user, I want to see my score and know how well I performed in the quiz._
+4. _As a first-time user, I want to have an enjoyable and engaging experience while answering the quiz questions. -
+5. _As a first-time user, I want to easily access the highscores list to see how my score compares to others._
 
 #### **Returning users**
-8. _As a returning user, I want to challenge myself with new quiz questions and test my knowledge again.
-9. _As a returning user, I want to easily navigate back to the highscores list to see if my previous score has improved.
+8. _As a returning user, I want to challenge myself with new quiz questions and test my knowledge again._
+9. _As a returning user, I want to easily navigate back to the highscores list to see if my previous score has improved._
 
 #### **Site owner**
-11. _As the site owner, I want users to have an enjoyable experience while playing the quiz.
-12. _As the site owner, I want users to share their quiz results with friends, helping to increase the visibility and reach of the quiz and attract more users to play.
+10. _As the site owner, I want users to have an enjoyable experience while playing the quiz._
+11. _As the site owner, I want users to share their quiz results with friends, helping to increase the visibility and reach of the quiz and attract more users to play._
 
 &nbsp;
 
@@ -113,13 +113,21 @@ By using correct HTML markup and labels it is ensured screen readers can accurat
 The website is composed of the following pages:
 
 - **Home Page:** The home page serves as the entry point to the quiz app. It welcomes users with the *"Hey Honey Bunny"* message inspired by a famous line from the movie *Pulp Fiction*, adding a touch of fun and engagement to the experience.and provides a brief introduction to the quiz. Users can easily navigate to other pages from the home page.
-/docs/screenshots/home_page.png
+<details><summary>Home Page<summary>
+<img src=/workspace/tarantino_quiz/docs/screenshots/home_page.png>
+</details>
+
 
 - **Rules Page:** The rules page provides users with a clear understanding of the quiz rules and instructions.
-/docs/screenshots/rules_page.png
+<details><summary>Rules Page<summary>
+<img src=/workspace/tarantino_quiz/docs/screenshots/rules_page.png>
+</details>
 
 - **Highscores Page:** The highscores page displays a list of top scorers in the quiz. Users can see their own score and compare it with others.
-/docs/screenshots/score_displays_latest.png
+<details><summary>Highscores Page<summary>
+<img src=/workspace/tarantino_quiz/docs/screenshots/score_displays_latest.png>
+</details>
+
 
 - **Name first Page:** The name page is the initial page where the user is prompted to enter their name. It is designed to collect the user's name and store it to later pair it with their quiz score.
 Features of the Name Page:
@@ -161,8 +169,6 @@ The Name Page ensures that the user provides a valid name and allows them to pro
 - **Displayed Score Page:** After completing the quiz, users are shown a concise score page displaying their results. They are then redirected to the highscore list, where they can view their score and compare it with other participants by clicking the "Show me Highscore list" button.
 
 
-
-
 ### **FOOTER**
 
 - The footer is fixed on every page and contains the media links to owners LinkedIn page and GitHub page, so that anyone who plays the quiz can easily can get in contact withe owner for feedback.
@@ -191,8 +197,9 @@ These future implementations will significantly elevate the movie quiz experienc
 - Color scheme inspiration was taken from the movies themselves, with a lot of sharp contrast with black, white, blood red and fiery yellow. 
 - These design choices was thought to help create a visually appealing and cohesive website that will leave a positive impression on our visitors.
 
+![](/docs/screenshots/color_scheme.png)<br>
 The colour palette was created using the [Coolors website](https://coolors.co/521313-2a2a2a-ffffff-ecec03-c59849).
-![](/docs/screenshots/color_scheme.png)
+
 
 ### **Fonts**
 
@@ -212,31 +219,27 @@ The site's structure aims to guide users seamlessly through these pages, providi
 ### **Wireframes**
 
 <details><summary>HOME</summary>
-<img src="/docs/wireframes/wireframe_displayed_score.png">
+<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_home.png">
 </details>
 
 <details><summary>RULES</summary>
-<img src="/docs/wireframes/wireframe_rules.png">
-</details>
-
-<details><summary>QUIZ</summary>
-<img src="/docs/wireframes/wireframe_quiz.png">
+<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_rules.png">
 </details>
 
 <details><summary>SUBMIT NAME</summary>
-<img src="/docs/wireframes/wireframe_submitname.png">
+<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_submitname.png">
 </details>
 
 <details><summary>HIGHSCORE LIST</summary>
-<img src="/docs/wireframes/wireframe_scorelist.png">
+<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_scorelist.png">
 </details>
 
 <details><summary>QUIZ</summary>
-<img src="/docs/wireframes/wireframe_quiz.png">
+<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_quiz.png">
 </details>
 
 <details><summary>DISPLAYED SCORE</summary>
-<img src="/docs/wireframes/wireframe_displayed_score.png">
+<img src="/workspace/tarantino_quiz/docs/wireframes/wireframe_displayed_score.png">
 </details>
 
 &nbsp;
@@ -380,9 +383,9 @@ In conclusion, the testing process confirmed the successful implementation of us
 
 | **Known Bugs to be resolved** | **Comments** |
 | ------------- | ------------ |
-| 12. Timer stops at zero, but user can still choose an answer | This bug was detected too late to fix before the project submission deadline. It will be addressed as soon as possible. <details><summary>See image: Timer</summary><img src="/docs/screenshots/quiz_bug_timer_zero.png"></details> |
-| 13. The score list doesn't display an ordered list with numbers as desired | This bug was present earlier in the project, but an undetected issue caused it to disappear. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be resolved in future updates. <details><summary>See image: Score List</summary><img src="/docs/screenshots/score_displays_latest.png"></details> |
-| 14. Unable to collect user scores and display them in the highscore box | This bug was previously fixed in line 10 as mentioned in the "Fixed Bugs" section. Unfortunately, an undetected bug caused its functionality to break again. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be rectified in future updates. <details><summary>See image: Score List</summary><img src="/docs/screenshots/bug_no_scores.png"></details> |
+| 12. Timer stops at zero, but user can still choose an answer | This bug was detected too late to fix before the project submission deadline. It will be addressed as soon as possible. <details><summary>See image: Timer</summary><img src="/workspace/tarantino_quiz/docs/screenshots/quiz_bug_timer_zero.png"></details> |
+| 13. The score list doesn't display an ordered list with numbers as desired | This bug was present earlier in the project, but an undetected issue caused it to disappear. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be resolved in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/score_displays_latest.png"></details> |
+| 14. Unable to collect user scores and display them in the highscore box | This bug was previously fixed in line 10 as mentioned in the "Fixed Bugs" section. Unfortunately, an undetected bug caused its functionality to break again. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be rectified in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/bug_no_scores.png"></details> |
 
 
 
