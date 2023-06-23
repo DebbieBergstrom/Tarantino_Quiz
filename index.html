@@ -50,6 +50,7 @@
             <div id="rules-box" class="container-content">
                 <h1>The following rules apply:</h1>
                 <ol class="lists">
+                    <!-- List of rules-->
                     <li>
                         <p>Have fun!</p>
                     </li>
@@ -68,11 +69,11 @@
                 </ol>
                 <h2>Now, are we absolutely, positively clear <br> about rule number one?”</h2>
                 <h4>(From Dusk Till Dawn, Kill Bill: Vol 1.)</h4>
-                <div class="btns">
-                    <!-- Toggle to Enter Name before Quiz-->
+                <!-- Toggle to Enter Name before Quiz-->
+                <div class="btns">                    
                     <button id="btn-to-name-first-2" aria-label="yes start quiz">YES, START QUIZ!</button>
                 </div>
-                <!-- Toggle back to Home Page-->
+                <!-- Exit - Toggle back to Home Page-->
                 <div class="exit-back">
                     <button class="exit" id="btn-exit" aria-label="exit go back">X</button>
                 </div>
@@ -84,21 +85,24 @@
                     <h1>"Everyone Be Cool!"</h1>
                     <h4>(Pulp Fiction)</h4>
                     <p>We just need your name first.</p>
+                    <!-- Name input field  -->
                     <label for="name-input" class="visually-hidden">Name:</label>
                     <input type="text" id="name-input" name="name" required placeholder="Enter your name here">
                     <div>
+                        <!-- Error message displays when user enter invalid name -->
                         <h4 id="name-error"></h4>
                     </div>
+                    <!-- Button Submit Name -->
                     <div class="btns">
                         <button id="btn-submit" type="submit" aria-label="submit name">Submit</button>
                     </div>
-                    <!-- Toggle to the Game-box-->
+                    <!-- Button Let The Quiz begin! Toggle to the Game-box-->
                     <div class="btns">
                         <button id="btn-to-quiz" aria-label="start the quiz" style="display: none;">LET THE QUIZ
                             BEGIN!</button>
                     </div>
                 </div>
-                <!-- Toggle back to Home Page-->
+                <!-- Exit button -Toggle back to Home Page-->
                 <div class="exit-back container-bottom">
                     <button class="exit" id="btn-exit-2" aria-label="exit go back">X</button>
                 </div>
@@ -108,13 +112,15 @@
             <div class="container-content" id="game-box">
                 <div class="wrapper">
                     <div class="img-wrapper">
+                        <!-- Quiz movie picture -->
                         <div id="score-img"></div>
                         <div id="quiz-img"></div>
                     </div>
                     <div class="quiz-content">
-                        <!-- Quiz movie picture -->
+                        <!-- Quiz questions displayed here -->
                         <h2 id="questions">Questions go here</h2>
                         <div id="answer-btns">
+                            <!-- Multiple choice answer buttons -->
                             <button class="btn-answ">A1</button>
                             <button class="btn-answ">A2</button>
                             <button class="btn-answ">A3</button>
@@ -122,12 +128,14 @@
                         </div>
                     </div>
                 </div>
+                <!-- Bottom section of the quiz game container -->
                 <div id="bottom" class="container-bottom">
                     <!-- Counts what number of question user's currently on-->
                     <div class="question-count">
                         <span id="number-of-q">1 / 10</span>
                     </div>
                     <div class="space">
+                        <!-- Next button to move to the next question -->
                         <button id="btn-next">Next</button>
                     </div>
                     <!-- Counts down time to answer question-->
@@ -145,7 +153,7 @@
                     <h1>Highscores of the day:</h1>
                     <ol id="highscore-list" class="lists"></ol>
                 </div>
-                <!-- Toggle back to Home Page-->
+                <!-- Exit button - Toggle back to Home Page-->
                 <div class="exit-back container-bottom">
                     <button class="exit" id="btn-exit-3" aria-label="exit go back">X</button>
                 </div>
@@ -154,15 +162,16 @@
             <footer>
                 <ul class="contact-icons">
                     <li>
+                        <!-- Link to GitHub page -->
                         <a href="https://github.com/DebbieBergstrom" target="_blank" rel="noopener"
                             aria-label="Visit our Github page (opens in new tab)"><i class="fab fa-github"></i></a>
                     </li>
                     <li>
-                        <!-- Change to a contact form ???? emailjs.com API-->
                         <span id="contact-us"><i class="fa-solid fa-arrow-left"></i> Contact Us! <i
                                 class="fa-solid fa-arrow-right"></i></span>
                     </li>
                     <li>
+                        <!-- Link to LinkedIn page -->
                         <a href="https://www.linkedin.com/in/debbie-bergström-3224ba160" target="_blank" rel="noopener"
                             aria-label="Visit our LinkedIn page (opens in new tab)"><i
                                 class="fa-brands fa-linkedin"></i></a>

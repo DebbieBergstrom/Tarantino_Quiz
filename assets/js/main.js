@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Get boxes 
+  // Get container boxes 
   const homeBox = document.getElementById('home-box');
   const rulesBox = document.getElementById('rules-box');
   const nameFirstBox = document.getElementById('name-first-box');
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   scoreBox.classList.add('hidden');
 
 
-  // Toggles between the desired "boxes" to be shown/hidden
+  // Toggles between the desired boxes to be shown/hidden
   function toggleBoxes(elementToShow, ...elementsToHide) {
     elementToShow.classList.remove('hidden'); // Show the element
 
@@ -36,11 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Button event listeners executing desires functions
   btnToNameFirst.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, gameBox, rulesBox, scoreBox));
   btnToNameFirst2.addEventListener("click", () => toggleBoxes(nameFirstBox, homeBox, gameBox, rulesBox, scoreBox));
 
   btnToRules.addEventListener("click", () => toggleBoxes(rulesBox, homeBox, nameFirstBox, gameBox, scoreBox));
 
+  // Button to enter score board after quiz, updates score board with new score
   btnToHighScoreList.addEventListener("click", () => {
     toggleBoxes(scoreBox, homeBox, rulesBox, nameFirstBox, gameBox);
     updateHighscoreList();
@@ -49,7 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
   btnExitToHome.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
   btnExitToHome2.addEventListener("click", () => toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox));
 
-  btnExitToHome3.addEventListener("click", () => { //button exits scoreBox and reloads the page to reset quiz
+  //button exits scoreBox and reloads the page to reset quiz
+  btnExitToHome3.addEventListener("click", () => {
     toggleBoxes(homeBox, nameFirstBox, gameBox, rulesBox, scoreBox);
     location.reload();
   });
@@ -58,10 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const quizQuestions = document.getElementById('questions');
   const movieImg = document.getElementById('quiz-img');
 
+
   let storedHighscores = [];
-    localStorage.setItem("highscores", JSON.stringify(storedHighscores));
-    // Retrieve highscores from local storage
-    storedHighscores = JSON.parse(localStorage.getItem("highscores"));
+  localStorage.setItem("highscores", JSON.stringify(storedHighscores));
+  // Retrieve highscores from local storage
+  storedHighscores = JSON.parse(localStorage.getItem("highscores"));
 
   /**
    * ############################## NAME FIRST BOX #####################################
@@ -73,14 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnToQuiz.style.display = "none"; // Initially hides the button until a valid name is submitted in the unername input field.
 
-  btnSubmitName.addEventListener("click", initialize); //Validates the input name, stores the name value, initializes the beginQuiz funtiion.
+  btnSubmitName.addEventListener("click", initialize); // Calls the below initialize funtion
 
   btnToQuiz.addEventListener("click", () => {
     toggleBoxes(gameBox, homeBox, rulesBox, nameFirstBox, scoreBox); // Button to start the quiz
     beginQuiz();
   });
 
-  function initialize(event) {
+  function initialize(event) { // Store name input, validates input by displaying "Let the Quiz Begin!" button 
     event.preventDefault();
     let nameError = document.getElementById("name-error");
     let name = nameInput.value.trim();
@@ -103,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Store the username for the Highscore List
     username = name;
 
-    // Create the user's score object
+    // Creates the user's score object
     let userScore = {
       name,
       score: -1,
@@ -112,8 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Push the user's score object into the highscores array
     storedHighscores.push(userScore);
 
-     // Save the highscores array to local storage
-     localStorage.setItem("highscores", JSON.stringify(storedHighscores));
+    // Save the highscores array to local storage
+    localStorage.setItem("highscores", JSON.stringify(storedHighscores));
 
     // Retrieve highscores from local storage
     storedHighscores = JSON.parse(localStorage.getItem("highscores"));
@@ -126,10 +130,10 @@ document.addEventListener("DOMContentLoaded", () => {
    * ############################## QUESTIONS ARRAY #####################################
    */
   const allQuestions = [{
-      image: "<img src='assets/images/inglorious_basterds_s.jpg' alt='inglorious basterds movie picture'>",
-      question: "How was the intense strangulation scene in the film 'Inglourious Basterds' achieved?",
+      image: "<img src='assets/images/inglorious_basterds_s.jpg' alt='inglorious basterds movie picture'>", // New image to each question
+      question: "How was the intense strangulation scene in the film 'Inglourious Basterds' achieved?", // Question no. 1
       answers: [{
-          text: "It was created using advanced visual effects and CGI techniques.",
+          text: "It was created using advanced visual effects and CGI techniques.", // 3 options false, 1 option true for each question
           correct: false
         },
         {
@@ -148,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/kill_bill_s.jpg' alt='kill bill movie picture'>",
-      question: "In the film 'Kill Bill', what is a unique characteristic of the onscreen deaths of the characters?",
+      question: "In the film 'Kill Bill', what is a unique characteristic of the onscreen deaths of the characters?", // Question no. 2
       answers: [{
           text: "All onscreen deaths are executed by male characters, emphasizing their dominance.",
           correct: false
@@ -169,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/pulp-fiction_s.jpg' alt='pulp fiction movie picture'>",
-      question: "What can be said about the biblical passage recited by Jules in 'Pulp Fiction', played by Samuel L. Jackson, known as Ezekiel 25:17?",
+      question: "What can be said about the biblical passage recited by Jules in 'Pulp Fiction', played by Samuel L. Jackson, known as Ezekiel 25:17?", // Question no. 3
       answers: [{
           text: "It's a modified version of the original biblical passage, tailored specifically for the film's narrative",
           correct: false
@@ -190,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/tarantino_actors_s.jpg' alt='various actors movie picture'>",
-      question: "Among the following actors, who has been seen the most in Quentin Tarantino's movies, ranked from most to least appearances?",
+      question: "Among the following actors, who has been seen the most in Quentin Tarantino's movies, ranked from most to least appearances?", // Question no. 4
       answers: [{
           text: "Samuel L. Jackson, Leonardo DiCaprio, Christoph Waltz",
           correct: false
@@ -211,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/from_dusk_till_dawn_s.jpg' alt='from dusk till dawn movie picture'>",
-      question: "What collaboration occurred between Tarantino and Robert Kurtzman that led to Tarantino writing the script to From Dusk Till Dawn?",
+      question: "What collaboration occurred between Tarantino and Robert Kurtzman that led to Tarantino writing the script to From Dusk Till Dawn?", // Question no. 5
       answers: [{
           text: "They collaborated on a special effects project for Oliver Stone when the idea came up.",
           correct: false
@@ -232,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/jackie_brown_s.jpg' alt='inglorious basterds movie picture'>",
-      question: "In Jackie Brown, Samuel L. Jackson delivers an iconic performance with his character's dialogue. What notable word does he frequently use in the film?",
+      question: "In Jackie Brown, Samuel L. Jackson delivers an iconic performance with his character's dialogue. What notable word does he frequently use in the film?", // Question no. 6
       answers: [{
           text: "motherfu**er",
           correct: true
@@ -253,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/django_red_s.jpg' alt='django unchained movie picture'>",
-      question: "What did Leonardo DiCaprio do after accidentally crushing a glass and started bleeding during the filming of a dinner scene in 'Django Unchained'?",
+      question: "What did Leonardo DiCaprio do after accidentally crushing a glass and started bleeding during the filming of a dinner scene in 'Django Unchained'?", // Question no. 7
       answers: [{
           text: "He immediately called for medical assistance and halted the filming.",
           correct: false
@@ -274,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/reservoir_dogs_s.jpg' alt='reservoir dogs movie picture'>",
-      question: "In the iconic scene from 'Reservoir Dogs', what song does Mr. Blonde dance to while torturing a captured cop?",
+      question: "In the iconic scene from 'Reservoir Dogs', what song does Mr. Blonde dance to while torturing a captured cop?", // Question no. 8
       answers: [{
           text: "'You Can't Hurry Love' by The Supremes.",
           correct: false
@@ -295,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/hateful_eight_s.jpg' alt='hateful eight movie picture'>",
-      question: "In the early development stages, what was the original concept and intended title for 'The Hateful Eight'?",
+      question: "In the early development stages, what was the original concept and intended title for 'The Hateful Eight'?", // Question no. 9
       answers: [{
           text: "It was envisioned as a prequel to 'Django Unchained' titled 'The Birth of Hatred.'",
           correct: false
@@ -316,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "<img src='assets/images/once_upon_s.jpg' alt='once upon a time in hollywood movie picture'>",
-      question: "Who portrayed the character of Sharon Tate in the film 'Once Upon a Time in Hollywood' and which infamous murderer was responsible for her death?",
+      question: "Who portrayed the character of Sharon Tate in the film 'Once Upon a Time in Hollywood' and which infamous murderer was responsible for her death?", // Question no. 10/10
       answers: [{
           text: "Jennifer Lawrence - Ted Bundy",
           correct: false
@@ -346,7 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeQuestionIndex = 0;
   let score = 0;
 
-  let timerElement = document.getElementById('time-left');
+  let timerElement = document.getElementById('time-left'); // Displays time left in seconds
   let questionTime = 15; // Total time for each question in seconds
   let timer;
 
@@ -370,8 +374,8 @@ document.addEventListener("DOMContentLoaded", () => {
         currentTime = 0; // Set the time to 0 to avoid negative numbers
         timerElement.textContent = currentTime; // Update the displayed time to 0
         // Disable answer buttons and show the next button
-      disableAnswerButtons();
-      btnNext.style.display = "block";
+        disableAnswerButtons();
+        btnNext.style.display = "block";
       }
     }, 1000);
 
@@ -388,8 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
    */
 
 
-
-  // Function to shuffle the array
+  // Function to shuffle the array to select question randomly
   function shuffleArray(allQuestions) {
     for (let i = allQuestions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -398,6 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return allQuestions;
   }
 
+  // Function to start the Quiz
   function beginQuiz() {
     activeQuestionIndex = 0;
     score = 0;
@@ -407,6 +411,7 @@ document.addEventListener("DOMContentLoaded", () => {
     countOfQuestion.textContent = `1 out of ${allQuestions.length}`;
   }
 
+  // Function to display each question & answers & display image
   function displayQuestion() {
     resetState();
     clearInterval(timer);
@@ -421,6 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnAnswers.innerHTML = "";
 
+    // Generates answer buttons for each new answer in the active question
     activeQuestion.answers.forEach(answer => {
       const button = document.createElement("button");
       button.innerHTML = answer.text;
@@ -434,7 +440,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function resetState() {
-    btnNext.style.display = "none";
+    btnNext.style.display = "none"; //hides the Next button on following question
     while (btnAnswers.firstChild) {
       btnAnswers.removeChild(btnAnswers.firstChild);
     }
@@ -456,15 +462,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       button.disabled = true; // takes away the ability re-select another answer. 
     });
-    btnNext.style.display = "block";
+    btnNext.style.display = "block"; // Displays Next button when an anwer is chosen
   }
 
   /**
    * ############################## NEXT BUTTON & HIGHSCORES #####################################
    */
 
-
-  function toggleToScoreBox() {
+  // Toggles to Score-Boz while updating the highscore list
+  function toggleToScoreBox() { //
     updateHighscoreList();
     toggleBoxes(scoreBox, nameFirstBox, homeBox, gameBox, rulesBox);
   }
@@ -487,8 +493,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     quizQuestions.innerHTML = `<div style="font-size: 2rem; color: yellow;">Wooow! <br>${username}, you scored <br>${score} out of ${allQuestions.length}!</div>`;
 
-     // Save the highscores array to local storage
-     localStorage.setItem("highscores", JSON.stringify(storedHighscores));
+    // Save the highscores array to local storage
+    localStorage.setItem("highscores", JSON.stringify(storedHighscores));
 
     // Retrieve highscores from local storage
     storedHighscores = JSON.parse(localStorage.getItem("highscores"));
@@ -499,7 +505,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-  
+    // Styling to change the Next-button into button "See Highscore List" at end of quiz
     btnNext.innerHTML = "See Highscore List";
     btnNext.style.display = "block";
     btnNext.style.backgroundColor = "rgb(168, 26, 38)";
@@ -509,6 +515,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnNext.style.width = "115px";
   }
 
+  // Handles Next button - either moves to next question or displays score
   function handleBtnNext() {
     activeQuestionIndex++;
     if (activeQuestionIndex < allQuestions.length) {
@@ -529,7 +536,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let highscores = [];
 
-    // If there are stored highscores, parse and set the highscores array
+    // If there are stored highscores set the highscores array
     if (storedHighscores) {
       highscores = storedHighscores;
     }

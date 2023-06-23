@@ -27,6 +27,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Hides the containers that shouldn't be visible */
 .hidden {
     display: none !important;
 }
@@ -68,10 +69,6 @@ input {
     padding-bottom: 0.1em;
     padding-top: 1rem;
 }
-
-#name-first-box h4 {}
-
-#name-first-box p {}
 
 #name-error {
     font-size: 0.8rem;
@@ -122,7 +119,7 @@ input {
 }
 
 
-/* BUTTONS  */
+/* MAIN BUTTONS  */
 .btns {
     display: flex;
     align-items: center;
@@ -561,7 +558,7 @@ footer li {
 }
 
 
-/* Laptop max-width 1000 px  */
+/* Laptop max-width 1050 px  */
 @media screen and (max-width: 1050px) {
 
     .container-content {
