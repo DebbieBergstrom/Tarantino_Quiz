@@ -384,7 +384,7 @@ In conclusion, the testing process confirmed the successful implementation of us
 
 | **Known Bugs to be resolved** | **Comments** |
 | ------------- | ------------ |
-| 1. The score list doesn't display an ordered list with numbers as desired | This bug was present earlier in the project, but an undetected issue caused it to disappear. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be resolved in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/score_displays_latest.png"></details> |
+| 1. The score list doesn't display an ordered list with numbers as desired | This bug was present earlier in the project, but an undetected issue caused it to disappear. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be resolved in future updates. Last minute update, number was added in the string that displays the score, so it looks just as if it was in an ordered list. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/score_displays_latest.png"></details> |
 | 2. Unable to collect user scores and display them in the highscore box | This bug was previously fixed in line 10 as mentioned in the "Fixed Bugs" section. Unfortunately, an undetected bug caused its functionality to break again. Due to time constraints, it couldn't be fixed before the project submission deadline. It will be rectified in future updates. <details><summary>See image: Score List</summary><img src="/workspace/tarantino_quiz/docs/screenshots/bug_no_scores.png"></details> |
 
 
